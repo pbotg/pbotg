@@ -11,7 +11,7 @@
         "id": 2,
         "nombre": "Pedro",
         "presupuesto": 20,
-        "bandera": 1,
+        "bandera": "",
         "valor": 300,
         "activo": true
     },
@@ -19,7 +19,7 @@
         "id": 3,
         "nombre": "Ana",
         "presupuesto": 25,
-        "bandera": "1",
+        "bandera": "3",
         "valor": 700,
         "activo": false
     },
