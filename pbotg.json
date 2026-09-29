@@ -5,30 +5,6 @@
         "presupuesto": 30,
         "bandera": "2",
         "valor": 500,
-        "activo": true
-    },
-    {
-        "id": 2,
-        "nombre": "Pedro",
-        "presupuesto": 20,
-        "bandera": "",
-        "valor": 300,
-        "activo": true
-    },
-    {
-        "id": 3,
-        "nombre": "Ana",
-        "presupuesto": 25,
-        "bandera": "3",
-        "valor": 700,
         "activo": false
-    },
-    {
-        "id": 4,
-        "nombre": "Carlos",
-        "presupuesto": 40,
-        "bandera": 1,
-        "valor": 900,
-        "activo": true
     }
 ]
