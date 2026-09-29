@@ -19,7 +19,7 @@
         "id": 3,
         "nombre": "Ana",
         "presupuesto": 25,
-        "bandera": 3,
+        "bandera": "1",
         "valor": 700,
         "activo": false
     },
