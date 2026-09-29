@@ -1,39 +1,34 @@
 [
-
-{
-"id": 1,
-"nombre": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since 1966, when designers at Letraset and James Mosley, the librarian at St Bride Printing Library in London, took a 1914 Cicero translation and scrambled it to make dummy text for Letraset's Body Type sheets.",
-"presupuesto": 30,
-"bandera": 2,
-"valor": 500,
-"activo": true
-},
-
-{
-"id": 2,
-"nombre": "Pedro",
-"presupuesto": 20,
-"bandera": 1,
-"valor": 300,
-"activo": true
-},
-
-{
-"id": 3,
-"nombre": "Ana",
-"presupuesto": 25,
-"bandera": 3,
-"valor": 700,
-"activo": false
-},
-
-{
-"id": 4,
-"nombre": "Carlos",
-"presupuesto": 40,
-"bandera": 1,
-"valor": 900,
-"activo": true
-}
-
+    {
+        "id": 1,
+        "nombre": "Garzón se viste de blanco.",
+        "presupuesto": 30,
+        "bandera": 2,
+        "valor": 500,
+        "activo": true
+    },
+    {
+        "id": 2,
+        "nombre": "Pedro",
+        "presupuesto": 20,
+        "bandera": 1,
+        "valor": 300,
+        "activo": true
+    },
+    {
+        "id": 3,
+        "nombre": "Ana",
+        "presupuesto": 25,
+        "bandera": 3,
+        "valor": 700,
+        "activo": false
+    },
+    {
+        "id": 4,
+        "nombre": "Carlos",
+        "presupuesto": 40,
+        "bandera": 1,
+        "valor": 900,
+        "activo": true
+    }
 ]
