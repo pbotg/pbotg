@@ -2,9 +2,9 @@
     {
         "id": 1,
         "proyecto": "Construcción de colectores de aguas lluvias para disminuir el riesgo de inundación.",
-        "asignado": 3430000000,
+        "presupuesto asignado": 3430000000,
         "bandera": "2",
-        "valor": 3530000000,
+        "presupuesto ideal": 3530000000,
         "activo": true
     }
 ]
