@@ -5,6 +5,7 @@
         "presupuesto asignado": 3430000000,
         "bandera": "2",
         "presupuesto ideal": 7530000000,
-        "activo": true
+        "activo": true,
+        "observaciones": "El presupuesto asignado es insuficiente porque en Narnia el León come zanahorías con remolacha."
     }
 ]
