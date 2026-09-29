@@ -1,12 +1,18 @@
 [
     {
+        "activo": true,
         "id": 1,
         "proyecto": "Construcción de colectores de aguas lluvias para disminuir el riesgo de inundación.",
         "presupuesto asignado": 3430000000,
         "bandera": "2",
-        "presupuesto ideal": 7530000000,
-        "activo": true,
+        "presupuesto ideal": 7530000000,        
         "observaciones": "El presupuesto asignado es insuficiente porque en Narnia el León come zanahorías con remolacha.",
-        "cobertura": "20 de Julio, Chapinero, Granjas, Julio Bahamón, La Florida, La Libertad, Los Comuneros, Los Nogales, San Isidro, Valle del Casa Loma, Santa Marta, Zuluaga"
+        "cobertura": "20 de Julio, Chapinero, Granjas, Julio Bahamón, La Florida, La Libertad, Los Comuneros, Los Nogales, San Isidro, Valle del Casa Loma, Santa Marta, Zuluaga",
+        "clasificación": "urgente",
+        "vigencia": "completa",
+        "operación": "SGP – APSB + Recursos propios municipio",
+        "prioridad": "alta",
+        "eje": "salud",
+        resumen: "Infraestructura de acueducto, alcantarillado y salud, incluyendo PTAR, Plan Maestro y canalización de aguas lluvias para mejorar servicios públicos y reducir riesgos de inundación.",
     }
 ]
