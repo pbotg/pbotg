@@ -1,0 +1,2221 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+<link href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAABWElEQVR4AVSSCbYjMQgDJd//zkwVdue/IWBAArx0TtOs6MqC9WGVYEHzoP89xEkmKzqs5FMCwF1HJLefhiDXNZYd+LQNSxx2mwjzMJzZSHz2gKHmOOVHWjyy2EdAClOLbiSJhXxyBufO1wRzZa7L8ll6uF7IPXU4tSW8gdAzkTz5NqNpKF5UbE9GxsmSZgeMRHYT1r/EqHV9k3Fm9GWN4QwAXe3F2KFRWGmGIiG+bNzY71J3BT6hSCNmHhQdaPxGX/HtGsuiiO97TLiCGegCjCC8CrmXWt+/8LIpP/V4gGXNfmR+mf2cC6Bb1mVACoOedwBgsiQOnFCAqQGYIBZubKYVMDnVkU824rolGlAMrY1kq8bdiNNIJjxiaEh8NJasNBf7VnJDDkBjroCh9584sgtPHMTKczblnsYkSd61onQHDZ/yXuFWyCwBveUWGIfMEuYZYYPJTP4BAAD///vq8eoAAAAGSURBVAMAKfaQMxSAb7QAAAAASUVORK5CYII=" rel="icon" type="image/x-icon">
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Italianno&display=swap" rel="stylesheet">
+
+
+    <title>PBOT Garzón</title>
+
+
+    <!-- =====================================================
+         TABULATOR
+    ====================================================== -->
+
+    <link
+        rel="stylesheet" 
+        href="tabulator.min.modificado.css"
+    >
+
+
+    <style>
+
+a{
+color: blue;
+text-decoration: none;
+display: block;
+margin: 12px 3px;
+padding: 6px;
+background: #8aff00;
+color: #5500d8;
+font-size: 10px;
+border-radius: 6px;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #fff;
+}
+
+::-webkit-scrollbar-thumb {
+    background: hsl(48, 100%, 50%);
+    border-radius: 5px;
+}
+
+
+
+*{
+    outline: none !important;
+    font-family: sans-serif;
+    font-size: 13px;
+}
+
+
+::placeholder {
+  color: black;
+}
+
+
+
+
+
+        body {
+font-family: Arial, sans-serif;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+        }
+
+
+        #busqueda {
+    width: 50%;
+    padding: 20px 30px;
+    /* margin-bottom: 15px; */
+    height: 78px;
+    border: 0;
+    /* border-radius: 5px; */
+    outline: none;
+    font-size: 36px;
+    box-sizing: border-box;
+        
+
+    background-image: url(1485477207-magnifier_78608.svg);
+    background-repeat: no-repeat;
+    background-position: left 18px center;
+    background-size: 42px 42px;
+    padding-left: 62px;
+
+
+        }
+
+        #tabla {
+    background: white;
+    overflow: hidden;
+    position: absolute;
+    width: 100%;
+    top: 180px;
+    bottom: 0;
+    max-width: 100%;
+        }
+
+        button {
+            padding: 9px 12px;
+            margin-top: 15px;
+            margin-right: 5px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+                box-shadow: 0 1px 2px 1px #8080b1;
+            display: inline-block;
+           transition: transform 0.05s;
+           text-transform: capitalize;
+           background: #fff;
+        }
+
+        button:active{
+            transform: translateY(2px);
+        }
+
+        #btnEliminarRegistro{
+/*            background: #f00;*/
+/*            color: #f00;*/
+        }
+        #btnAgregarRegistro{
+/*            background: lime;*/
+        }
+
+
+/*
+        #btnJSON {
+            background: #333;
+            color: white;
+        }
+
+        #btnOrdenOriginal {
+            background: #ddd;
+        }
+
+        #resultado {
+            margin-top: 20px;
+            padding: 15px;
+            background: #222;
+            color: #eee;
+            border-radius: 6px;
+            white-space: pre-wrap;
+            overflow-x: auto;
+        }
+*/
+        /*
+         * Pie de totales
+         */
+
+        .tabulator-calcs-bottom {
+            font-weight: bold;
+/*            background: #eeeeee;*/
+        }
+
+        /*
+         * Checkbox
+         */
+
+        .checkbox-registro {
+            width: 18px;
+            height: 18px;
+            cursor: pointer;
+        }
+
+
+
+
+
+
+
+.tabulator .tabulator-row .tabulator-cell:not([tabulator-field="bandera"]) {
+    background-color: white !important;
+}
+
+.tabulator .tabulator-row .tabulator-cell[tabulator-field="bandera"]{
+    font-weight: bold;
+    font-size: 18px;
+}
+
+
+.tabulator-col[tabulator-field="observaciones"] .tabulator-col-title {
+    color: red;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.tabulator .tabulator-row .tabulator-cell[tabulator-field="observaciones"]{
+    font-size: 13px;
+    color: #5500d8;
+    font-weight: bold;
+}
+
+
+
+.tabulator-col[tabulator-field="lo esperado"] .tabulator-col-title {
+    color: green;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.tabulator .tabulator-row .tabulator-cell[tabulator-field="lo esperado"]{
+    font-size: 13px;
+    color: #5500d8;
+    font-weight: bold;
+}
+
+
+
+
+.tabulator .tabulator-row .tabulator-cell[tabulator-field="dinero ideal"]{
+    font-size: 15px;
+    color: green;
+    font-weight: bold;
+}
+
+
+
+
+
+#botonera{
+        position: absolute;
+        top: 10px;
+        right: 20px;
+        z-index: 100;
+        }
+
+
+
+
+.tabulator .tabulator-row:nth-child(odd) .tabulator-cell:not([tabulator-field="bandera"]) {
+    background-color: #f2f2f2 !important;
+}
+
+.tabulator .tabulator-cell {
+    white-space: normal !important;
+    overflow-wrap: anywhere;
+}
+
+
+#disclaimer{
+            position: absolute;
+            left: 78px;
+            top: 66px;
+            z-index: 1000;
+            font-size: 13px;
+            }
+.firma{
+  font-family: "Italianno", cursive;
+  font-weight: 400;
+  font-style: normal;
+  text-transform: capitalize;
+  font-size: 42px;
+}
+
+
+#presentacion{
+            position: absolute;
+            left: 78px;
+            top: 116px;
+            z-index: 1000;
+            font-size: 13px;
+            color: purple;
+            }
+
+.tabulator-col-title{ text-transform: capitalize; }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+
+<input
+    type="text"
+    id="busqueda"
+    placeholder=" PBOT Garzón"
+    autofocus="true"
+>
+
+
+<div id="disclaimer">Análisis por <span class="firma">Sergio Losada Perdomo</span></div>
+<div id="presentacion">Garzón debería ser tomado más en serio.<br>Necesitamos el mejor PBOT posible!</div>
+
+
+
+<div id="tabla"></div>
+
+
+<div id="botonera">
+
+
+
+<button id="btnSeleccionarTodo">
+    seleccionar todo
+</button>
+
+<button id="btnInvertirSeleccion">
+    invertir
+</button>
+
+<button id="btnOrdenOriginal">
+    restaurar
+</button>
+
+<button id="btnAgregarRegistro">
+    agregar
+</button>
+
+<button id="btnEliminarRegistro">
+    eliminar
+</button>
+
+<pre id="resultado" style="display: none;"></pre>
+
+<button id="btnJSON">
+    Guardar
+</button>
+
+</div>
+
+
+<!-- =====================================================
+     TABULATOR
+====================================================== -->
+
+<script src="tabulator.min.js"></script>
+
+
+<script>
+
+
+
+
+
+
+
+/*
+!!Explain:  $7( string||number ) devuevle un hash;
+            $7.encrypt( value, password ) devuelve un hash;
+            $7.decrypt( hash, password )  devuelve el valor oculto en el hash;
+*/
+
+function $7(a){function b(a,b){this.highOrder=a,this.lowOrder=b}function s(a){return unescape(encodeURIComponent(a))}function t(a){for(var b=[],c=(1<<r)-1,d=a.length*r,e=0;d>e;e+=r)b[e>>5]|=(a.charCodeAt(e/r)&c)<<32-r-e%32;return b}function u(a){for(var e,b="0123456789abcdef",c="",d=4*a.length,f=0;d>f;f+=1)e=a[f>>2]>>8*(3-f%4),c+=b.charAt(15&e>>4)+b.charAt(15&e);return c}function v(a,c){var d,e,f,g;return d=(65535&a.lowOrder)+(65535&c.lowOrder),e=(a.lowOrder>>>16)+(c.lowOrder>>>16)+(d>>>16),f=(65535&e)<<16|65535&d,d=(65535&a.highOrder)+(65535&c.highOrder)+(e>>>16),e=(a.highOrder>>>16)+(c.highOrder>>>16)+(d>>>16),g=(65535&e)<<16|65535&d,new b(g,f)}function w(a,c,d,e){var f,g,h,i;return f=(65535&a.lowOrder)+(65535&c.lowOrder)+(65535&d.lowOrder)+(65535&e.lowOrder),g=(a.lowOrder>>>16)+(c.lowOrder>>>16)+(d.lowOrder>>>16)+(e.lowOrder>>>16)+(f>>>16),h=(65535&g)<<16|65535&f,f=(65535&a.highOrder)+(65535&c.highOrder)+(65535&d.highOrder)+(65535&e.highOrder)+(g>>>16),g=(a.highOrder>>>16)+(c.highOrder>>>16)+(d.highOrder>>>16)+(e.highOrder>>>16)+(f>>>16),i=(65535&g)<<16|65535&f,new b(i,h)}function x(a,c,d,e,f){var g,h,i,j;return g=(65535&a.lowOrder)+(65535&c.lowOrder)+(65535&d.lowOrder)+(65535&e.lowOrder)+(65535&f.lowOrder),h=(a.lowOrder>>>16)+(c.lowOrder>>>16)+(d.lowOrder>>>16)+(e.lowOrder>>>16)+(f.lowOrder>>>16)+(g>>>16),i=(65535&h)<<16|65535&g,g=(65535&a.highOrder)+(65535&c.highOrder)+(65535&d.highOrder)+(65535&e.highOrder)+(65535&f.highOrder)+(h>>>16),h=(a.highOrder>>>16)+(c.highOrder>>>16)+(d.highOrder>>>16)+(e.highOrder>>>16)+(f.highOrder>>>16)+(g>>>16),j=(65535&h)<<16|65535&g,new b(j,i)}function y(a,c,d){return new b(a.highOrder&c.highOrder^a.highOrder&d.highOrder^c.highOrder&d.highOrder,a.lowOrder&c.lowOrder^a.lowOrder&d.lowOrder^c.lowOrder&d.lowOrder)}function z(a,c,d){return new b(a.highOrder&c.highOrder^~a.highOrder&d.highOrder,a.lowOrder&c.lowOrder^~a.lowOrder&d.lowOrder)}function A(a,c){return 32>=c?new b(a.highOrder>>>c|a.lowOrder<<32-c,a.lowOrder>>>c|a.highOrder<<32-c):new b(a.lowOrder>>>c|a.highOrder<<32-c,a.highOrder>>>c|a.lowOrder<<32-c)}function B(a){var c=A(a,28),d=A(a,34),e=A(a,39);return new b(c.highOrder^d.highOrder^e.highOrder,c.lowOrder^d.lowOrder^e.lowOrder)}function C(a){var c=A(a,14),d=A(a,18),e=A(a,41);return new b(c.highOrder^d.highOrder^e.highOrder,c.lowOrder^d.lowOrder^e.lowOrder)}function D(a){var c=A(a,1),d=A(a,8),e=F(a,7);return new b(c.highOrder^d.highOrder^e.highOrder,c.lowOrder^d.lowOrder^e.lowOrder)}function E(a){var c=A(a,19),d=A(a,61),e=F(a,6);return new b(c.highOrder^d.highOrder^e.highOrder,c.lowOrder^d.lowOrder^e.lowOrder)}function F(a,c){return 32>=c?new b(a.highOrder>>>c,a.lowOrder>>>c|a.highOrder<<32-c):new b(0,a.highOrder<<32-c)}a=a+uns7(a)+a;var f,g,h,i,j,k,l,m,n,o,p,q,c=[new b(1779033703,4089235720),new b(3144134277,2227873595),new b(1013904242,4271175723),new b(2773480762,1595750129),new b(1359893119,2917565137),new b(2600822924,725511199),new b(528734635,4215389547),new b(1541459225,327033209)],d=[new b(1116352408,3609767458),new b(1899447441,602891725),new b(3049323471,3964484399),new b(3921009573,2173295548),new b(961987163,4081628472),new b(1508970993,3053834265),new b(2453635748,2937671579),new b(2870763221,3664609560),new b(3624381080,2734883394),new b(310598401,1164996542),new b(607225278,1323610764),new b(1426881987,3590304994),new b(1925078388,4068182383),new b(2162078206,991336113),new b(2614888103,633803317),new b(3248222580,3479774868),new b(3835390401,2666613458),new b(4022224774,944711139),new b(264347078,2341262773),new b(604807628,2007800933),new b(770255983,1495990901),new b(1249150122,1856431235),new b(1555081692,3175218132),new b(1996064986,2198950837),new b(2554220882,3999719339),new b(2821834349,766784016),new b(2952996808,2566594879),new b(3210313671,3203337956),new b(3336571891,1034457026),new b(3584528711,2466948901),new b(113926993,3758326383),new b(338241895,168717936),new b(666307205,1188179964),new b(773529912,1546045734),new b(1294757372,1522805485),new b(1396182291,2643833823),new b(1695183700,2343527390),new b(1986661051,1014477480),new b(2177026350,1206759142),new b(2456956037,344077627),new b(2730485921,1290863460),new b(2820302411,3158454273),new b(3259730800,3505952657),new b(3345764771,106217008),new b(3516065817,3606008344),new b(3600352804,1432725776),new b(4094571909,1467031594),new b(275423344,851169720),new b(430227734,3100823752),new b(506948616,1363258195),new b(659060556,3750685593),new b(883997877,3785050280),new b(958139571,3318307427),new b(1322822218,3812723403),new b(1537002063,2003034995),new b(1747873779,3602036899),new b(1955562222,1575990012),new b(2024104815,1125592928),new b(2227730452,2716904306),new b(2361852424,442776044),new b(2428436474,593698344),new b(2756734187,3733110249),new b(3204031479,2999351573),new b(3329325298,3815920427),new b(3391569614,3928383900),new b(3515267271,566280711),new b(3940187606,3454069534),new b(4118630271,4000239992),new b(116418474,1914138554),new b(174292421,2731055270),new b(289380356,3203993006),new b(460393269,320620315),new b(685471733,587496836),new b(852142971,1086792851),new b(1017036298,365543100),new b(1126000580,2618297676),new b(1288033470,3409855158),new b(1501505948,4234509866),new b(1607167915,987167468),new b(1816402316,1246189591)],e=new Array(64),r=8;a=s(a),strlen=a.length*r,a=t(a),a[strlen>>5]|=128<<24-strlen%32,a[(strlen+128>>10<<5)+31]=strlen;for(var n=0;n<a.length;n+=32){f=c[0],g=c[1],h=c[2],i=c[3],j=c[4],k=c[5],l=c[6],m=c[7];for(var o=0;80>o;o++)e[o]=16>o?new b(a[2*o+n],a[2*o+n+1]):w(E(e[o-2]),e[o-7],D(e[o-15]),e[o-16]),p=x(m,C(j),z(j,k,l),d[o],e[o]),q=v(B(f),y(f,g,h)),m=l,l=k,k=j,j=v(i,p),i=h,h=g,g=f,f=v(p,q);c[0]=v(f,c[0]),c[1]=v(g,c[1]),c[2]=v(h,c[2]),c[3]=v(i,c[3]),c[4]=v(j,c[4]),c[5]=v(k,c[5]),c[6]=v(l,c[6]),c[7]=v(m,c[7])}for(var G=[],n=0;n<c.length;n++)G.push(c[n].highOrder),G.push(c[n].lowOrder);return u(G)}eval(function(a,b,c,d,e,f){if(e=function(a){return(b>a?"":e(parseInt(a/b)))+((a%=b)>35?String.fromCharCode(a+29):a.toString(36))},!"".replace(/^/,String)){for(;c--;)f[e(c)]=d[c]||e(c);d=[function(a){return f[a]}],e=function(){return"\\w+"},c=1}for(;c--;)d[c]&&(a=a.replace(new RegExp("\\b"+e(c)+"\\b","g"),d[c]));return a}('m 2b(v){e 1y;e S=m(J,1p){l(J<<1p)|(J>>>(32-1p))};e f=m(1e,1g){e 1m,1n,D,C,u;D=(1e&1x);C=(1g&1x);1m=(1e&1j);1n=(1g&1j);u=(1e&1G)+(1g&1G);r(1m&1n){l(u^1x^D^C)}r(1m|1n){r(u&1j){l(u^2c^D^C)}1o{l(u^1j^D^C)}}1o{l(u^D^C)}};e 1E=m(x,y,z){l(x&y)|((~x)&z)};e 1J=m(x,y,z){l(x&z)|(y&(~z))};e 1N=m(x,y,z){l(x^y^z)};e 1B=m(x,y,z){l(y^(x|(~z)))};e g=m(a,b,c,d,x,s,t){a=f(a,f(f(1E(b,c,d),x),t));l f(S(a,s),b)};e j=m(a,b,c,d,x,s,t){a=f(a,f(f(1J(b,c,d),x),t));l f(S(a,s),b)};e h=m(a,b,c,d,x,s,t){a=f(a,f(f(1N(b,c,d),x),t));l f(S(a,s),b)};e i=m(a,b,c,d,x,s,t){a=f(a,f(f(1B(b,c,d),x),t));l f(S(a,s),b)};e 1A=m(v){e B;e I=v.1k;e 1q=I+8;e 1M=(1q-(1q%1L))/1L;e 1h=(1M+1)*16;e q=2d 1Z(1h-1);e M=0;e o=0;28(o<I){B=(o-(o%4))/4;M=(o%4)*8;q[B]=(q[B]|(v.1F(o)<<M));o++}B=(o-(o%4))/4;M=(o%4)*8;q[B]=q[B]|(24<<M);q[1h-2]=I<<3;q[1h-1]=I>>>29;l q};e T=m(J){e 1f="",1d="",1w,K;1v(K=0;K<=3;K++){1w=(J>>>(K*8))&25;1d="0"+1w.26(16);1f=1f+1d.27(1d.1k-2,2)}l 1f};e x=[],k,1u,1r,1s,1t,a,b,c,d,1c=7,Q=12,L=17,N=22,R=5,E=9,W=14,Z=20,V=4,U=11,19=16,F=23,H=6,P=10,O=15,G=21;v=2e.1K(v);x=1A(v);a=2f;b=2m;c=2n;d=2o;1y=x.1k;1v(k=0;k<1y;k+=16){1u=a;1r=b;1s=c;1t=d;a=g(a,b,c,d,x[k+0],1c,2l);d=g(d,a,b,c,x[k+1],Q,2k);c=g(c,d,a,b,x[k+2],L,2g);b=g(b,c,d,a,x[k+3],N,2h);a=g(a,b,c,d,x[k+4],1c,2i);d=g(d,a,b,c,x[k+5],Q,2j);c=g(c,d,a,b,x[k+6],L,2p);b=g(b,c,d,a,x[k+7],N,1U);a=g(a,b,c,d,x[k+8],1c,1R);d=g(d,a,b,c,x[k+9],Q,1Q);c=g(c,d,a,b,x[k+10],L,1O);b=g(b,c,d,a,x[k+11],N,1P);a=g(a,b,c,d,x[k+12],1c,1W);d=g(d,a,b,c,x[k+13],Q,1X);c=g(c,d,a,b,x[k+14],L,1S);b=g(b,c,d,a,x[k+15],N,1T);a=j(a,b,c,d,x[k+1],R,1V);d=j(d,a,b,c,x[k+6],E,1Y);c=j(c,d,a,b,x[k+11],W,2a);b=j(b,c,d,a,x[k+0],Z,2r);a=j(a,b,c,d,x[k+5],R,30);d=j(d,a,b,c,x[k+10],E,2Z);c=j(c,d,a,b,x[k+15],W,31);b=j(b,c,d,a,x[k+4],Z,33);a=j(a,b,c,d,x[k+9],R,35);d=j(d,a,b,c,x[k+14],E,34);c=j(c,d,a,b,x[k+3],W,2Y);b=j(b,c,d,a,x[k+8],Z,2X);a=j(a,b,c,d,x[k+13],R,2S);d=j(d,a,b,c,x[k+2],E,37);c=j(c,d,a,b,x[k+7],W,2R);b=j(b,c,d,a,x[k+12],Z,2q);a=h(a,b,c,d,x[k+5],V,2T);d=h(d,a,b,c,x[k+8],U,2U);c=h(c,d,a,b,x[k+11],19,2W);b=h(b,c,d,a,x[k+14],F,2V);a=h(a,b,c,d,x[k+1],V,36);d=h(d,a,b,c,x[k+4],U,3d);c=h(c,d,a,b,x[k+7],19,3e);b=h(b,c,d,a,x[k+10],F,3b);a=h(a,b,c,d,x[k+13],V,3a);d=h(d,a,b,c,x[k+0],U,39);c=h(c,d,a,b,x[k+3],19,3c);b=h(b,c,d,a,x[k+6],F,38);a=h(a,b,c,d,x[k+9],V,2P);d=h(d,a,b,c,x[k+12],U,2y);c=h(c,d,a,b,x[k+15],19,2z);b=h(b,c,d,a,x[k+2],F,2A);a=i(a,b,c,d,x[k+0],H,2B);d=i(d,a,b,c,x[k+7],P,2x);c=i(c,d,a,b,x[k+14],O,2w);b=i(b,c,d,a,x[k+5],G,2s);a=i(a,b,c,d,x[k+12],H,2Q);d=i(d,a,b,c,x[k+3],P,2t);c=i(c,d,a,b,x[k+10],O,2u);b=i(b,c,d,a,x[k+1],G,2v);a=i(a,b,c,d,x[k+8],H,2C);d=i(d,a,b,c,x[k+15],P,2D);c=i(c,d,a,b,x[k+6],O,2L);b=i(b,c,d,a,x[k+13],G,2M);a=i(a,b,c,d,x[k+4],H,2N);d=i(d,a,b,c,x[k+11],P,2O);c=i(c,d,a,b,x[k+2],O,2K);b=i(b,c,d,a,x[k+9],G,2J);a=f(a,1u);b=f(b,1r);c=f(c,1s);d=f(d,1t)}e 1D=T(a)+T(b)+T(c)+T(d);l 1D.2F()}m 1K(1C){e Y=(1C+\'\');e 1b="",w,A,1i=0;w=A=0;1i=Y.1k;1v(e n=0;n<1i;n++){e p=Y.1F(n);e X=1I;r(p<1l){A++}1o r(p>2E&&p<2G){X=18.1a((p>>6)|2H)+18.1a((p&1z)|1l)}1o{X=18.1a((p>>12)|2I)+18.1a(((p>>6)&1z)|1l)+18.1a((p&1z)|1l)}r(X!==1I){r(A>w){1b+=Y.1H(w,A)}1b+=X;w=A=n+1}}r(A>w){1b+=Y.1H(w,1i)}l 1b}',62,201,"||||||||||||||var|addUnsigned|_FF|_HH|_II|_GG||return|function||lByteCount|c1|lWordArray|if||ac|lResult|str|start||||end|lWordCount|lY8|lX8|S22|S34|S44|S41|lMessageLength|lValue|lCount|S13|lBytePosition|S14|S43|S42|S12|S21|rotateLeft|wordToHex|S32|S31|S23|enc|string|S24|||||||||String|S33|fromCharCode|utftext|S11|wordToHexValue_temp|lX|wordToHexValue|lY|lNumberOfWords|stringl|0x40000000|length|128|lX4|lY4|else|iShiftBits|lNumberOfWords_temp1|BB|CC|DD|AA|for|lByte|0x80000000|xl|63|convertToWordArray|_I|argString|temp|_F|charCodeAt|0x3FFFFFFF|slice|null|_G|utf8_encode|64|lNumberOfWords_temp2|_H|0xFFFF5BB1|0x895CD7BE|0x8B44F7AF|0x698098D8|0xA679438E|0x49B40821|0xFD469501|0xF61E2562|0x6B901122|0xFD987193|0xC040B340|Array|||||0x80|255|toString|substr|while||0x265E5A51|uns7|0xC0000000|new|this|0x67452301|0x242070DB|0xC1BDCEEE|0xF57C0FAF|0x4787C62A|0xE8C7B756|0xD76AA478|0xEFCDAB89|0x98BADCFE|0x10325476|0xA8304613|0x8D2A4C8A|0xE9B6C7AA|0xFC93A039|0x8F0CCC92|0xFFEFF47D|0x85845DD1|0xAB9423A7|0x432AFF97|0xE6DB99E5|0x1FA27CF8|0xC4AC5665|0xF4292244|0x6FA87E4F|0xFE2CE6E0|127|toLowerCase|2048|192|224|0xEB86D391|0x2AD7D2BB|0xA3014314|0x4E0811A1|0xF7537E82|0xBD3AF235|0xD9D4D039|0x655B59C3|0x676F02D9|0xA9E3E905|0xFFFA3942|0x8771F681|0xFDE5380C|0x6D9D6122|0x455A14ED|0xF4D50D87|0x2441453|0xD62F105D|0xD8A1E681||0xE7D3FBC8|0xC33707D6|0x21E1CDE6|0xA4BEEA44|0xFCEFA3F8|0x4881D05|0xEAA127FA|0x289B7EC6|0xBEBFBC70|0xD4EF3085|0x4BDECFA9|0xF6BB4B60".split("|"),0,{}));
+$7.AES={Sbox:[99,124,119,123,242,107,111,197,48,1,103,43,254,215,171,118,202,130,201,125,250,89,71,240,173,212,162,175,156,164,114,192,183,253,147,38,54,63,247,204,52,165,229,241,113,216,49,21,4,199,35,195,24,150,5,154,7,18,128,226,235,39,178,117,9,131,44,26,27,110,90,160,82,59,214,179,41,227,47,132,83,209,0,237,32,252,177,91,106,203,190,57,74,76,88,207,208,239,170,251,67,77,51,133,69,249,2,127,80,60,159,168,81,163,64,143,146,157,56,245,188,182,218,33,16,255,243,210,205,12,19,236,95,151,68,23,196,167,126,61,100,93,25,115,96,129,79,220,34,42,144,136,70,238,184,20,222,94,11,219,224,50,58,10,73,6,36,92,194,211,172,98,145,149,228,121,231,200,55,109,141,213,78,169,108,86,244,234,101,122,174,8,186,120,37,46,28,166,180,198,232,221,116,31,75,189,139,138,112,62,181,102,72,3,246,14,97,53,87,185,134,193,29,158,225,248,152,17,105,217,142,148,155,30,135,233,206,85,40,223,140,161,137,13,191,230,66,104,65,153,45,15,176,84,187,22],Rcon:[[0,0,0,0],[1,0,0,0],[2,0,0,0],[4,0,0,0],[8,0,0,0],[16,0,0,0],[32,0,0,0],[64,0,0,0],[128,0,0,0],[27,0,0,0],[54,0,0,0]],Cipher:function(r,e){for(var o=4,t=e.length/o-1,n=[[],[],[],[]],a=0;4*o>a;a++)n[a%4][Math.floor(a/4)]=r[a];n=this.AddRoundKey(n,e,0,o);for(var i=1;t>i;i++)n=this.SubBytes(n,o),n=this.ShiftRows(n,o),n=this.MixColumns(n,o),n=this.AddRoundKey(n,e,i,o);n=this.SubBytes(n,o),n=this.ShiftRows(n,o),n=this.AddRoundKey(n,e,t,o);for(var f=new Array(4*o),a=0;4*o>a;a++)f[a]=n[a%4][Math.floor(a/4)];return f},SubBytes:function(r,e){for(var o=0;4>o;o++)for(var t=0;e>t;t++)r[o][t]=this.Sbox[r[o][t]];return r},ShiftRows:function(r,e){for(var o=new Array(4),t=1;4>t;t++){for(var n=0;4>n;n++)o[n]=r[t][(n+t)%e];for(var n=0;4>n;n++)r[t][n]=o[n]}return r},MixColumns:function(r){for(var e=0;4>e;e++){for(var o=new Array(4),t=new Array(4),n=0;4>n;n++)o[n]=r[n][e],t[n]=128&r[n][e]?r[n][e]<<1^283:r[n][e]<<1;r[0][e]=t[0]^o[1]^t[1]^o[2]^o[3],r[1][e]=o[0]^t[1]^o[2]^t[2]^o[3],r[2][e]=o[0]^o[1]^t[2]^o[3]^t[3],r[3][e]=o[0]^t[0]^o[1]^o[2]^t[3]}return r},AddRoundKey:function(r,e,o,t){for(var n=0;4>n;n++)for(var a=0;t>a;a++)r[n][a]^=e[4*o+a][n];return r},KeyExpansion:function(r){for(var e=4,o=r.length/4,t=o+6,n=new Array(e*(t+1)),a=new Array(4),i=0;o>i;i++){var f=[r[4*i],r[4*i+1],r[4*i+2],r[4*i+3]];n[i]=f}for(var i=o;e*(t+1)>i;i++){n[i]=new Array(4);for(var h=0;4>h;h++)a[h]=n[i-1][h];if(i%o==0){a=this.SubWord(this.RotWord(a));for(var h=0;4>h;h++)a[h]^=this.Rcon[i/o][h]}else o>6&&i%o==4&&(a=this.SubWord(a));for(var h=0;4>h;h++)n[i][h]=n[i-o][h]^a[h]}return n},SubWord:function(r){for(var e=0;4>e;e++)r[e]=this.Sbox[r[e]];return r},RotWord:function(r){for(var e=r[0],o=0;3>o;o++)r[o]=r[o+1];return r[3]=e,r},encrypt:function(r,e,o){var t=16;if(128!=o&&192!=o&&256!=o)return"";r=r.encodeUTF8(),e=e.encodeUTF8();for(var n=o/8,a=new Array(n),i=0;n>i;i++)a[i]=isNaN(e.charCodeAt(i))?0:e.charCodeAt(i);var f=this.Cipher(a,this.KeyExpansion(a));f=f.concat(f.slice(0,n-16));for(var h=new Array(t),c=(new Date).getTime(),d=Math.floor(c/1e3),u=c%1e3,i=0;4>i;i++)h[i]=d>>>8*i&255;for(var i=0;4>i;i++)h[i+4]=255&u;for(var s="",i=0;8>i;i++)s+=String.fromCharCode(h[i]);for(var v=this.KeyExpansion(f),A=Math.ceil(r.length/t),C=new Array(A),y=0;A>y;y++){for(var g=0;4>g;g++)h[15-g]=y>>>8*g&255;for(var g=0;4>g;g++)h[15-g-4]=y/4294967296>>>8*g;for(var l=this.Cipher(h,v),S=A-1>y?t:(r.length-1)%t+1,p=new Array(S),i=0;S>i;i++)p[i]=l[i]^r.charCodeAt(y*t+i),p[i]=String.fromCharCode(p[i]);C[y]=p.join("")}var b=s+C.join("");return b=b.encodeBase64()},decrypt:function(r,e,o){var t=16;if(128!=o&&192!=o&&256!=o)return"";r=r.decodeBase64(),e=e.encodeUTF8();for(var n=o/8,a=new Array(n),i=0;n>i;i++)a[i]=isNaN(e.charCodeAt(i))?0:e.charCodeAt(i);var f=this.Cipher(a,this.KeyExpansion(a));f=f.concat(f.slice(0,n-16));for(var h=new Array(8),c=r.slice(0,8),i=0;8>i;i++)h[i]=c.charCodeAt(i);for(var d=this.KeyExpansion(f),u=Math.ceil((r.length-8)/t),s=new Array(u),v=0;u>v;v++)s[v]=r.slice(8+v*t,8+v*t+t);r=s;for(var A=new Array(r.length),v=0;u>v;v++){for(var C=0;4>C;C++)h[15-C]=v>>>8*C&255;for(var C=0;4>C;C++)h[15-C-4]=(v+1)/4294967296-1>>>8*C&255;for(var y=this.Cipher(h,d),g=new Array(r[v].length),i=0;i<r[v].length;i++)g[i]=y[i]^r[v].charCodeAt(i),g[i]=String.fromCharCode(g[i]);A[v]=g.join("")}var l=A.join("");return l=l.decodeUTF8()}};var b64="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/=";String.prototype.encodeBase64=function(r){r="undefined"==typeof r?!1:r;var e,o,t,n,a,i,f,h,c,d,u,s=[],v="";if(d=r?this.encodeUTF8():this,c=d.length%3,c>0)for(;c++<3;)v+="=",d+="\x00";for(c=0;c<d.length;c+=3)e=d.charCodeAt(c),o=d.charCodeAt(c+1),t=d.charCodeAt(c+2),n=e<<16|o<<8|t,a=n>>18&63,i=n>>12&63,f=n>>6&63,h=63&n,s[c/3]=b64.charAt(a)+b64.charAt(i)+b64.charAt(f)+b64.charAt(h);return u=s.join(""),u=u.slice(0,u.length-v.length)+v},String.prototype.decodeBase64=function(r){r="undefined"==typeof r?!1:r;var e,o,t,n,a,i,f,h,c,d,u=[];d=r?this.decodeUTF8():this;for(var s=0;s<d.length;s+=4)n=b64.indexOf(d.charAt(s)),a=b64.indexOf(d.charAt(s+1)),i=b64.indexOf(d.charAt(s+2)),f=b64.indexOf(d.charAt(s+3)),h=n<<18|a<<12|i<<6|f,e=h>>>16&255,o=h>>>8&255,t=255&h,u[s/4]=String.fromCharCode(e,o,t),64==f&&(u[s/4]=String.fromCharCode(e,o)),64==i&&(u[s/4]=String.fromCharCode(e));return c=u.join(""),r?c.decodeUTF8():c},String.prototype.encodeUTF8=function(){var r=this.replace(/[\u0080-\u07ff]/g,function(r){var e=r.charCodeAt(0);return String.fromCharCode(192|e>>6,128|63&e)});return r=r.replace(/[\u0800-\uffff]/g,function(r){var e=r.charCodeAt(0);return String.fromCharCode(224|e>>12,128|e>>6&63,128|63&e)})},String.prototype.decodeUTF8=function(){var r=this.replace(/[\u00c0-\u00df][\u0080-\u00bf]/g,function(r){var e=(31&r.charCodeAt(0))<<6|63&r.charCodeAt(1);return String.fromCharCode(e)});return r=r.replace(/[\u00e0-\u00ef][\u0080-\u00bf][\u0080-\u00bf]/g,function(r){var e=(15&r.charCodeAt(0))<<12|(63&r.charCodeAt(1))<<6|63&r.charCodeAt(2);return String.fromCharCode(e)})};
+$7.encrypt=function(v,k){ return $7.AES.encrypt(v,$7(k),256) };$7.decrypt = function(v,k){ return $7.AES.decrypt(v,$7(k),256) };
+
+
+
+
+var __CLAVE__ = "",
+    __clave = "",
+    __guardando = false;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+async function cargarDatos() {
+
+const pbot_reader_token = "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";
+
+
+const respuesta = await fetch(
+    "https://api.github.com/repos/pbotg/pbotg/contents/pbotg.json?ref=main",
+    {
+        headers: {
+            "Accept": "application/vnd.github.raw+json",
+            "Authorization": `Bearer ${pbot_reader_token}`,
+            "X-GitHub-Api-Version": "2026-03-10"
+        },
+        cache: "no-store"
+    }
+);
+
+var r = await respuesta.json();
+
+console.log( r )
+
+return r
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+async function iniciar() {
+
+    const datos = await cargarDatos();
+
+
+
+
+
+
+
+
+
+// =========================================================
+// CAMPOS NUMÉRICOS QUE DEBEN SUMARSE
+// =========================================================
+
+const camposNumericos = [
+
+    "dinero asignado",
+    "bandera",
+    "dinero ideal"
+
+];
+
+
+// =========================================================
+// FUNCIÓN PARA CALCULAR UN TOTAL
+//
+// Solo suma registros cuyo:
+// activo === true
+// =========================================================
+
+// function calcularTotalCampo(campo) {
+
+//     let total = 0;
+
+
+//     /*
+//      * Obtener todos los registros reales
+//      */
+
+//     const registros = tabla.getData();
+
+
+//     registros.forEach(registro => {
+
+
+//         /*
+//          * Registro desactivado
+//          */
+
+//         if (registro.activo !== true) {
+//             return;
+//         }
+
+
+//         /*
+//          * Convertir a número
+//          */
+
+//         const valor = Number(
+//             registro[campo]
+//         );
+
+
+//         /*
+//          * Evitar NaN
+//          */
+
+//         if (!Number.isNaN(valor)) {
+
+//             total += valor;
+
+//         }
+
+//     });
+
+
+//     return total;
+
+// }
+
+
+
+// =========================================================
+// CALCULAR TOTAL DE UN CAMPO
+//
+// Solo considera:
+// 1. Filas visibles después del filtrado
+// 2. Registros cuyo activo === true
+// =========================================================
+
+function calcularTotalCampo(campo) {
+
+    let total = 0;
+
+
+    /*
+     * Obtener solamente las filas que están
+     * activas/visibles después de los filtros
+     */
+    const filas = tabla.getRows("active");
+
+
+    filas.forEach(row => {
+
+        const registro = row.getData();
+
+
+        /*
+         * El registro debe estar activo
+         */
+        if (registro.activo !== true) {
+            return;
+        }
+
+
+        /*
+         * Obtener valor numérico
+         */
+        const valor = Number(
+            registro[campo]
+        );
+
+
+        /*
+         * Evitar NaN
+         */
+        if (!Number.isNaN(valor)) {
+
+            total += valor;
+
+        }
+
+    });
+
+
+    return total;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// =========================================================
+// CHECKBOX DE ACTIVO
+// =========================================================
+
+function checkboxFormatter(cell) {
+
+
+    const row = cell.getRow();
+
+    const data = row.getData();
+
+
+    /*
+     * Crear checkbox
+     */
+
+    const checkbox =
+        document.createElement("input");
+
+
+    checkbox.type = "checkbox";
+
+    checkbox.className =
+        "checkbox-registro";
+
+
+    checkbox.checked =
+        data.activo === true;
+
+
+    /*
+     * Cuando cambia
+     */
+
+    checkbox.addEventListener(
+        "change",
+        function(event) {
+
+
+            /*
+             * Evitar que el clic
+             * seleccione la fila
+             */
+
+            event.stopPropagation();
+
+
+            /*
+             * Actualizar el JSON
+             */
+
+            row.update({
+
+                activo: this.checked
+
+            });
+
+
+            /*
+             * Redibujar la tabla para
+             * actualizar los totales
+             */
+
+            tabla.redraw(true);
+
+        }
+    );
+
+
+    return checkbox;
+
+}
+
+
+// =========================================================
+// CREAR COLUMNAS
+// =========================================================
+
+const columnas = [
+
+    {
+        title: "",
+
+        field: "activo",
+
+        formatter: checkboxFormatter,
+
+        hozAlign: "center",
+
+        headerSort: false,
+
+        width: 80,
+
+
+
+        /*
+         * No necesitamos cálculo aquí
+         */
+
+        bottomCalc: function() {
+
+            return "";
+
+        }
+
+    }
+
+];
+
+
+// =========================================================
+// OBTENER CAMPOS DEL JSON
+// =========================================================
+
+const campos =
+    Object.keys(datos[0]);
+
+
+campos.forEach(campo => {
+
+
+    /*
+     * activo ya fue creado manualmente
+     */
+
+    if (campo === "activo") {
+
+        return;
+
+    }
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+    // const columna = {
+
+    //     title: campo,
+
+    //     field: campo,
+
+    //     editor: "input",
+
+    //     headerFilter: "input"
+
+    // };
+
+    const columna = {
+
+        title: campo,
+
+        field: campo,
+
+        editor: "input",
+
+        maxWidth: 300,
+        variableHeight: true,
+
+        headerFilter: "input",
+
+        headerFilterFunc: filtroColumna,
+
+        headerFilterFuncParams: {
+
+            campo: campo
+
+        }
+
+    };
+
+
+
+// =====================================================
+// CAMPO NUMÉRICO
+// =====================================================
+
+if (
+    camposNumericos.includes(campo)
+) {
+
+    columna.hozAlign = "right";
+
+    /*
+     * Editor numérico
+     */
+
+    columna.editor = "number";
+
+
+    /*
+     * bandera
+     *
+     * Solo permite escoger:
+     * 0, 1, 2 y 3
+     */
+
+    if (campo === "bandera") {
+
+        columna.editor = "list";
+
+        columna.editorParams = {
+
+            values: [
+                "0",
+                "1",
+                "2",
+                "3"
+            ]
+
+        };
+
+    }
+
+
+    /*
+     * Ordenamiento numérico
+     */
+
+    columna.sorter = "number";
+
+
+    /*
+     * Mostrar números formateados
+     */
+
+    columna.formatter =
+        function(cell) {
+
+            const valor =
+                Number(cell.getValue());
+
+            if (
+                Number.isNaN(valor)
+            ) {
+
+                return "";
+
+            }
+
+            return valor.toLocaleString(
+                "es-CO"
+            );
+
+        };
+
+
+    /*
+     * TOTAL
+     */
+
+    columna.bottomCalc =
+        function() {
+
+            return calcularTotalCampo(
+                campo
+            );
+
+        };
+
+
+    /*
+     * Formato del total
+     */
+
+    columna.bottomCalcFormatter =
+        function(cell) {
+
+            const valor =
+                Number(cell.getValue());
+
+            return valor.toLocaleString(
+                "es-CO"
+            );
+
+        };
+
+}
+
+
+    // =====================================================
+    // CAMPO NORMAL
+    // =====================================================
+
+    else {
+
+
+        /*
+         * No mostrar total numérico
+         */
+
+        columna.bottomCalc =
+            function() {
+
+                /*
+                 * Si es el primer campo de texto,
+                 * mostrar TOTAL.
+                 */
+
+                if (
+                    campo === "proyecto"
+                ) {
+
+                    return "TOTALES => ";
+
+                }
+
+                return "";
+
+            };
+
+    }
+
+
+
+
+
+
+
+if (campo === "observaciones" || campo === "lo esperado") {
+
+    columna.formatter = function(cell) {
+
+        const texto = String(cell.getValue() ?? "");
+
+        const urlRegex = /https?:\/\/[^\s]+/g;
+
+        return texto.replace(urlRegex, function(url) {
+
+            return `<a class="atext" href="${url}"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        onclick="event.stopPropagation()">
+                        ${url}
+                    </a>`;
+        });
+    };
+
+}  
+
+/*
+if (campo === "observaciones") {
+
+    columna.formatter = function(cell) {
+
+        const texto = String(cell.getValue() ?? "");
+
+        const urlRegex = /https?:\/\/[^\s]+/g;
+
+        return texto.replace(urlRegex, function(url) {
+
+            let videoId = null;
+
+            // youtube.com/watch?v=XXXXXXXX
+            const watch = url.match(
+                /youtube\.com\/watch\?[^\\s]*v=([^&\s]+)/
+            );
+
+            // youtu.be/XXXXXXXX
+            const short = url.match(
+                /youtu\.be\/([^?\s]+)/
+            );
+
+            // youtube.com/shorts/XXXXXXXX
+            const shorts = url.match(
+                /youtube\.com\/shorts\/([^?\s]+)/
+            );
+
+            // youtube.com/embed/XXXXXXXX
+            const embed = url.match(
+                /youtube\.com\/embed\/([^?\s]+)/
+            );
+
+            if (watch) {
+                videoId = watch[1];
+            }
+            else if (short) {
+                videoId = short[1];
+            }
+            else if (shorts) {
+                videoId = shorts[1];
+            }
+            else if (embed) {
+                videoId = embed[1];
+            }
+
+            // Si es YouTube
+            if (videoId) {
+
+                const miniatura =
+                    `https://img.youtube.com/vi/${videoId}/mqdefault.jpg`;
+
+                return `
+                    <a href="${url}"
+                       target="_blank"
+                       rel="noopener noreferrer"
+                       onclick="event.stopPropagation();">
+
+                        <img src="${miniatura}"
+                             style="
+                                width:120px;
+                                height:auto;
+                                display:block;
+                                margin:4px 0;
+                                border-radius:4px;
+                             ">
+                    </a>
+                `;
+            }
+
+            // Cualquier otro enlace
+            return `
+                <a class="atexto" href="${url}"
+                   target="_blank"
+                   rel="noopener noreferrer"
+                   onclick="event.stopPropagation();">
+                    ${url}
+                </a>
+            `;
+        });
+    };
+}*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    columnas.push(columna);
+
+});
+
+
+// =========================================================
+// CREAR TABLA
+// =========================================================
+
+const tabla = new Tabulator(
+    "#tabla",
+    {
+
+        /*
+         * Datos
+         */
+
+        data: datos,
+
+
+        /*
+         * Altura
+         */
+
+       // height: "450px",
+
+
+        /*
+         * Ajustar columnas
+         */
+
+     //   layout: "fitDataTable",
+        layout: "fitData",
+
+
+        /*
+         * Columnas
+         */
+
+        columns: columnas,
+
+
+        /*
+         * Permitir mover filas
+         */
+
+        movableRows: true,
+
+
+        /*
+         * Selección de filas
+         */
+
+        selectableRows: true,
+
+
+        /*
+         * Identificador de cada fila
+         */
+
+        index: "id",
+
+
+        /*
+         * Orden inicial
+         */
+
+        initialSort: [
+
+            {
+                column: "id",
+                dir: "asc"
+            }
+
+        ],
+
+
+        /*
+         * Cuando se edita una celda
+         */
+
+        // cellEdited: function(cell) {
+
+
+        //     /*
+        //      * Si es un campo numérico,
+        //      * actualizar totales.
+        //      */
+
+        //     if (
+        //         camposNumericos.includes(
+        //             cell.getField()
+        //         )
+        //     ) {
+
+        //         tabla.redraw(true);
+
+        //     }
+
+        // },
+
+cellEdited: function(cell) {
+
+    if (cell.getField() === "bandera") {
+        colorearFila(cell.getRow());
+    }
+
+    if (camposNumericos.includes(cell.getField())) {
+    }
+        tabla.redraw(true);
+
+
+},
+
+
+
+
+rowFormatter: function(row) {
+
+    const elemento = row.getElement();
+    const bandera = Number(row.getData().bandera);
+
+//    elemento.style.backgroundColor = "";
+
+
+    if (bandera === 0) {
+        elemento.style.backgroundColor = "#fff";
+    //    elemento.style.color = "#000";
+    }
+    else if (bandera === 1) {
+        elemento.style.backgroundColor = "#f00";
+    //    elemento.style.color = "#fff";
+    }
+    else if (bandera === 2) {
+        elemento.style.backgroundColor = "#fff7b0";
+    //    elemento.style.color = "#000";
+    }
+    else if (bandera === 3) {
+        elemento.style.backgroundColor = "#b9ffd5";
+    //    elemento.style.color = "#000";
+    }
+},
+
+
+
+
+
+
+        /*
+         * Cuando se mueve una fila
+         */
+
+        rowMoved: function(row) {
+
+            console.log(
+                "Nuevo orden:"
+            );
+
+            console.log(
+                tabla.getData()
+            );
+
+        }
+
+    }
+);
+
+
+
+
+
+
+// =========================================================
+// SELECCIONAR TODO
+// =========================================================
+
+document
+    .getElementById("btnSeleccionarTodo")
+    .addEventListener("click", function() {
+
+        tabla.getRows().forEach(row => {
+
+            row.update({
+                activo: true
+            });
+
+        });
+
+        tabla.redraw(true);
+
+    });
+
+
+// =========================================================
+// INVERTIR SELECCIÓN
+// =========================================================
+
+document
+    .getElementById("btnInvertirSeleccion")
+    .addEventListener("click", function() {
+
+        tabla.getRows().forEach(row => {
+
+            const data = row.getData();
+
+            row.update({
+                activo: data.activo !== true
+            });
+
+        });
+
+        tabla.redraw(true);
+
+    });
+
+
+
+
+
+
+// =========================================================
+// BÚSQUEDA GLOBAL
+// =========================================================
+
+// document
+//     .getElementById("busqueda")
+//     .addEventListener(
+//         "input",
+//         function() {
+
+
+//             const texto =
+//                 this.value
+//                     .toLowerCase()
+//                     .trim();
+
+
+//             /*
+//              * Sin búsqueda
+//              */
+
+//             if (texto === "") {
+
+//                 tabla.clearFilter();
+
+//                 return;
+
+//             }
+
+
+//             /*
+//              * Buscar en cualquier campo
+//              */
+
+//             tabla.setFilter(
+//                 function(data) {
+
+
+//                     return Object
+//                         .values(data)
+//                         .some(valor => {
+
+
+//                             return String(valor)
+//                                 .toLowerCase()
+//                                 .includes(texto);
+
+
+//                         });
+
+//                 }
+//             );
+
+//         }
+//     );
+
+
+// =========================================================
+// BÚSQUEDA GENERAL
+//
+// Ejemplos:
+//
+// >40
+// <40
+// >=40
+// <=40
+// 40
+// Juan
+// Bogotá
+// =========================================================
+
+document
+    .getElementById("busqueda")
+    .addEventListener(
+        "input",
+        function() {
+
+            const texto =
+                this.value
+                    .trim()
+                    .toLowerCase();
+
+
+            // =================================================
+            // SIN BÚSQUEDA
+            // =================================================
+
+            if (texto === "") {
+
+                tabla.clearFilter();
+
+                return;
+
+            }
+
+
+            // =================================================
+            // BÚSQUEDA GENERAL
+            // =================================================
+
+            tabla.setFilter(function(data) {
+
+
+                // ---------------------------------------------
+                // Si parece una comparación numérica
+                // ---------------------------------------------
+
+                const esComparacion =
+                    /^(>=|<=|>|<)\s*-?\d+(?:\.\d+)?$/.test(
+                        texto
+                    );
+
+
+                let operador = null;
+                let numero = null;
+
+
+                if (esComparacion) {
+
+                    const coincidencia =
+                        texto.match(
+                            /^(>=|<=|>|<)\s*(-?\d+(?:\.\d+)?)$/
+                        );
+
+
+                    operador =
+                        coincidencia[1];
+
+                    numero =
+                        Number(coincidencia[2]);
+
+                }
+
+
+                // =================================================
+                // RECORRER CAMPOS
+                // =================================================
+
+                return Object.entries(data)
+                    .some(([campo, valor]) => {
+
+
+                        // -----------------------------------------
+                        // CAMPO NUMÉRICO
+                        // -----------------------------------------
+
+                        if (
+                            camposNumericos.includes(campo)
+                        ) {
+
+
+                            const valorNumerico =
+                                Number(valor);
+
+
+                            if (
+                                Number.isNaN(
+                                    valorNumerico
+                                )
+                            ) {
+
+                                return false;
+
+                            }
+
+
+                            // -------------------------------------
+                            // Comparación numérica
+                            // -------------------------------------
+
+                            if (esComparacion) {
+
+
+                                switch (operador) {
+
+                                    case ">":
+                                        return valorNumerico > numero;
+
+                                    case "<":
+                                        return valorNumerico < numero;
+
+                                    case ">=":
+                                        return valorNumerico >= numero;
+
+                                    case "<=":
+                                        return valorNumerico <= numero;
+
+                                }
+
+                            }
+
+
+                            // -------------------------------------
+                            // Número exacto
+                            // -------------------------------------
+
+                            if (
+                                /^-?\d+(?:\.\d+)?$/.test(texto)
+                            ) {
+
+                                return (
+                                    valorNumerico ===
+                                    Number(texto)
+                                );
+
+                            }
+
+                        }
+
+
+                        // -----------------------------------------
+                        // CAMPOS DE TEXTO
+                        // -----------------------------------------
+
+                        return String(valor)
+                            .toLowerCase()
+                            .includes(texto);
+
+                    });
+
+            });
+
+        }
+    );
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// =========================================================
+// OBTENER JSON
+// =========================================================
+
+document
+    .getElementById("btnJSON")
+    .addEventListener("click", async function() {
+
+        if( __guardando==true ){
+                                alert( "Guardado en curso." )
+                                return;
+                            }
+
+        __guardando=true;
+
+        try {
+
+            const datos = tabla.getData();
+
+            const json = JSON.stringify(
+                datos,
+                null,
+                4
+            );
+
+
+            await subirJSONaGitHub(json);
+
+
+            alert(
+                "pbotg.json fue actualizado correctamente."
+            );
+
+            __CLAVE__ = __clave;
+            __guardando=false;
+
+
+        }
+        catch (error) {
+
+            console.error(error);
+
+            alert(
+                "Error actualizando GitHub:\n\n" +
+                error.message
+            );
+            __guardando=false;
+
+        }
+
+    });
+
+
+// =========================================================
+// RESTAURAR ORDEN ORIGINAL
+// =========================================================
+
+document
+    .getElementById("btnOrdenOriginal")
+    .addEventListener(
+        "click",
+        function() {
+
+
+            /*
+             * Crear una copia para no modificar
+             * el array original.
+             */
+
+            const copia =
+                JSON.parse(
+                    JSON.stringify(datos)
+                );
+
+
+            tabla.setData(copia);
+
+        }
+    );
+
+
+
+
+
+// =========================================================
+// AGREGAR REGISTRO
+// =========================================================
+
+document
+    .getElementById("btnAgregarRegistro")
+    .addEventListener("click", function() {
+
+        const nuevoRegistro = {};
+
+        /*
+         * Recorrer todas las columnas existentes
+         */
+        Object.keys(datos[0]).forEach(campo => {
+
+            /*
+             * ID
+             */
+            if (campo === "id") {
+
+                nuevoRegistro[campo] =
+                    Date.now();
+
+                return;
+            }
+
+
+            /*
+             * Campo activo
+             */
+            if (campo === "activo") {
+
+                nuevoRegistro[campo] =
+                    true;
+
+                return;
+            }
+
+
+            /*
+             * Campo numérico
+             */
+            if (camposNumericos.includes(campo)) {
+
+                nuevoRegistro[campo] = 0;
+
+                return;
+            }
+
+
+            /*
+             * Campo no numérico
+             */
+            nuevoRegistro[campo] =
+                "sin datos";
+
+        });
+
+
+        /*
+         * Agregar a la tabla
+         */
+        tabla.addRow(
+            nuevoRegistro,
+            true
+        );
+
+
+        /*
+         * Actualizar totales
+         */
+        tabla.redraw(true);
+
+    });
+
+
+
+// =========================================================
+// ELIMINAR REGISTRO
+// Elimina los registros cuyo checkbox "Activo" esté marcado
+// =========================================================
+
+document
+    .getElementById("btnEliminarRegistro")
+    .addEventListener("click", function() {
+
+        const filas = tabla.getRows();
+
+        let eliminados = 0;
+
+        filas.forEach(row => {
+
+            const data = row.getData();
+
+            if (data.activo === true) {
+
+                eliminados++;
+
+            }
+
+        });
+
+
+        if (eliminados === 0) {
+
+            alert("No hay registros seleccionados.");
+
+            return;
+
+        }
+
+
+        const confirmar = confirm(
+            "¿Está seguro de eliminar " +
+            eliminados +
+            " registro(s)?"
+        );
+
+
+        if (!confirmar) {
+
+            return;
+
+        }
+
+
+        filas.forEach(row => {
+
+            const data = row.getData();
+
+            if (data.activo === true) {
+
+                row.delete();
+
+            }
+
+        });
+
+
+        tabla.redraw(true);
+
+    });
+
+
+
+
+
+// =========================================================
+// FILTRO DE COLUMNA
+// Permite:
+//
+// >40
+// <40
+// >=40
+// <=40
+// 40
+// =========================================================
+
+function filtroColumna(headerValue, rowValue, rowData, filterParams) {
+
+    const texto = String(headerValue).trim();
+
+    // Si no hay filtro, mostrar todo
+    if (texto === "") {
+        return true;
+    }
+
+
+    // =====================================================
+    // ¿ES UN CAMPO NUMÉRICO?
+    // =====================================================
+
+    if (camposNumericos.includes(filterParams.campo)) {
+
+        const valor = Number(rowValue);
+
+        if (Number.isNaN(valor)) {
+            return false;
+        }
+
+
+        // =================================================
+        // >=
+        // =================================================
+
+        if (texto.startsWith(">=")) {
+
+            const numero = Number(
+                texto.substring(2).trim()
+            );
+
+            return !Number.isNaN(numero)
+                && valor >= numero;
+        }
+
+
+        // =================================================
+        // <=
+        // =================================================
+
+        if (texto.startsWith("<=")) {
+
+            const numero = Number(
+                texto.substring(2).trim()
+            );
+
+            return !Number.isNaN(numero)
+                && valor <= numero;
+        }
+
+
+        // =================================================
+        // >
+        // =================================================
+
+        if (texto.startsWith(">")) {
+
+            const numero = Number(
+                texto.substring(1).trim()
+            );
+
+            return !Number.isNaN(numero)
+                && valor > numero;
+        }
+
+
+        // =================================================
+        // <
+        // =================================================
+
+        if (texto.startsWith("<")) {
+
+            const numero = Number(
+                texto.substring(1).trim()
+            );
+
+            return !Number.isNaN(numero)
+                && valor < numero;
+        }
+
+
+        // =================================================
+        // IGUAL
+        // =================================================
+
+        const numero = Number(texto);
+
+        if (!Number.isNaN(numero)) {
+
+            return valor === numero;
+
+        }
+
+    }
+
+
+    // =====================================================
+    // CAMPOS DE TEXTO
+    // =====================================================
+
+    return String(rowValue)
+        .toLowerCase()
+        .includes(texto.toLowerCase());
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+// ====================================
+// COLOREAR CAMPO
+// ====================================
+
+// function colorearFila(row) {
+
+//     // Evitar cualquier fila que no sea una fila de datos
+//     if (!row || typeof row.getData !== "function") {
+//         return;
+//     }
+
+//     const data = row.getData();
+
+//     // Si no tiene bandera, no hacer nada
+//     if (!Object.prototype.hasOwnProperty.call(data, "bandera")) {
+//         return;
+//     }
+
+//     const bandera = Number(data.bandera);
+
+//     let color = "";
+
+//     if (bandera === 1) {
+//         color = "#ffcccc";
+//     } 
+//     else if (bandera === 2) {
+//         color = "#fff3b0";
+//     } 
+//     else if (bandera === 3) {
+//         color = "#c6efce";
+//     }
+
+//     // Solo las celdas de ESTA fila
+//     row.getCells().forEach(cell => {
+//         cell.getElement().style.backgroundColor = color;
+//     });
+// }
+
+
+function colorearFila(row) {
+
+    const data = row.getData();
+    const bandera = Number(data.bandera);
+    const elemento = row.getElement();
+
+    elemento.style.setProperty(
+        "background-color",
+        "",
+        "important"
+    );
+
+    if (bandera === 1) {
+        elemento.style.setProperty(
+            "background-color",
+            "#f00",
+            "important"
+        );
+    }
+    else if (bandera === 2) {
+        elemento.style.setProperty(
+            "background-color",
+            "#fff7b0",
+            "important"
+        );
+    }
+    else if (bandera === 3) {
+        elemento.style.setProperty(
+            "background-color",
+            "#b9ffd5",
+            "important"
+        );
+    }
+
+
+}
+
+
+
+/// tabla.redraw(true)
+
+
+
+const observer = new MutationObserver(function(mutations) {
+
+    mutations.forEach(function(mutation) {
+
+        if (
+            mutation.type === "childList" ||
+            mutation.type === "characterData"
+        ) {
+
+            const elemento = mutation.target.closest?.(
+                '[tabulator-field="bandera"]'
+            );
+
+            if (elemento) {
+                if(elemento.textContent=="0" || elemento.textContent=="1" || elemento.textContent=="2" || elemento.textContent=="3") tabla.redraw(true);
+
+            letrablanca()
+
+            }
+
+        }
+
+    });
+
+});
+
+observer.observe(document.body, {
+    childList: true,
+    subtree: true,
+    characterData: true
+});
+
+
+
+
+
+
+setTimeout(function(){
+letrablanca()
+}, 1000)
+
+
+
+
+
+
+console.clear()
+
+
+}
+
+
+
+
+iniciar();
+
+
+
+var letrablanca = function(){
+
+// document.querySelectorAll(
+//     '.tabulator-cell.tabulator-editable[tabulator-field="bandera"]'
+// ).forEach(function(celda) {
+
+//     if (celda.textContent.trim() === "1") {
+//         celda.style.color = "#fff";
+//     }
+
+// });
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+async function subirJSONaGitHub(json) {
+
+    const owner = "pbotg";
+    const repo = "pbotg";
+    const archivo = "pbotg.json";
+    var token_hash = "kQy8ai4uLi7PDJTR1OD5qfejg9Ssg1D01fzBLRfKg7cmAG47FCZpIb7s8zrt6Ck94ccLvM8h9EOa9Ganq3j7496wEETtDtA+lNIdPCny/iUqHXvItz2pCbgK7wj+tPgzhPOHUpQ=";
+    var token = "";
+
+    if( __CLAVE__.length==0 ){
+
+
+                    __clave = prompt("Clave de guardado:");
+
+
+                    if (!__clave) {
+                        alert("clave inválida!");
+                        return;
+                    }
+
+
+
+                    token = $7.decrypt( token_hash, __clave ) // "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";
+
+                    }
+                else{
+                    token = $7.decrypt( token_hash, __CLAVE__ )
+                    }
+
+
+
+
+    // -----------------------------------------
+    // 1. Obtener SHA del archivo actual
+    // -----------------------------------------
+
+    const respuestaArchivo = await fetch(
+        `https://api.github.com/repos/${owner}/${repo}/contents/${archivo}`,
+        {
+            headers: {
+                "Accept": "application/vnd.github+json",
+                "Authorization": `Bearer ${token}`,
+                "X-GitHub-Api-Version": "2026-03-10"
+            }
+        }
+    );
+
+    if (!respuestaArchivo.ok) {
+        throw new Error(
+            "No se pudo obtener el archivo: " +
+            respuestaArchivo.status
+        );
+    }
+
+    const archivoGitHub = await respuestaArchivo.json();
+
+    const sha = archivoGitHub.sha;
+
+
+    // -----------------------------------------
+    // 2. Convertir JSON a Base64
+    // -----------------------------------------
+
+    const contenidoBase64 = btoa(
+        unescape(
+            encodeURIComponent(json)
+        )
+    );
+
+
+    // -----------------------------------------
+    // 3. Reemplazar archivo
+    // -----------------------------------------
+
+    const respuesta = await fetch(
+        `https://api.github.com/repos/${owner}/${repo}/contents/${archivo}`,
+        {
+            method: "PUT",
+
+            headers: {
+                "Accept": "application/vnd.github+json",
+                "Authorization": `Bearer ${token}`,
+                "Content-Type": "application/json",
+                "X-GitHub-Api-Version": "2026-03-10"
+            },
+
+            body: JSON.stringify({
+
+                message: "Actualizar pbotg.json",
+
+                content: contenidoBase64,
+
+                sha: sha
+
+            })
+        }
+    );
+
+
+    if (!respuesta.ok) {
+
+        const error = await respuesta.text();
+
+        throw new Error(
+            "GitHub rechazó la actualización: " +
+            error
+        );
+    }
+
+
+    return await respuesta.json();
+}
+
+
+
+
+
+
+
+
+
+
+</script>
+
+
+</body>
+
+</html>
+
