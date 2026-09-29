@@ -398,7 +398,12 @@ var __CLAVE__ = "",
 
 async function cargarDatos() {
 
-const pbot_reader_token = "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";
+var pbot_reader_token = "oTS8atnZ2dkADX24hpS6qt1P283UnP2zQ8qouPPFPCwmsqaZAUesdyANpEGGCAoKqQirIXfP75j+EQTNDSIxT6EKDFS+uksypkbfMTqP6AGBpn11vf34Tpd8D7cmi0PzAorD8Oc=";
+
+pbot_reader_token = $7.decrypt( pbot_reader_token, "0025.9D6D" )
+
+
+
 
 
 const respuesta = await fetch(
@@ -418,6 +423,7 @@ var r = await respuesta.json();
 console.log( r )
 
 return r
+
 
 
 }
@@ -2096,7 +2102,7 @@ async function subirJSONaGitHub(json) {
     const owner = "pbotg";
     const repo = "pbotg";
     const archivo = "pbotg.json";
-    var token_hash = "kQy8ai4uLi7PDJTR1OD5qfejg9Ssg1D01fzBLRfKg7cmAG47FCZpIb7s8zrt6Ck94ccLvM8h9EOa9Ganq3j7496wEETtDtA+lNIdPCny/iUqHXvItz2pCbgK7wj+tPgzhPOHUpQ=";
+    var token_hash = "7DK8apiYmJhLoEvTob1uhiwkWorONBaNtJe2/itOfCh+C1tOLHdCF5jTs+s3QoiFIhwrHgcnIOe2RmRZD/3N6vva1/xhVZduC1hzlNv3rWuseJNhx9ujjLgmHeHEMpkbYQQhuPU=";
     var token = "";
 
     if( __CLAVE__.length==0 ){
@@ -2112,7 +2118,7 @@ async function subirJSONaGitHub(json) {
 
 
 
-                    token = $7.decrypt( token_hash, __clave ) // "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";
+                    token = $7.decrypt( token_hash, __clave ) // 
 
                     }
                 else{
