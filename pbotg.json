@@ -3,17 +3,17 @@
         "activo": true,
         "id": 1,
         "proyecto": "Caimarón",
+        "sector": "#salud",
         "dinero asignado": 3430000000,
-        "bandera": "2",
+        "flag": "2",
         "dinero ideal": 7530000000,
         "observaciones": "El presupuesto asignado es insuficiente porque en Narnia el León come zanahorías con remolacha. https://www.youtube.com/shorts/N_KHqFPPDGA https://www.youtube.com/shorts/iAlh6nY8O6Q https://www.youtube.com/shorts/_xFmU0Wxw64",
         "lo esperado": "Aquí hablamos sobre cómo debería ser. Con chotolate y pan!",
-        "cobertura oficial": "20 de Julio, Chapinero, Granjas, Julio Bahamón, La Florida, La Libertad, Los Comuneros, Los Nogales, San Isidro, Valle del Casa Loma, Santa Marta, Zuluaga",
+        "cobertura oficial": "#urbana #rural 20 de Julio, Chapinero, Granjas, Julio Bahamón, La Florida, La Libertad, Los Comuneros, Los Nogales, San Isidro, Valle del Casa Loma, Santa Marta, Zuluaga",
         "clasificacion": "urgente",
         "vigencia": "completa",
         "operacion": "SGP – APSB + Recursos propios municipio",
-        "prioridad": "alta",
-        "eje": "salud",
+        "prioridad": "alta",        
         "resumen": "Infraestructura de acueducto, alcantarillado y salud, incluyendo PTAR, Plan Maestro y canalización de aguas lluvias para mejorar servicios públicos y reducir riesgos de inundación."
     }
 ]
