@@ -9,8 +9,8 @@
     "dinero ideal": "3430000000",
     "lo esperado": "",
     "cobertura oficial": "20 de Julio, Chapinero, Granjas, Julio Bahamón, La Florida, La Libertad, Los Comuneros, Los Nogales, San Isidro, Valle del Casa Loma, Santa Marta, Zuluaga",
-    "clasificacion": "-Urbana",
-    "vigencia": "-Corta",
+    "clasificacion": ":Urbana",
+    "vigencia": ":Corta",
     "prioridad": "Alta",
     "operacion": "SGP – APSB + Recursos propios municipio"
   },
@@ -39,8 +39,8 @@
     "dinero ideal": "3220000000",
     "lo esperado": "",
     "cobertura oficial": "El Carmen, El Jardín, El Obrero, El Rosario, Juan Pablo I, Juan Pablo II, La Gaitana, Las Américas, Nueva Holanda, Nuevo Horizonte, Rodrigo Lara Bonilla, San Vicente de Paul, Santa Teresa",
-    "clasificacion": "-Urbana",
-    "vigencia": "-Corta",
+    "clasificacion": ":Urbana",
+    "vigencia": ":Corta",
     "prioridad": "Alta",
     "operacion": "SGP Propósito General + Recursos propios municipio"
   },
@@ -54,7 +54,7 @@
     "dinero ideal": "3980000000",
     "lo esperado": "",
     "cobertura oficial": "Zona Urbana",
-    "clasificacion": "-Urbana",
+    "clasificacion": ":Urbana",
     "vigencia": "Corta - Mediana - Larga",
     "prioridad": "Alta",
     "operacion": "SGP APSB + Regalías directas municipio + Recursos propios"
@@ -69,8 +69,8 @@
     "dinero ideal": "1380000000",
     "lo esperado": "",
     "cobertura oficial": "Zona Urbana",
-    "clasificacion": "-Urbana",
-    "vigencia": "-Corta",
+    "clasificacion": ":Urbana",
+    "vigencia": ":Corta",
     "prioridad": "Alta",
     "operacion": "Recursos propios municipio + SGP Propósito General"
   },
@@ -84,7 +84,7 @@
     "dinero ideal": "5520000000",
     "lo esperado": "",
     "cobertura oficial": "San Antonio del Pescado, El Mesón, Santa Marta, Majo, La Jagua, El Paraíso, El Recreo, Zuluaga",
-    "clasificacion": "-Rural",
+    "clasificacion": ":Rural",
     "vigencia": "Corta - Mediana - Larga",
     "prioridad": "Alta",
     "operacion": "SGP APSB + OCAD Departamental Huila + Gobernación del Huila"
@@ -99,8 +99,8 @@
     "dinero ideal": "1874500000",
     "lo esperado": "",
     "cobertura oficial": "San Antonio del Pescado, Majo, El Paraíso, San Gerardo, Zuluaga, 20 de Julio, Chapinero, Granjas, Julio Bahamón, La Florida, La Libertad, Los Comuneros, Los Nogales, San Isidro",
-    "clasificacion": "-Urbana",
-    "vigencia": "-Corta",
+    "clasificacion": ":Urbana",
+    "vigencia": ":Corta",
     "prioridad": "Alta",
     "operacion": "SGP APSB + Recursos propios municipio"
   },
@@ -114,8 +114,8 @@
     "dinero ideal": "920000000",
     "lo esperado": "",
     "cobertura oficial": "San Antonio del Pescado, El Mesón, Santa Marta, Majo, La Jagua, El Paraíso, El Recreo, Zuluaga / Zona Urbana",
-    "clasificacion": "-General",
-    "vigencia": "-Corta",
+    "clasificacion": ":General",
+    "vigencia": ":Corta",
     "prioridad": "Alta",
     "operacion": "SGP Salud + Ministerio de Salud y Protección Social"
   },
@@ -129,8 +129,8 @@
     "dinero ideal": "230000000",
     "lo esperado": "",
     "cobertura oficial": "Santa Marta",
-    "clasificacion": "-General",
-    "vigencia": "-Corta",
+    "clasificacion": ":General",
+    "vigencia": ":Corta",
     "prioridad": "Alta",
     "operacion": "Recursos propios municipio + CAM Huila"
   },
@@ -144,8 +144,8 @@
     "dinero ideal": "460000000",
     "lo esperado": "",
     "cobertura oficial": "Zona Rural",
-    "clasificacion": "-General",
-    "vigencia": "-Corta",
+    "clasificacion": ":General",
+    "vigencia": ":Corta",
     "prioridad": "Alta",
     "operacion": "SGP APSB + Gobernación del Huila"
   },
@@ -159,7 +159,7 @@
     "dinero ideal": "9100000000",
     "lo esperado": "",
     "cobertura oficial": "El Mesón, Santa Marta, La Jagua, El Paraíso, El Recreo, Zuluaga / Sector 2 Centro, El Progreso, Las Mercedes, Méndez, Provivienda, Nazareth, Orquídea Real, Pío XII, Primavera, Riveras de Garzón, Samaritanos, San Cayetano, San Lorenzo, Santa Clara, Santa Lucía, Termitas, Villa Karol, Villa Laura, Villa Sol, Fontanar",
-    "clasificacion": "-General",
+    "clasificacion": ":General",
     "vigencia": "Corta - Mediana",
     "prioridad": "Alta",
     "operacion": "SGP Propósito General + Regalías directas + Ministerio de Transporte / INVIAS"
@@ -174,7 +174,7 @@
     "dinero ideal": "2070000000",
     "lo esperado": "",
     "cobertura oficial": "Zona Rural / Zona Urbana",
-    "clasificacion": "-Rural",
+    "clasificacion": ":Rural",
     "vigencia": "Corta - Mediana",
     "prioridad": "Alta",
     "operacion": "SGP Propósito General + Gobernación del Huila"
@@ -189,7 +189,7 @@
     "dinero ideal": "1725000000",
     "lo esperado": "",
     "cobertura oficial": "Zona Rural / Zona Urbana",
-    "clasificacion": "-Rural",
+    "clasificacion": ":Rural",
     "vigencia": "Corta - Mediana",
     "prioridad": "Alta",
     "operacion": "SGP Propósito General + Recursos propios municipio"
@@ -204,7 +204,7 @@
     "dinero ideal": "2530000000",
     "lo esperado": "",
     "cobertura oficial": "Zona Rural / Zona Urbana",
-    "clasificacion": "-Rural",
+    "clasificacion": ":Rural",
     "vigencia": "Corta - Mediana",
     "prioridad": "Alta",
     "operacion": "Regalías directas municipio + Gobernación del Huila"
@@ -219,7 +219,7 @@
     "dinero ideal": "1070000000",
     "lo esperado": "",
     "cobertura oficial": "Zona Rural / Zona Urbana",
-    "clasificacion": "-Rural",
+    "clasificacion": ":Rural",
     "vigencia": "Corta - Mediana",
     "prioridad": "Alta",
     "operacion": "SGP Propósito General + Gobernación del Huila"
@@ -234,7 +234,7 @@
     "dinero ideal": "340000000",
     "lo esperado": "",
     "cobertura oficial": "Zona Rural / Zona Urbana",
-    "clasificacion": "-Rural",
+    "clasificacion": ":Rural",
     "vigencia": "Corta - Mediana",
     "prioridad": "Alta",
     "operacion": "Regalías directas municipio + Gobernación del Huila"
@@ -249,7 +249,7 @@
     "dinero ideal": "1380000000",
     "lo esperado": "",
     "cobertura oficial": "Zona Rural – Santa Marta",
-    "clasificacion": "-Rural",
+    "clasificacion": ":Rural",
     "vigencia": "Corta - Mediana",
     "prioridad": "Alta",
     "operacion": "Regalías directas municipio"
@@ -264,7 +264,7 @@
     "dinero ideal": "1150000000",
     "lo esperado": "",
     "cobertura oficial": "Zona Rural",
-    "clasificacion": "-Rural",
+    "clasificacion": ":Rural",
     "vigencia": "Corta - Mediana - Larga",
     "prioridad": "Alta",
     "operacion": "SGP Propósito General + INVIAS + Gobernación del Huila"
@@ -279,7 +279,7 @@
     "dinero ideal": "1035000000",
     "lo esperado": "",
     "cobertura oficial": "Zona Urbana",
-    "clasificacion": "-Urbana",
+    "clasificacion": ":Urbana",
     "vigencia": "Corta - Mediana",
     "prioridad": "Alta",
     "operacion": "SGP Propósito General + Recursos propios municipio"
@@ -294,7 +294,7 @@
     "dinero ideal": "920000000",
     "lo esperado": "",
     "cobertura oficial": "Zona Urbana",
-    "clasificacion": "-Urbana",
+    "clasificacion": ":Urbana",
     "vigencia": "Corta - Mediana",
     "prioridad": "Alta",
     "operacion": "SGP Propósito General + Fondo Desarrollo Urbano"
@@ -309,7 +309,7 @@
     "dinero ideal": "690000000",
     "lo esperado": "",
     "cobertura oficial": "Zona Rural / Zona Urbana",
-    "clasificacion": "-General",
+    "clasificacion": ":General",
     "vigencia": "Corta - Mediana",
     "prioridad": "Alta",
     "operacion": "SGP Propósito General + Recursos propios municipio"
@@ -324,8 +324,8 @@
     "dinero ideal": "490000000",
     "lo esperado": "",
     "cobertura oficial": "Zona Rural / Zona Urbana",
-    "clasificacion": "-General",
-    "vigencia": "-Corta",
+    "clasificacion": ":General",
+    "vigencia": ":Corta",
     "prioridad": "Alta",
     "operacion": "SGP Propósito General + Recursos propios municipio"
   },
@@ -339,7 +339,7 @@
     "dinero ideal": "2775000000",
     "lo esperado": "",
     "cobertura oficial": "Zona Rural / Zona Urbana",
-    "clasificacion": "-General",
+    "clasificacion": ":General",
     "vigencia": "Corta - Mediana - Larga",
     "prioridad": "Alta",
     "operacion": "SGP Propósito General + Recursos propios municipio + Gobernación del Huila"
@@ -369,7 +369,7 @@
     "dinero ideal": "63250000",
     "lo esperado": "",
     "cobertura oficial": "Zona Rural / Zona Urbana",
-    "clasificacion": "-General",
+    "clasificacion": ":General",
     "vigencia": "Corta - Mediana - Larga",
     "prioridad": "Alta",
     "operacion": "Gobernación del Huila + Ministerio del Interior + Fondo de Adaptación"
@@ -384,7 +384,7 @@
     "dinero ideal": "40250000",
     "lo esperado": "",
     "cobertura oficial": "Zona Rural / Zona Urbana",
-    "clasificacion": "-General",
+    "clasificacion": ":General",
     "vigencia": "Corta - Mediana",
     "prioridad": "Alta",
     "operacion": "Recursos propios municipio + Ministerio de Ambiente"
@@ -399,7 +399,7 @@
     "dinero ideal": "400000000",
     "lo esperado": "",
     "cobertura oficial": "Zona Rural",
-    "clasificacion": "-General",
+    "clasificacion": ":General",
     "vigencia": "Corta - Mediana - Larga",
     "prioridad": "Alta",
     "operacion": "Fondo Nacional de Calamidades + Recursos propios municipio"
@@ -414,7 +414,7 @@
     "dinero ideal": "138289077",
     "lo esperado": "",
     "cobertura oficial": "Zona Rural",
-    "clasificacion": "-Urbana",
+    "clasificacion": ":Urbana",
     "vigencia": "Corta - Mediana",
     "prioridad": "Alta",
     "operacion": "Fondo Nacional de Calamidades + Recursos propios municipio"
@@ -429,7 +429,7 @@
     "dinero ideal": "40250000",
     "lo esperado": "",
     "cobertura oficial": "Vereda Claros",
-    "clasificacion": "-General",
+    "clasificacion": ":General",
     "vigencia": "Corta - Mediana - Larga",
     "prioridad": "Alta",
     "operacion": "CAM Huila + SGP Propósito General"
@@ -444,7 +444,7 @@
     "dinero ideal": "34500000",
     "lo esperado": "",
     "cobertura oficial": "Zona Rural",
-    "clasificacion": "-Rural",
+    "clasificacion": ":Rural",
     "vigencia": "Mediana - Larga",
     "prioridad": "Alta",
     "operacion": "Ministerio del Interior + Gobernación del Huila + Fondo de Adaptación"
@@ -459,7 +459,7 @@
     "dinero ideal": "51750000",
     "lo esperado": "",
     "cobertura oficial": "Zona Rural",
-    "clasificacion": "-Rural",
+    "clasificacion": ":Rural",
     "vigencia": "Corta - Mediana",
     "prioridad": "Alta",
     "operacion": "CAM Huila + Gobernación del Huila + Ministerio de Ambiente"
@@ -474,7 +474,7 @@
     "dinero ideal": "46000000",
     "lo esperado": "",
     "cobertura oficial": "Zona Rural",
-    "clasificacion": "-Rural",
+    "clasificacion": ":Rural",
     "vigencia": "Corta - Mediana",
     "prioridad": "Alta",
     "operacion": "EMGESA / Enel + Ministerio de Transporte + Gobernación del Huila"
@@ -489,7 +489,7 @@
     "dinero ideal": "250000000",
     "lo esperado": "",
     "cobertura oficial": "Zona Rural",
-    "clasificacion": "-Rural",
+    "clasificacion": ":Rural",
     "vigencia": "Corta - Mediana - Larga",
     "prioridad": "Alta",
     "operacion": "CAM Huila + Ministerio de Ambiente + Gobernación del Huila"
@@ -504,7 +504,7 @@
     "dinero ideal": "40250000",
     "lo esperado": "",
     "cobertura oficial": "Periferia Urbana",
-    "clasificacion": "-Urbana",
+    "clasificacion": ":Urbana",
     "vigencia": "Corta - Mediana",
     "prioridad": "Alta",
     "operacion": "CAM Huila + SGP Propósito General"
@@ -519,7 +519,7 @@
     "dinero ideal": "100000000",
     "lo esperado": "",
     "cobertura oficial": "Zona Rural / Zona Urbana",
-    "clasificacion": "-Rural",
+    "clasificacion": ":Rural",
     "vigencia": "Corta - Mediana",
     "prioridad": "Alta",
     "operacion": "Regalías OCAD Departamental + Ministerio de Ambiente"
@@ -534,7 +534,7 @@
     "dinero ideal": "32200000",
     "lo esperado": "",
     "cobertura oficial": "Zona Urbana",
-    "clasificacion": "-General",
+    "clasificacion": ":General",
     "vigencia": "Corta - Mediana",
     "prioridad": "Alta",
     "operacion": "Ministerio de Minas y Energía + IPSE + Gobernación del Huila"
@@ -549,7 +549,7 @@
     "dinero ideal": "40250000",
     "lo esperado": "",
     "cobertura oficial": "Zona Rural / Zona Urbana",
-    "clasificacion": "-General",
+    "clasificacion": ":General",
     "vigencia": "Corta - Mediana - Larga",
     "prioridad": "Alta",
     "operacion": "SGP Propósito General + UNGRD"
@@ -564,7 +564,7 @@
     "dinero ideal": "34500000",
     "lo esperado": "",
     "cobertura oficial": "La Jagua",
-    "clasificacion": "-Rural",
+    "clasificacion": ":Rural",
     "vigencia": "Corta - Mediana",
     "prioridad": "Alta",
     "operacion": "SGP Propósito General + Ministerio de Vivienda"
@@ -579,7 +579,7 @@
     "dinero ideal": "40250000",
     "lo esperado": "",
     "cobertura oficial": "Zona Rural / Zona Urbana",
-    "clasificacion": "-General",
+    "clasificacion": ":General",
     "vigencia": "Corta - Mediana",
     "prioridad": "Alta",
     "operacion": "SGP Propósito General + Servicio Geológico Colombiano (SGC)"
@@ -594,8 +594,8 @@
     "dinero ideal": "32200000",
     "lo esperado": "",
     "cobertura oficial": "Zona Rural / Zona Urbana",
-    "clasificacion": "-General",
-    "vigencia": "-Corta",
+    "clasificacion": ":General",
+    "vigencia": ":Corta",
     "prioridad": "Alta",
     "operacion": "SGP Propósito General + CAM Huila"
   },
@@ -609,7 +609,7 @@
     "dinero ideal": "25300000",
     "lo esperado": "",
     "cobertura oficial": "Zona Rural / Zona Urbana",
-    "clasificacion": "-General",
+    "clasificacion": ":General",
     "vigencia": "Corta - Mediana - Larga",
     "prioridad": "Alta",
     "operacion": "CAM Huila + SGP Propósito General"
@@ -624,8 +624,8 @@
     "dinero ideal": "250000000",
     "lo esperado": "",
     "cobertura oficial": "Zona Rural / Zona Urbana",
-    "clasificacion": "-General",
-    "vigencia": "-Corta",
+    "clasificacion": ":General",
+    "vigencia": ":Corta",
     "prioridad": "Alta",
     "operacion": "Fondo Nacional de Calamidades + Ministerio de Vivienda + UNGRD"
   },
@@ -639,7 +639,7 @@
     "dinero ideal": "25300000",
     "lo esperado": "",
     "cobertura oficial": "Zona Rural / Zona Urbana",
-    "clasificacion": "-General",
+    "clasificacion": ":General",
     "vigencia": "Corta - Mediana - Larga",
     "prioridad": "Alta",
     "operacion": "CAM Huila + SGP Propósito General"
@@ -654,7 +654,7 @@
     "dinero ideal": "25300000",
     "lo esperado": "",
     "cobertura oficial": "Zona Rural / Zona Urbana",
-    "clasificacion": "-General",
+    "clasificacion": ":General",
     "vigencia": "Corta - Mediana",
     "prioridad": "Alta",
     "operacion": "UNGRD + Gobernación del Huila"
@@ -669,7 +669,7 @@
     "dinero ideal": "70000000",
     "lo esperado": "",
     "cobertura oficial": "Zona Rural / Zona Urbana",
-    "clasificacion": "-General",
+    "clasificacion": ":General",
     "vigencia": "Corta - Mediana - Larga",
     "prioridad": "Alta",
     "operacion": "CAM Huila + SGP Propósito General"
@@ -684,7 +684,7 @@
     "dinero ideal": "50000000",
     "lo esperado": "",
     "cobertura oficial": "Zona Rural / Zona Urbana",
-    "clasificacion": "-General",
+    "clasificacion": ":General",
     "vigencia": "Corta - Mediana",
     "prioridad": "Alta",
     "operacion": "UNGRD + SGP Propósito General"
@@ -699,8 +699,8 @@
     "dinero ideal": "2070000000",
     "lo esperado": "",
     "cobertura oficial": "Administrativa",
-    "clasificacion": "-General",
-    "vigencia": "-Corta",
+    "clasificacion": ":General",
+    "vigencia": ":Corta",
     "prioridad": "Alta",
     "operacion": "Recursos propios municipio"
   },
@@ -713,9 +713,9 @@
     "flag": "0",
     "dinero ideal": "1345500000",
     "lo esperado": "",
-    "cobertura oficial": "-Urbana",
-    "clasificacion": "-General",
-    "vigencia": "-Corta",
+    "cobertura oficial": ":Urbana",
+    "clasificacion": ":General",
+    "vigencia": ":Corta",
     "prioridad": "Alta",
     "operacion": "Recursos propios municipio + SGP Propósito General"
   },
@@ -729,9 +729,9 @@
     "dinero ideal": "552000000",
     "lo esperado": "",
     "cobertura oficial": "Nazareth, Orquídea Real, Pío XII, primavera, Riveras de Garzón, Samaritanos, San Cayetano, San Lorenzo, Santa Clara, Santa Lucía, Termitas, Villa Karoll, Villa Laura, Villa Sol, Fontanar",
-    "clasificacion": "-General",
-    "vigencia": "-Corta",
-    "prioridad": "-Media",
+    "clasificacion": ":General",
+    "vigencia": ":Corta",
+    "prioridad": ":Media",
     "operacion": "Regalías directas municipio + Sobretasa a la gasolina + SGP Propósito General"
   },
   {
@@ -744,9 +744,9 @@
     "dinero ideal": "1250000000",
     "lo esperado": "",
     "cobertura oficial": "San Antonio del Pescado, El Descanso, Caguancito, El Mesón, Santa Marta, Majo, El Paraíso, El Recreo, Zuluaga / Área urbana",
-    "clasificacion": "-Rural",
+    "clasificacion": ":Rural",
     "vigencia": "Corta - Mediana",
-    "prioridad": "-Media",
+    "prioridad": ":Media",
     "operacion": "Promigas / Gas Natural S.A. + Regalías directas + Ministerio de Minas y Energía"
   },
   {
@@ -759,9 +759,9 @@
     "dinero ideal": "230000000",
     "lo esperado": "",
     "cobertura oficial": "Zona Rural / Zona Urbana",
-    "clasificacion": "-General",
-    "vigencia": "-Corta",
-    "prioridad": "-Media",
+    "clasificacion": ":General",
+    "vigencia": ":Corta",
+    "prioridad": ":Media",
     "operacion": "Recursos propios municipio + Ministerio de Ambiente"
   },
   {
@@ -774,9 +774,9 @@
     "dinero ideal": "172500000",
     "lo esperado": "",
     "cobertura oficial": "Zona Rural",
-    "clasificacion": "-General",
+    "clasificacion": ":General",
     "vigencia": "Corta - Mediana - Larga",
-    "prioridad": "-Media",
+    "prioridad": ":Media",
     "operacion": "Regalías directas municipio + Gobernación del Huila"
   },
   {
@@ -791,7 +791,7 @@
     "cobertura oficial": "Zona Rural Zona Urbana",
     "clasificacion": "Urbana - Rural",
     "vigencia": "Corta - Mediana",
-    "prioridad": "-Media",
+    "prioridad": ":Media",
     "operacion": "Ministerio de Cultura + Gobernación + Fondo Desarrollo Urbano + Recursos propios"
   },
   {
@@ -804,9 +804,9 @@
     "dinero ideal": "402500000",
     "lo esperado": "",
     "cobertura oficial": "Zona Rural Zona Urbana",
-    "clasificacion": "-Rural",
-    "vigencia": "-Corta",
-    "prioridad": "-Media",
+    "clasificacion": ":Rural",
+    "vigencia": ":Corta",
+    "prioridad": ":Media",
     "operacion": "SGP APSB + CAM Huila + Gobernación del Huila"
   },
   {
@@ -819,9 +819,9 @@
     "dinero ideal": "287500000",
     "lo esperado": "",
     "cobertura oficial": "Zona Rural Zona Urbana",
-    "clasificacion": "-General",
+    "clasificacion": ":General",
     "vigencia": "Corta - Mediana",
-    "prioridad": "-Media",
+    "prioridad": ":Media",
     "operacion": "Recursos propios municipio + Ministerio de Ambiente (Resolución 472/2017)"
   },
   {
@@ -834,9 +834,9 @@
     "dinero ideal": "$410000000",
     "lo esperado": "",
     "cobertura oficial": "Zona Urbana",
-    "clasificacion": "-Urbana",
+    "clasificacion": ":Urbana",
     "vigencia": "Corta - Mediana",
-    "prioridad": "-Media",
+    "prioridad": ":Media",
     "operacion": "Recursos propios municipio y privado"
   },
   {
@@ -849,9 +849,9 @@
     "dinero ideal": "690000000",
     "lo esperado": "",
     "cobertura oficial": "El Mesón, Santa Marta, La Jagua, Vereda Claros, El Carmen, El Jardín, El Obrero, El Rosario, Juan Pablo I, Juan Pablo II, La Gaitana, Las Américas, Nueva Holanda, Nuevo Horizonte, Rodrigo Lara Bonilla, San Vicente de Paul, Santa Teresa",
-    "clasificacion": "-Urbana",
+    "clasificacion": ":Urbana",
     "vigencia": "Corta - Mediana",
-    "prioridad": "-Media",
+    "prioridad": ":Media",
     "operacion": "Ministerio de Vivienda VIS + Regalías directas + SGP Propósito General + Gobernación"
   },
   {
@@ -864,9 +864,9 @@
     "dinero ideal": "782000000",
     "lo esperado": "",
     "cobertura oficial": "Zona Rural / Zona Urbana",
-    "clasificacion": "-Urbana",
+    "clasificacion": ":Urbana",
     "vigencia": "Corta - Mediana - Larga",
-    "prioridad": "-Media",
+    "prioridad": ":Media",
     "operacion": "Ministerio de Vivienda VIS + Regalías directas + Gobernación del Huila"
   },
   {
@@ -879,9 +879,9 @@
     "dinero ideal": "402500000",
     "lo esperado": "",
     "cobertura oficial": "Zona Rural / Zona Urbana",
-    "clasificacion": "-Urbana",
+    "clasificacion": ":Urbana",
     "vigencia": "Corta - Mediana",
-    "prioridad": "-Media",
+    "prioridad": ":Media",
     "operacion": "Fondo Nacional de Calamidades + Ministerio de Vivienda + Gobernación del Huila"
   },
   {
@@ -894,9 +894,9 @@
     "dinero ideal": "92000000",
     "lo esperado": "",
     "cobertura oficial": "Zuluaga",
-    "clasificacion": "-Urbana",
-    "vigencia": "-Corta",
-    "prioridad": "-Media",
+    "clasificacion": ":Urbana",
+    "vigencia": ":Corta",
+    "prioridad": ":Media",
     "operacion": "Recursos propios municipio + IGAC"
   },
   {
@@ -909,9 +909,9 @@
     "dinero ideal": "115000000",
     "lo esperado": "",
     "cobertura oficial": "Zona Urbana",
-    "clasificacion": "-Urbana",
-    "vigencia": "-Corta",
-    "prioridad": "-Media",
+    "clasificacion": ":Urbana",
+    "vigencia": ":Corta",
+    "prioridad": ":Media",
     "operacion": "Recursos propios municipio + DNP"
   },
   {
@@ -924,9 +924,9 @@
     "dinero ideal": "172500000",
     "lo esperado": "",
     "cobertura oficial": "Zona Rural / Zona Urbana",
-    "clasificacion": "-Urbana",
+    "clasificacion": ":Urbana",
     "vigencia": "Mediana - Larga",
-    "prioridad": "-Media",
+    "prioridad": ":Media",
     "operacion": "Ministerio de Vivienda – Programa de Mejoramiento + Gobernación + Recursos propios"
   },
   {
@@ -939,9 +939,9 @@
     "dinero ideal": "467500000",
     "lo esperado": "",
     "cobertura oficial": "Zona Rural / Zona Urbana",
-    "clasificacion": "-General",
+    "clasificacion": ":General",
     "vigencia": "Corta - Mediana",
-    "prioridad": "-Media",
+    "prioridad": ":Media",
     "operacion": "SGP Deporte + Ministerio del Deporte + Gobernación del Huila"
   },
   {
@@ -954,9 +954,9 @@
     "dinero ideal": "402500000",
     "lo esperado": "",
     "cobertura oficial": "San Antonio del Pescado, El Mesón, Santa Marta, La Jagua, El Paraíso / 20 de Julio, Chapinero, Granjas, Julio Bahamón, La Florida, La Libertad, Los Comuneros, Los Nogales, San Isidro, Valle del Casa Loma",
-    "clasificacion": "-General",
+    "clasificacion": ":General",
     "vigencia": "Corta - Mediana",
-    "prioridad": "-Media",
+    "prioridad": ":Media",
     "operacion": "SGP Deporte + Ministerio del Deporte + Gobernación del Huila"
   },
   {
@@ -969,9 +969,9 @@
     "dinero ideal": "100000000",
     "lo esperado": "",
     "cobertura oficial": "San Antonio del Pescado, El Mesón, El Paraíso / Área urbana",
-    "clasificacion": "-General",
-    "vigencia": "-Corta",
-    "prioridad": "-Media",
+    "clasificacion": ":General",
+    "vigencia": ":Corta",
+    "prioridad": ":Media",
     "operacion": "SGP Propósito General + Recursos propios municipio"
   },
   {
@@ -984,9 +984,9 @@
     "dinero ideal": "50000000",
     "lo esperado": "",
     "cobertura oficial": "Zona Rural / Zona Urbana",
-    "clasificacion": "-General",
+    "clasificacion": ":General",
     "vigencia": "Corta - Mediana",
-    "prioridad": "-Media",
+    "prioridad": ":Media",
     "operacion": "SGP Deporte + Recursos propios municipio"
   },
   {
@@ -999,9 +999,9 @@
     "dinero ideal": "57500000",
     "lo esperado": "",
     "cobertura oficial": "Zona Urbana",
-    "clasificacion": "-Urbana",
+    "clasificacion": ":Urbana",
     "vigencia": "Corta - Mediana",
-    "prioridad": "-Media",
+    "prioridad": ":Media",
     "operacion": "Recursos propios municipio + Gobernación del Huila"
   },
   {
@@ -1014,9 +1014,9 @@
     "dinero ideal": "50000000",
     "lo esperado": "",
     "cobertura oficial": "Zona Rural / Zona Urbana",
-    "clasificacion": "-General",
+    "clasificacion": ":General",
     "vigencia": "Corta - Mediana - Larga",
-    "prioridad": "-Media",
+    "prioridad": ":Media",
     "operacion": "SGP Deporte + Recursos propios municipio"
   },
   {
@@ -1029,9 +1029,9 @@
     "dinero ideal": "92000000",
     "lo esperado": "",
     "cobertura oficial": "Zona Rural / Zona Urbana",
-    "clasificacion": "-General",
+    "clasificacion": ":General",
     "vigencia": "Corta - Mediana",
-    "prioridad": "-Media",
+    "prioridad": ":Media",
     "operacion": "SGP Propósito General + Recursos propios municipio"
   },
   {
@@ -1044,9 +1044,9 @@
     "dinero ideal": "172500000",
     "lo esperado": "",
     "cobertura oficial": "Santa Marta, El Paraíso, El Recreo, San Gerardo, Zuluaga / Área urbana completa",
-    "clasificacion": "-General",
+    "clasificacion": ":General",
     "vigencia": "Corta - Mediana - Larga",
-    "prioridad": "-Media",
+    "prioridad": ":Media",
     "operacion": "SGP Propósito General + Regalías directas + Gobernación del Huila"
   },
   {
@@ -1059,9 +1059,9 @@
     "dinero ideal": "130000000",
     "lo esperado": "",
     "cobertura oficial": "Zona Urbana",
-    "clasificacion": "-Urbana",
+    "clasificacion": ":Urbana",
     "vigencia": "Corta - Mediana - Larga",
-    "prioridad": "-Media",
+    "prioridad": ":Media",
     "operacion": "SGP Propósito General + Fondo Desarrollo Urbano + Gobernación del Huila"
   },
   {
@@ -1074,9 +1074,9 @@
     "dinero ideal": "690000000",
     "lo esperado": "",
     "cobertura oficial": "Zuluaga",
-    "clasificacion": "-Rural",
-    "vigencia": "-Corta",
-    "prioridad": "-Media",
+    "clasificacion": ":Rural",
+    "vigencia": ":Corta",
+    "prioridad": ":Media",
     "operacion": "Policía Nacional + Recursos propios municipio + Gobernación del Huila"
   },
   {
@@ -1089,7 +1089,7 @@
     "dinero ideal": "460000000",
     "lo esperado": "",
     "cobertura oficial": "La Jagua",
-    "clasificacion": "-General",
+    "clasificacion": ":General",
     "vigencia": "Corta - Mediana - Larga",
     "prioridad": "Media-baja",
     "operacion": "Ministerio de Cultura + SGP Propósito General + Gobernación del Huila"
@@ -1104,7 +1104,7 @@
     "dinero ideal": "20700000",
     "lo esperado": "",
     "cobertura oficial": "El Recreo, Majo",
-    "clasificacion": "-General",
+    "clasificacion": ":General",
     "vigencia": "Corta - Mediana - Larga",
     "prioridad": "Media-baja",
     "operacion": "Ministerio de Agricultura / ADR + Gobernación del Huila + Recursos propios"
@@ -1119,7 +1119,7 @@
     "dinero ideal": "13800000",
     "lo esperado": "",
     "cobertura oficial": "El Recreo",
-    "clasificacion": "-Rural",
+    "clasificacion": ":Rural",
     "vigencia": "Corta - Mediana",
     "prioridad": "Media-baja",
     "operacion": "AUNAP + Ministerio de Agricultura + Gobernación del Huila"
@@ -1134,7 +1134,7 @@
     "dinero ideal": "402500000",
     "lo esperado": "",
     "cobertura oficial": "Caguancito, Santa Marta, Majo, El Paraíso, El Recreo",
-    "clasificacion": "-Rural",
+    "clasificacion": ":Rural",
     "vigencia": "Corta - Mediana - Larga",
     "prioridad": "Media-baja",
     "operacion": "Fontur + ProColombia + Gobernación del Huila + Recursos propios"
@@ -1149,8 +1149,8 @@
     "dinero ideal": "69000000000",
     "lo esperado": "",
     "cobertura oficial": "Garzón, Gigante, Guadalupe, Altamira, El Pital, Agrado, Tarqui, La Argentina – Subregión Centro Sur del Huila",
-    "clasificacion": "-General",
-    "vigencia": "-Larga",
+    "clasificacion": ":General",
+    "vigencia": ":Larga",
     "prioridad": "Supramunicipal",
     "operacion": "Regalías SGR (OCAD Paz + OCAD Departamental) + Ministerio de Comercio / iNNpulsa + Ministerio de Agricultura / ADR / FNC + Bancóldex (APP) + ProColombia + Gobernación del Huila + Alianzas Público-Privadas"
   }
