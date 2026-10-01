@@ -1466,7 +1466,7 @@ function actualizarPuntos() {
     parrafo.textContent =
         `${puntosAlcanzados} de ${puntosPosibles} puntos posibles: ${rendimiento.toFixed(2)}% de rendimiento.`;
 }
-setInterval(function(){ actualizarPuntos() }, 1000)
+setTimeout(function(){ actualizarPuntos() }, 1000)
 
 
 // =========================================================
