@@ -875,6 +875,11 @@ const columnas = [
 const campos =
     Object.keys(datos[0]);
 
+const titulos_by = {
+    "clasificacion": "clasificación",
+    "operacion": "operación"
+};
+
 
 campos.forEach(campo => {
 
@@ -915,7 +920,7 @@ campos.forEach(campo => {
 
     const columna = {
 
-        title: campo,
+        title: titulos_by[campo] || campo,
 
         field: campo,
 
