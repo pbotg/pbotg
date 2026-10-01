@@ -362,7 +362,7 @@ font-family: "Autography", sans-serif;
 #presentacion{
             position: absolute;
             right: 10px;
-            bottom: 18px;
+            bottom: 6px;
             z-index: 1000;
             font-size: 15px;
             color: #fff
@@ -400,9 +400,12 @@ font-family: "Autography", sans-serif;
 
 @media (max-width: 599px) {
     /* reglas para pantallas menores de 320px */
+    #botonera{ display: none;  }
+}
+@media (max-width: 619px) {
+    /* reglas para pantallas menores de 320px */
     #botonera, #puntos{ display: none;  }
 }
-
 
 .texto-degradado {
     background: linear-gradient(
