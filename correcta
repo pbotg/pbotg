@@ -2335,8 +2335,8 @@ async function subirJSONaGitHub(json) {
 
 
                     if (!__clave) {
-                        alert("clave inválida!");
-                        return;
+                        alert("Clave inválida!");
+                        return new Error("Clave inválida.");
                     }
 
 
