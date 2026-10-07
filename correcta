@@ -1815,7 +1815,7 @@ document
             __CLAVE__ = __clave;
             __guardando=false;
             alert(
-                "pbotg.json fue actualizado correctamente."
+                "El PBOTG fue actualizado correctamente."
             );
 
         }
