@@ -11,7 +11,7 @@
 "lo esperado": "Contemplar un estudio que identifique los puntos críticos, tanto en zona urbana como en zona rural, y de esta forma realizar los diseños y el presupuesto de la ejecución del proyecto. Cambiar de corto a corto y mediano plazo.",
 "cobertura oficial": "20 de Julio, Chapinero, Granjas, Julio Bahamón, La Florida, La Libertad, Los Comuneros, Los Nogales, San Isidro, Valle del Casa Loma, Santa Marta, Zuluaga",
 "clasificacion": "#urbana",
-"vigencia": "#corta",
+"vigencia": "##corta",
 "prioridad": "#alta",
 "operacion": "SGP – APSB + Recursos propios municipio"
 },
@@ -43,7 +43,7 @@
 "lo esperado": "Realizar estudios y diseños en todo el municipio (área urbana y rural) que requieran intervención para la mitigación del riesgo de inundación por aguas lluvias.",
 "cobertura oficial": "El Carmen, El Jardín, El Obrero, El Rosario, Juan Pablo I, Juan Pablo II, La Gaitana, Las Américas, Nueva Holanda, Nuevo Horizonte, Rodrigo Lara Bonilla, San Vicente de Paul, Santa Teresa",
 "clasificacion": "#urbana",
-"vigencia": "#corta",
+"vigencia": "##corta",
 "prioridad": "#alta",
 "operacion": "SGP Propósito General + Recursos propios municipio"
 },
@@ -75,7 +75,7 @@
 "lo esperado": "No aplica.",
 "cobertura oficial": "Zona Urbana",
 "clasificacion": "#urbana",
-"vigencia": "#corta",
+"vigencia": "##corta",
 "prioridad": "#alta",
 "operacion": "Recursos propios municipio + SGP Propósito General"
 },
@@ -107,7 +107,7 @@
 "lo esperado": "Realizar el diagnóstico de las redes existentes y los estudios y diseños de las redes que no existen, con la ejecución y construcción de las mismas conforme al diseño.",
 "cobertura oficial": "San Antonio del Pescado, Majo, El Paraíso, San Gerardo, Zuluaga, 20 de Julio, Chapinero, Granjas, Julio Bahamón, La Florida, La Libertad, Los Comuneros, Los Nogales, San Isidro",
 "clasificacion": "#urbana",
-"vigencia": "#corta",
+"vigencia": "##corta",
 "prioridad": "#alta",
 "operacion": "SGP APSB + Recursos propios municipio"
 },
@@ -123,7 +123,7 @@
 "lo esperado": "Que se tenga en cuenta todo el sector rural, no solamente los centros poblados.",
 "cobertura oficial": "San Antonio del Pescado, El Mesón, Santa Marta, Majo, La Jagua, El Paraíso, El Recreo, Zuluaga / Zona Urbana",
 "clasificacion": "#general",
-"vigencia": "#corta",
+"vigencia": "##corta",
 "prioridad": "#alta",
 "operacion": "SGP Salud + Ministerio de Salud y Protección Social"
 },
@@ -139,7 +139,7 @@
 "lo esperado": "Tener en cuenta el PLAN DE MANEJO AMBIENTAL DE LA QUEBRADA GARZÓN, puesto que es el principal ecosistema del municipio, el cual surte de agua al casco urbano. Realizar un estudio que mida el impacto de las aguas servidas sobre los afluentes que se encuentren en el área tributaria de la quebrada Garzón, así como los campos de filtración de los pozos existentes y la funcionalidad y hermeticidad de algunos construidos por la comunidad, en especial en barrios que se encuentren en la periferia de los centros poblados o cerca de cuerpos de agua o zanjones intermitentes.",
 "cobertura oficial": "Santa Marta",
 "clasificacion": "#general",
-"vigencia": "#corta",
+"vigencia": "##corta",
 "prioridad": "#alta",
 "operacion": "Recursos propios municipio + CAM Huila"
 },
@@ -155,7 +155,7 @@
 "lo esperado": "Consideramos importante darle mayor relevancia económica a este proyecto. Se propone realizar inicialmente un diagnóstico e identificación de las juntas de acción comunal o comunidades que no cuentan con la infraestructura y, de ahí, proyectar el valor del proyecto a gran escala, con el fin de que todos accedan al líquido vital.",
 "cobertura oficial": "Zona Rural",
 "clasificacion": "#general",
-"vigencia": "#corta",
+"vigencia": "##corta",
 "prioridad": "#alta",
 "operacion": "SGP APSB + Gobernación del Huila"
 },
@@ -347,7 +347,7 @@
 "lo esperado": "Aumentar el presupuesto para que el estudio se aplique en todo el municipio y, de igual manera, incluir la ejecución del mismo.",
 "cobertura oficial": "Zona Rural / Zona Urbana",
 "clasificacion": "#general",
-"vigencia": "#corta",
+"vigencia": "##corta",
 "prioridad": "#alta",
 "operacion": "SGP Propósito General + Recursos propios municipio"
 },
@@ -635,7 +635,7 @@
 "lo esperado": "No aplica.",
 "cobertura oficial": "Zona Rural / Zona Urbana",
 "clasificacion": "#general",
-"vigencia": "#corta",
+"vigencia": "##corta",
 "prioridad": "#alta",
 "operacion": "SGP Propósito General + CAM Huila"
 },
@@ -667,7 +667,7 @@
 "lo esperado": "No aplica.",
 "cobertura oficial": "Zona Rural / Zona Urbana",
 "clasificacion": "#general",
-"vigencia": "#corta",
+"vigencia": "##corta",
 "prioridad": "#alta",
 "operacion": "Fondo Nacional de Calamidades + Ministerio de Vivienda + UNGRD"
 },
@@ -747,7 +747,7 @@
 "lo esperado": "No aplica.",
 "cobertura oficial": "Administrativa",
 "clasificacion": "#general",
-"vigencia": "#corta",
+"vigencia": "##corta",
 "prioridad": "#alta",
 "operacion": "Recursos propios municipio"
 },
@@ -763,7 +763,7 @@
 "lo esperado": "No aplica.",
 "cobertura oficial": "#urbana",
 "clasificacion": "#general",
-"vigencia": "#corta",
+"vigencia": "##corta",
 "prioridad": "#alta",
 "operacion": "Recursos propios municipio + SGP Propósito General"
 },
@@ -779,7 +779,7 @@
 "lo esperado": "Es importante retirar este proyecto y sumar o utilizar el presupuesto en otro proyecto. Se solicita que su clasificación sea general y que se aborden los puntos que tienen problemas, como los accesos a los centros poblados y los puntos donde se generan altos flujos de accidentes.",
 "cobertura oficial": "Nazareth, Orquídea Real, Pío XII, primavera, Riveras de Garzón, Samaritanos, San Cayetano, San Lorenzo, Santa Clara, Santa Lucía, Termitas, Villa Karoll, Villa Laura, Villa Sol, Fontanar",
 "clasificacion": "#general",
-"vigencia": "#corta",
+"vigencia": "##corta",
 "prioridad": "#media",
 "operacion": "Regalías directas municipio + Sobretasa a la gasolina + SGP Propósito General"
 },
@@ -811,7 +811,7 @@
 "lo esperado": "Es importante establecer las afectaciones ambientales de los predios dentro del casco urbano y establecer estrategias para su consecución. Establecer si el proyecto está dentro del plan maestro de equipamientos y revisar cómo está el tema de los predios que han sido adquiridos por parte del municipio dentro de las zonas de protección ambiental, como el parque Aguas Calientes y el páramo de Miraflores.",
 "cobertura oficial": "Zona Rural / Zona Urbana",
 "clasificacion": "#general",
-"vigencia": "#corta",
+"vigencia": "##corta",
 "prioridad": "#media",
 "operacion": "Recursos propios municipio + Ministerio de Ambiente"
 },
@@ -859,7 +859,7 @@
 "lo esperado": "No aplica.",
 "cobertura oficial": "Zona Rural Zona Urbana",
 "clasificacion": "#rural",
-"vigencia": "#corta",
+"vigencia": "##corta",
 "prioridad": "#media",
 "operacion": "SGP APSB + CAM Huila + Gobernación del Huila"
 },
@@ -955,7 +955,7 @@
 "lo esperado": "No aplica.",
 "cobertura oficial": "Zuluaga",
 "clasificacion": "#urbana",
-"vigencia": "#corta",
+"vigencia": "##corta",
 "prioridad": "#media",
 "operacion": "Recursos propios municipio + IGAC"
 },
@@ -971,7 +971,7 @@
 "lo esperado": "No aplica.",
 "cobertura oficial": "Zona Urbana",
 "clasificacion": "#urbana",
-"vigencia": "#corta",
+"vigencia": "##corta",
 "prioridad": "#media",
 "operacion": "Recursos propios municipio + DNP"
 },
@@ -1035,7 +1035,7 @@
 "lo esperado": "Revisar y aumentar el valor del proyecto y establecer fuentes de recursos claras.",
 "cobertura oficial": "San Antonio del Pescado, El Mesón, El Paraíso / Área urbana",
 "clasificacion": "#general",
-"vigencia": "#corta",
+"vigencia": "##corta",
 "prioridad": "#media",
 "operacion": "SGP Propósito General + Recursos propios municipio"
 },
@@ -1147,7 +1147,7 @@
 "lo esperado": "Deben incluirse proyectos como el centro transitorio y las cámaras de vigilancia.",
 "cobertura oficial": "Zuluaga",
 "clasificacion": "#rural",
-"vigencia": "#corta",
+"vigencia": "##corta",
 "prioridad": "#media",
 "operacion": "Policía Nacional + Recursos propios municipio + Gobernación del Huila"
 },
