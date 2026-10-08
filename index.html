@@ -1447,15 +1447,17 @@ function filtrarDesdeURL() {
         parametro
     );
 
-    // Poner el texto dentro del input del filtro
-    const input = document.querySelector(
-        '.tabulator-header-filter input'
-    );
+    const columna = tabla.getColumn("cobertura oficial");
 
-    if (input) {
-        input.value = parametro;
+    if (columna) {
+        const input = columna
+            .getElement()
+            .querySelector(".tabulator-header-filter input");
+
+        if (input) {
+            input.value = parametro;
+        }
     }
-    
 }
 
 
