@@ -4,8 +4,7 @@
 <head>
 
     <meta charset="UTF-8">
-<link id="page_favicon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAABeUlEQVR4AVyRQVbEMAxD5ey5Y08HN4DtzJVgX/Flp1MefnEsy4rjtOvQw0c9fNo+z9N6fxv/eLMd1j709FFPj53++RRe/v6Sl0qS2SwVQXFh5EpisxuNBZTJhOUIiVY2qurD4rSVXZe1kCT1dnBWbd2q4lA8LOQduDFJ2iGZ2xGwQuXSwBXQs7VY1EIL49TehynVHsd/VCudFcISYV6UvdQWelJQuHJkOAmLCVqneUWKsCpuA9O9pqxczl8QLAPneSBLq1oAImaPA1lUWADasVOoKhqDEwlpurpaZKwdmiLlpmE4m/R2JvNWLYdOK4YLjJt3ZsjWIJ42VCLeSaHJkZWYP+E0wbtO1DWmKjqJXBTTQ7EA8nkCFbAIiK1oFTPbVaCSi9IudbPlcn4jiiACj+YEshwMgmOpvxzcNaXBo639F4wsZLoCWd0llF5WM1m9iAYLJeCWOs0Q0YuLb/6/TkLEs+YvgPPlheUgfJDUCYE+pZLa1ZZvEfALAAD//16X6jkAAAAGSURBVAMAZUe6mVi2msgAAAAASUVORK5CYII=" rel="icon" type="image/x-icon">
-   <meta
+<link id="page_favicon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAABZklEQVR4AUSS23XDMAxDAX+1O2XIdtUMYPSClFMdkgLAhyQnV1hfv698/bySt3HluxzPndx489XyVm68vPV37lx6lgF1NqUBP9xwDOExywYjcgPJsayzyED1DIEO3LxPXT7aVWVou8LISTHMO2MkMApGfnADjl2oayZZNIPcudxM7Ktv1FkZvfHyRzqgN2BYT+4s8QbLJ7l7Y1C6zw0KTFEbwk5O3fhNeEfGra5iaOHxC0nhlMqO21e4aXcjTL74SaFNo3SeUOatMPg0zDNQUYhr9lMHB/KEcCpIQeH3mK0BSrEfnSoUrtBclnECA1pC40pTs9DzK4ghkkUnfizdq1kM0C6mFUx9QXlr5gYVSurF+OSj+YhQjCRWvT3/gyqSnlMJUHEjvre65iMaodZmVyVkBAjY/bCdClU7h5eYJ6SvIyht0aw0Emg+SJorVUDHKFc7L6FhkEa8hm8BcgEN86cqrvRx6w8AAP//vS3HjAAAAAZJREFUAwDnpahxY6X6LwAAAABJRU5ErkJggg==" rel="icon" type="image/x-icon">   <meta
         name="viewport"
         content="width=device-width, initial-scale=1.0"
     >
@@ -16,7 +15,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Italianno&display=swap" rel="stylesheet">
 
 
-    <title>PBOT Garzón</title>
+    <title>Sergio Losada Cerquera - PBOT Garzón</title>
 
 
     <!-- =====================================================
@@ -46,7 +45,7 @@ color: blue;
 text-decoration: none;
 display: block;
 margin: 12px 3px;
-padding: 6px;
+padding: 10px;
 background: #8aff00;
 color: #5500d8;
 font-size: 10px;
@@ -55,15 +54,16 @@ border-radius: 6px;
 
 /* Scrollbar */
 ::-webkit-scrollbar {
-    width: 10px;
+    width: 15px;
 }
 
 ::-webkit-scrollbar-track {
-    background: #fff;
+    background: hsl(240, 20%, 90%) !important;
 }
 
 ::-webkit-scrollbar-thumb {
     background: hsl(48, 100%, 50%);
+    background: hsl(240, 20%, 20%);
 }
 
 
@@ -95,6 +95,7 @@ font-family: Arial, sans-serif;
 
 
         #busqueda {
+            display: none;
             position: absolute;
     width: 100%;
     padding: 10px 30px;
@@ -115,16 +116,41 @@ font-family: Arial, sans-serif;
 
         }
 
+#contenedorTabla {
+    position: absolute;
+    top: 180px;
+    bottom: 0;
+    width: 100%;
+    overflow: hidden;
+    overflow-x: auto;
+}
+
         #tabla {
     background: white;
     overflow: hidden;
     position: absolute;
-    width: 100%;
-    top: 76px;
-    bottom: 90px;
-    max-width: 100%;
+    top: 0;
+    bottom: 0px;
+   /* max-width: 100%;*/
+    width: max-content;
+    min-width: 100%;
         }
 
+        .tabulator .tabulator-tableholder{
+                                        overflow-x: hidden;
+                                        }
+
+        .tabulator .tabulator-header{
+                                    color: #000;
+                                    }
+                                    .tabulator .tabulator-footer{ border: 0 !important; }
+
+                                    .tabulator-row tabulator-calcs .tabulator-calcs-bottom .tabulator-cell{
+                                                                                                        background: red;
+                                                                                                        }
+                                    .tabulator .tabulator-footer .tabulator-calcs-holder{
+                                                                                        border: 0 !important;
+                                                                                        }
 
 
         #btnEliminarRegistro{
@@ -161,7 +187,8 @@ font-family: Arial, sans-serif;
          */
 
         .tabulator-calcs-bottom {
-            font-weight: bold;
+            /*font-weight: bold;*/
+/*            font-size: 18px !important;*/
 /*            background: #eeeeee;*/
         }
 
@@ -179,58 +206,57 @@ font-family: Arial, sans-serif;
 
 
 
-
-
-.tabulator .tabulator-row .tabulator-cell:not([tabulator-field="flag"]) {
+.tabulator .tabulator-row .tabulator-cell:not([tabulator-field="flag"]){
     background-color: white !important;
 }
 
+
 .tabulator .tabulator-row .tabulator-cell[tabulator-field="flag"]{
-    font-size: 24px;
+    /*font-size: 24px;*/
     text-align: center !important;
 }
 
 .tabulator .tabulator-row .tabulator-cell[tabulator-field="id"]{
-    font-size: 20px;
+   /* font-size: 20px;*/
     text-align: center !important;
 }
 .tabulator .tabulator-row .tabulator-cell[tabulator-field="prioridad"],
 .tabulator .tabulator-row .tabulator-cell[tabulator-field="clasificacion"],
 .tabulator .tabulator-row .tabulator-cell[tabulator-field="vigencia"],
 .tabulator .tabulator-row .tabulator-cell[tabulator-field="sector"]{
-    font-size: 14px;
-    text-align: center !important;
+   /* font-size: 14px;*/
+    text-align: left !important;
 }
 .tabulator .tabulator-row .tabulator-cell{
-    text-align: center !important;
+    text-align: left !important;
 }
 
 
 .tabulator-col[tabulator-field="observaciones"] .tabulator-col-title {
-    color: red;
-    font-size: 14px;
-    font-weight: bold;
+    color: #5500d8;
+   /* font-size: 14px;
+    font-weight: bold;*/
 }
 
 .tabulator .tabulator-row .tabulator-cell[tabulator-field="observaciones"]{
     font-size: 13px;
     color: #5500d8;
-    font-weight: bold;
+   /* font-weight: bold;*/
     text-align: left !important;
 }
 
 
 
 .tabulator-col[tabulator-field="lo esperado"] .tabulator-col-title {
-    color: green;
-    font-size: 14px;
+    color: #009a00;
+   /* font-size: 14px;*/
     font-weight: bold;
 }
 
 .tabulator .tabulator-row .tabulator-cell[tabulator-field="lo esperado"]{
     font-size: 13px;
-    color: #5500d8;
-    font-weight: bold;
+    color: #009a00;
+   /*font-weight: bold;*/
     text-align: left !important;
 }
 
@@ -243,8 +269,8 @@ font-family: Arial, sans-serif;
 
 .tabulator .tabulator-row .tabulator-cell[tabulator-field="dinero ideal"]{
     font-size: 13px;
-    color: green;
-    font-weight: bold;
+    color: #009a00;
+  /*  font-weight: bold;*/
 }
 
 .tabulator .tabulator-row .tabulator-cell[tabulator-field="clasificacion"],
@@ -261,29 +287,30 @@ font-family: Arial, sans-serif;
 
 
 #botonera{
-        position: absolute;
-        top: 0;
-        right: 0;
-        z-index: 100;
-/*        box-shadow: 0 1px 2px 1px #8080b1;*/
-        
-        display: flex;
-        justify-content: space-between;
-        gap: 12px;
-        align-items: center;
-        background: #fff;
-        padding-right: 15px;
+    position: absolute;
+    bottom: 33px;
+    right: 10px;
+    z-index: 100;
+    /* box-shadow: 0 1px 2px 1px #8080b1; */
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    align-items: center;
+    /* background: #fff; */
+    padding-right: 15px;
+    color: grey;
         }
         #botonera button {
-            padding: 9px 0 6px 0px;
-            border: none;
-            cursor: pointer;
-            display: inline-block;
-           transition: transform 0.05s;
-           text-transform: capitalize;
-           background: transparent;
-           flex: 1;
-           font-size: 12px;
+padding: 9px 0 6px 0px;
+    border: none;
+    cursor: pointer;
+    display: inline-block;
+    transition: transform 0.05s;
+    text-transform: capitalize;
+    background: transparent;
+    flex: 1;
+    font-size: 11px;
+    color: #50555f;
         }
 
         button:active{
@@ -317,7 +344,7 @@ font-family: Arial, sans-serif;
     color: transparent;
 }
 
-.tabulator .tabulator-row:nth-child(odd) .tabulator-cell:not([tabulator-field="flag"]) {
+.tabulator .tabulator-row:nth-child(odd):not(.tabulator-calcs) .tabulator-cell:not([tabulator-field="flag"]) {
     background-color: #f2f2f2 !important;
 }
 
@@ -328,6 +355,7 @@ font-family: Arial, sans-serif;
 
 
 #disclaimer {
+    display: none;
     position: absolute;
     height: 92px;
     left: 0;
@@ -352,6 +380,7 @@ font-family: "Autography", sans-serif;
 }
 
 #avatar{
+        display: none;
         position: absolute;
         width: 112px;
         height: 112px;
@@ -365,17 +394,9 @@ font-family: "Autography", sans-serif;
         }
 
 
-#presentacion{
-            position: absolute;
-            right: 10px;
-            bottom: 6px;
-            z-index: 1000;
-            font-size: 15px;
-            color: #fff
-            }
 
 
-.tabulator-col-title{ text-transform: capitalize; }
+.tabulator-col-title::first-letter{ text-transform: capitalize; }
 
 
 .tabulator-header-filter input{
@@ -395,7 +416,32 @@ font-family: "Autography", sans-serif;
 }
 
 
+
+.tabulator .tabulator-row:nth-child(odd) .tabulator-cell:not([tabulator-field="flag"]),
+.tabulator .tabulator-footer .tabulator-calcs-holder,
+.tabulator-footer .tabulator-calcs-holder,
+.tabulator-footer .tabulator-calcs-holder .tabulator-cell {
+    background-color: hsl(240, 20%, 90%) !important;
+}
+
+
+
+
+
+
+
 /*
+
+
+
+
+
+
+
+
+
+
+
 #btnSeleccionarTodo{ font-size: 24px; margin-top: -6px; font-weight: bold; }
 #btnInvertirSeleccion{ font-size: 28px }
 #btnOrdenOriginal{ font-size: 36px }
@@ -421,27 +467,97 @@ font-family: "Autography", sans-serif;
 }
 
 
-#puntos{ color: lime; display: inline-block; }
+
+
+.tabulator-footer .tabulator-calcs-holder .tabulator-calcs-bottom .tabulator-cell[tabulator-field="sector"] {
+    text-align: center !important;
+}
 
 
 
-
-
-@media (max-width: 599px) {
+@media (max-width: 1060px) {
     /* reglas para pantallas menores de 320px */
     #botonera{ display: none;  }
 }
-@media (max-width: 619px) {
+@media (max-width: 650px) {
     /* reglas para pantallas menores de 320px */
     #puntos{ display: none !important;  }
     #presentacion{ bottom: 16px }
 }
 
+
+
+
+#logo{
+    position: absolute;
+    top: 20px;
+    left: 40px;
+    width: 240px;
+    height: 120px;
+    background: url(logo.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    }
+    #sublogo{
+    position: absolute;
+    top: 114px;
+    left: 182px;
+    font-size: 11px;
+    font-weight: bold;
+    text-align: right;
+    line-height: 18px;
+    }
+    #subtema{
+    position: absolute;
+    top: 140px;
+    left: 186px;
+    font-size: 11px;
+    font-weight: bold;
+    }
+#presentacion{
+            position: absolute;
+            right: 40px;
+            top: 110px;
+            z-index: 100000000000;
+            font-size: 15px;
+            }
+            #puntos{
+    position: absolute;
+    right: 24px;
+    top: 6px;
+    z-index: 100000000000;
+    font-size: 24px;
+    color: #000;
+    font-weight: bold;
+    text-align: right;
+            }
+            #puntos_porcentage{ color:red; font-size: 48px }
+            #puntos_hechos{     color: #ffef62;
+    font-size: 24px;
+    background: black;
+    padding: 3px 6px;
+    border-radius: 6px; }
+            #puntos_posibles{     color: #000000;
+    font-size: 36px;
+    background: color: #ffef62;
+    font-size: 36px;
+    background: #6effa8;
+    padding: 3px 6px;
+    border-radius: 6px; }
+
+    #puntos_rendimiento{ font-size: 18px; padding-right: 6px }
+
+#contadorFilas{
+            position: absolute;
+            right: 28px;
+            top: 112px;
+            z-index: 100000000000;
+            font-weight: bold;
+            }
+            #contadorFilas span{ color: #5500d8; font-size: 24px; font-weight:bold; }
+
     </style>
-
 </head>
-
-
 <body>
 
 
@@ -455,10 +571,18 @@ font-family: "Autography", sans-serif;
 
 
 <div id="disclaimer"><span class="firma texto-degradado ">Sergio losada</span></div>
-<div id="presentacion">PBOT Sí, pero no así. <p id="puntos"></p></div>
+<div id="presentacion"></div>
 <div id="avatar"></div>
 
+
+<p id="puntos"></p>
+<p id="contadorFilas"></p>
+
+<div id="logo"></div>
+<div id="sublogo">¡Lo haremos bien!<br>PBOT Garzón</div>
+<div id="contenedorTabla">
 <div id="tabla">
+</div>
 
 
 </div>
@@ -855,7 +979,7 @@ const columnas = [
 
         headerSort: false,
 
-        width: 80,
+        width: 24,
 
 
 
@@ -892,15 +1016,18 @@ const titulos_by = {
 campos.forEach(campo => {
 
 
+
+
+
     /*
      * activo ya fue creado manualmente
      */
 
-    if (campo === "activo") {
+   if (campo === "activo") {
 
-        return;
+       return;
 
-    }
+   }
 
 
 
@@ -934,7 +1061,7 @@ campos.forEach(campo => {
 
         editor: "input",
 
-        maxWidth: 300,
+        maxWidth: 240,
         variableHeight: true,
 
         headerFilter: "input",
@@ -954,7 +1081,26 @@ campos.forEach(campo => {
 if (campo === "dinero ideal") {
     columna.visible = false;
 }
+/*
+if (campo === "activo") {
+    columna.maxWidth = 60;
+}*/
 
+if (campo === "cobertura oficial") {
+    columna.maxWidth = 210;
+}
+if (campo === "operacion") {
+    columna.maxWidth = 180;
+}
+if (campo === "proyecto") {
+    columna.maxWidth = 180;
+}
+if (campo === "sector") {
+    columna.maxWidth = 180;
+}
+if (campo === "flag" || campo === "vigencia") {
+    columna.maxWidth = 120;
+}
 
 // =====================================================
 // CAMPO NUMÉRICO
@@ -1089,7 +1235,7 @@ columna.bottomCalcFormatter = function(cell) {
                     campo === "sector"
                 ) {
 
-                    return " TOTALES :";
+                    return "Totales"; // TOTALES
 
                 }
 
@@ -1284,6 +1430,25 @@ if (campo === "observaciones") {
 });
 
 
+
+
+
+function filtrarDesdeURL() {
+
+    const parametro = window.location.search.substring(1).trim();
+
+    if (!parametro) {
+        return;
+    }
+
+    tabla.setFilter(
+        "cobertura oficial",
+        "like",
+        parametro
+    );
+}
+
+
 // =========================================================
 // CREAR TABLA
 // =========================================================
@@ -1333,6 +1498,7 @@ const tabla = new Tabulator(
          */
 
         selectableRows: false,
+   //     footerElement: false,
 
 
         /*
@@ -1413,11 +1579,11 @@ rowFormatter: function(row) {
     //    elemento.style.color = "#fff";
     }
     else if (flag === 2) {
-        elemento.style.backgroundColor = "#fff7b0";
+        elemento.style.backgroundColor = "#ffef62";
     //    elemento.style.color = "#000";
     }
     else if (flag === 3) {
-        elemento.style.backgroundColor = "#b9ffd5";
+        elemento.style.backgroundColor = "#6effa8"; // flag verde flag 3
     //    elemento.style.color = "#000";
     }
 },
@@ -1446,6 +1612,10 @@ rowFormatter: function(row) {
     }
 );
 
+
+filtrarDesdeURL();
+
+
 tabla.on("dataFiltered", function() {
     actualizarPuntos();
 });
@@ -1454,6 +1624,13 @@ tabla.on("dataFiltered", function() {
 function actualizarPuntos() {
 
     const filas = tabla.getRows("active").map(row => row.getData());
+
+    const cantidad_mostrandose = tabla.getRows("active").length;
+
+    document.getElementById("contadorFilas").innerHTML = `en <span>${cantidad_mostrandose}</span> proyectos.`;
+
+
+    console.log( filas.length )
 
     const puntosPosibles = filas.length * 3;
 
@@ -1473,8 +1650,8 @@ function actualizarPuntos() {
 
     const parrafo = document.getElementById("puntos");
 
-    parrafo.textContent =
-        `${puntosAlcanzados} de ${puntosPosibles} puntos posibles: ${rendimiento.toFixed(2)}% de rendimiento.`;
+//    parrafo.textContent = `${puntosAlcanzados} de ${puntosPosibles} puntos posibles: ${rendimiento.toFixed(2)}% de rendimiento.`;
+    parrafo.innerHTML = `<span id="puntos_hechos">${puntosAlcanzados}</span> de <span id="puntos_posibles">${puntosPosibles}</span> puntos posibles.<br><span id="puntos_rendimiento">rendimiento</span><span id="puntos_porcentage">${rendimiento.toFixed(2)}%</span>`;
 }
 setTimeout(function(){ actualizarPuntos() }, 1000)
 
