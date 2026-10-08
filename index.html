@@ -1438,31 +1438,17 @@ if (campo === "observaciones") {
 
 function filtrarDesdeURL() {
 
-    const parametro = window.location.search.substring(1).trim();
+    let parametro = window.location.search.substring(1).trim();
+
+    try {
+        parametro = decodeURIComponent(parametro.replace(/\+/g, " ")).trim();
+    } catch (e) {}
 
     if (!parametro) {
         return;
     }
 
-    tabla.setFilter(
-        "cobertura oficial",
-        "like",
-        parametro
-    );
-
-    const columna = tabla.getColumn("cobertura oficial");
-
-    if (columna) {
-        const input = columna
-            .getElement()
-            .querySelector(".tabulator-header-filter input");
-
-        if (input) {
-            input.value = parametro;
-        }
-    }
-
-
+    tabla.setHeaderFilterValue("cobertura oficial", parametro);
 }
 
 
@@ -1630,13 +1616,13 @@ rowFormatter: function(row) {
 );
 
 
-filtrarDesdeURL();
+// filtrarDesdeURL();
 
 
 tabla.on("dataFiltered", function() {
     actualizarPuntos();
 });
-
+tabla.on("tableBuilt", filtrarDesdeURL);
 
 function actualizarPuntos() {
 
