@@ -1446,6 +1446,16 @@ function filtrarDesdeURL() {
         "like",
         parametro
     );
+
+    // Poner el texto dentro del input del filtro
+    const input = document.querySelector(
+        '.tabulator-header-filter input'
+    );
+
+    if (input) {
+        input.value = parametro;
+    }
+    
 }
 
 
