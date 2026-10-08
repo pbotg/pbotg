@@ -10,7 +10,7 @@
 "observaciones": "No contempla estudios y diseños de los mismos ni las ubicaciones que requieren dentro de la cartografía. Existen otras zonas que requieren la intervención con estos colectores, como por la calle 3 con carrera 6 #cambioproyecto.",
 "lo esperado": "Contemplar un estudio que identifique los puntos críticos, tanto en zona urbana como en zona rural, y de esta forma realizar los diseños y el presupuesto de la ejecución del proyecto. Cambiar de corto a corto y mediano plazo.",
 "cobertura oficial": "20 de Julio, Chapinero, Granjas, Julio Bahamón, La Florida, La Libertad, Los Comuneros, Los Nogales, San Isidro, Valle del Casa Loma, Santa Marta, Zuluaga",
-"clasificacion": "#urbana",
+"clasificacion": "##urbana",
 "vigencia": "##corta",
 "prioridad": "#alta",
 "operacion": "SGP – APSB + Recursos propios municipio"
@@ -42,7 +42,7 @@
 "observaciones": "Se da a entender que es una ampliación del primer proyecto, por lo que ambos hablan de conducción de aguas lluvias dentro del casco urbano #duplicado_3:1.",
 "lo esperado": "Realizar estudios y diseños en todo el municipio (área urbana y rural) que requieran intervención para la mitigación del riesgo de inundación por aguas lluvias.",
 "cobertura oficial": "El Carmen, El Jardín, El Obrero, El Rosario, Juan Pablo I, Juan Pablo II, La Gaitana, Las Américas, Nueva Holanda, Nuevo Horizonte, Rodrigo Lara Bonilla, San Vicente de Paul, Santa Teresa",
-"clasificacion": "#urbana",
+"clasificacion": "##urbana",
 "vigencia": "##corta",
 "prioridad": "#alta",
 "operacion": "SGP Propósito General + Recursos propios municipio"
@@ -58,7 +58,7 @@
 "observaciones": "Consideramos que el proyecto está acorde con la realidad del municipio.",
 "lo esperado": "No aplica.",
 "cobertura oficial": "Zona Urbana",
-"clasificacion": "#urbana",
+"clasificacion": "##urbana",
 "vigencia": "#corta #mediana #larga",
 "prioridad": "#alta",
 "operacion": "SGP APSB + Regalías directas municipio + Recursos propios"
@@ -74,7 +74,7 @@
 "observaciones": "Sin observaciones.",
 "lo esperado": "No aplica.",
 "cobertura oficial": "Zona Urbana",
-"clasificacion": "#urbana",
+"clasificacion": "##urbana",
 "vigencia": "##corta",
 "prioridad": "#alta",
 "operacion": "Recursos propios municipio + SGP Propósito General"
@@ -90,7 +90,7 @@
 "observaciones": "Los recursos del SGP APSB están pignorados.",
 "lo esperado": "Deben rectificar la fuente de recursos.",
 "cobertura oficial": "San Antonio del Pescado, El Mesón, Santa Marta, Majo, La Jagua, El Paraíso, El Recreo, Zuluaga",
-"clasificacion": "#rural",
+"clasificacion": "##rural",
 "vigencia": "#corta #mediana #larga",
 "prioridad": "#alta",
 "operacion": "SGP APSB + OCAD Departamental Huila + Gobernación del Huila"
@@ -106,7 +106,7 @@
 "observaciones": "No se contemplan diagnóstico, estudios y diseños que permitan determinar si las redes requieren algún mejoramiento o su cambio completo, en caso de existir.",
 "lo esperado": "Realizar el diagnóstico de las redes existentes y los estudios y diseños de las redes que no existen, con la ejecución y construcción de las mismas conforme al diseño.",
 "cobertura oficial": "San Antonio del Pescado, Majo, El Paraíso, San Gerardo, Zuluaga, 20 de Julio, Chapinero, Granjas, Julio Bahamón, La Florida, La Libertad, Los Comuneros, Los Nogales, San Isidro",
-"clasificacion": "#urbana",
+"clasificacion": "##urbana",
 "vigencia": "##corta",
 "prioridad": "#alta",
 "operacion": "SGP APSB + Recursos propios municipio"
@@ -122,7 +122,7 @@
 "observaciones": "No tiene en cuenta todo el perímetro del municipio y solo se enfoca en algunas partes.",
 "lo esperado": "Que se tenga en cuenta todo el sector rural, no solamente los centros poblados.",
 "cobertura oficial": "San Antonio del Pescado, El Mesón, Santa Marta, Majo, La Jagua, El Paraíso, El Recreo, Zuluaga / Zona Urbana",
-"clasificacion": "#general",
+"clasificacion": "##general",
 "vigencia": "##corta",
 "prioridad": "#alta",
 "operacion": "SGP Salud + Ministerio de Salud y Protección Social"
@@ -138,7 +138,7 @@
 "observaciones": "Centra la problemática en Santa Marta debido a que no existe alcantarillado ni PTAR en la misma; igual pasa en El Mesón, La Cabaña, Zuluaga, San Gerardo, El Paraíso, etc. El crecimiento desmedido en algunos centros poblados y la falta de infraestructura de servicios públicos han hecho que muchas de las construcciones que se encuentran cerca de cuerpos de agua los utilicen como descarga de aguas negras, contaminando los cauces; esta problemática se ve en todos los centros poblados. Es muy limitado y le falta diagnóstico; el precio es ridículo - cuestionable; no alcanza para realizar un estudio del mismo.",
 "lo esperado": "Tener en cuenta el PLAN DE MANEJO AMBIENTAL DE LA QUEBRADA GARZÓN, puesto que es el principal ecosistema del municipio, el cual surte de agua al casco urbano. Realizar un estudio que mida el impacto de las aguas servidas sobre los afluentes que se encuentren en el área tributaria de la quebrada Garzón, así como los campos de filtración de los pozos existentes y la funcionalidad y hermeticidad de algunos construidos por la comunidad, en especial en barrios que se encuentren en la periferia de los centros poblados o cerca de cuerpos de agua o zanjones intermitentes.",
 "cobertura oficial": "Santa Marta",
-"clasificacion": "#general",
+"clasificacion": "##general",
 "vigencia": "##corta",
 "prioridad": "#alta",
 "operacion": "Recursos propios municipio + CAM Huila"
@@ -154,7 +154,7 @@
 "observaciones": "Presupuesto muy corto para estar en una clasificación general. Se sabe que muchas veredas, como La Esmeralda y San Antonio del Pescado, no cuentan con el servicio o la infraestructura adecuada para surtir de agua a sus habitantes; el presupuesto, en teoría, no alcanzaría ni para una infraestructura a pequeña escala. Compromete recursos que ya están pignorados del SGP APSB.",
 "lo esperado": "Consideramos importante darle mayor relevancia económica a este proyecto. Se propone realizar inicialmente un diagnóstico e identificación de las juntas de acción comunal o comunidades que no cuentan con la infraestructura y, de ahí, proyectar el valor del proyecto a gran escala, con el fin de que todos accedan al líquido vital.",
 "cobertura oficial": "Zona Rural",
-"clasificacion": "#general",
+"clasificacion": "##general",
 "vigencia": "##corta",
 "prioridad": "#alta",
 "operacion": "SGP APSB + Gobernación del Huila"
@@ -170,7 +170,7 @@
 "observaciones": "No contempla estudios y diseños ni un diagnóstico tanto en el área urbana como en la zona rural.",
 "lo esperado": "Cambiar el proyecto a \"Estudios y diseños para ampliación de vía, vías peatonales y placa huella\", estableciendo dentro de los mismos que se realice un diagnóstico tanto en el área urbana como en la zona rural.",
 "cobertura oficial": "El Mesón, Santa Marta, La Jagua, El Paraíso, El Recreo, Zuluaga / Sector 2 Centro, El Progreso, Las Mercedes, Méndez, Provivienda, Nazareth, Orquídea Real, Pío XII, Primavera, Riveras de Garzón, Samaritanos, San Cayetano, San Lorenzo, Santa Clara, Santa Lucía, Termitas, Villa Karol, Villa Laura, Villa Sol, Fontanar",
-"clasificacion": "#general",
+"clasificacion": "##general",
 "vigencia": "#corta #mediana",
 "prioridad": "#alta",
 "operacion": "SGP Propósito General + Regalías directas + Ministerio de Transporte / INVIAS"
@@ -186,7 +186,7 @@
 "observaciones": "Consideramos que esta vía no tiene la relevancia que se le está dando, ya que en la vereda Los Robles hay aproximadamente entre 10 y 20 familias. Hay otros proyectos que requieren atención más inmediata.",
 "lo esperado": "Priorizar los proyectos que requieren atención más inmediata.",
 "cobertura oficial": "Zona Rural / Zona Urbana",
-"clasificacion": "#rural",
+"clasificacion": "##rural",
 "vigencia": "#corta #mediana",
 "prioridad": "#alta",
 "operacion": "SGP Propósito General + Gobernación del Huila"
@@ -202,7 +202,7 @@
 "observaciones": "No se grafica el kilómetro que se desea terminar en la proyección de vías de la cartografía oficial del proyecto de acuerdo.",
 "lo esperado": "Determinar en la cartografía el kilómetro que se desea terminar y verificar en campo si ya se realizó o no.",
 "cobertura oficial": "Zona Rural / Zona Urbana",
-"clasificacion": "#rural",
+"clasificacion": "##rural",
 "vigencia": "#corta #mediana",
 "prioridad": "#alta",
 "operacion": "SGP Propósito General + Recursos propios municipio"
@@ -218,7 +218,7 @@
 "observaciones": "No se determina en la cartografía la ubicación de la vía que se desea aperturar, por lo que no se sabe si la vía ya se encuentra aperturada o no.",
 "lo esperado": "Verificar si la vía ya se encuentra aperturada o no y determinar la vía proyectada en la cartografía del proyecto de acuerdo.",
 "cobertura oficial": "Zona Rural / Zona Urbana",
-"clasificacion": "#rural",
+"clasificacion": "##rural",
 "vigencia": "#corta #mediana",
 "prioridad": "#alta",
 "operacion": "Regalías directas municipio + Gobernación del Huila"
@@ -234,7 +234,7 @@
 "observaciones": "No se determina en la cartografía la delimitación del empalme, por lo que no se sabe si ya existe entre estas dos veredas.",
 "lo esperado": "Verificar si el empalme ya existe entre estas dos veredas y determinar la vía proyectada en la cartografía del proyecto de acuerdo.",
 "cobertura oficial": "Zona Rural / Zona Urbana",
-"clasificacion": "#rural",
+"clasificacion": "##rural",
 "vigencia": "#corta #mediana",
 "prioridad": "#alta",
 "operacion": "SGP Propósito General + Gobernación del Huila"
@@ -250,7 +250,7 @@
 "observaciones": "No existe una manera de conectar Santa Marta con Las Mercedes sin tocar el páramo de Miraflores.",
 "lo esperado": "Tener en cuenta el mejoramiento integral de la vía que conecta Santa Marta con Alto Fátima.",
 "cobertura oficial": "Zona Rural / Zona Urbana",
-"clasificacion": "#rural",
+"clasificacion": "##rural",
 "vigencia": "#corta #mediana",
 "prioridad": "#alta",
 "operacion": "Regalías directas municipio + Gobernación del Huila"
@@ -266,7 +266,7 @@
 "observaciones": "No determina la quebrada de la que se está hablando; se presenta de manera muy general con un presupuesto alto.",
 "lo esperado": "Contemplar inicialmente estudios y diseños a corto plazo y, a corto y mediano plazo, la construcción del mismo.",
 "cobertura oficial": "Zona Rural – Santa Marta",
-"clasificacion": "#rural",
+"clasificacion": "##rural",
 "vigencia": "#corta #mediana",
 "prioridad": "#alta",
 "operacion": "Regalías directas municipio"
@@ -282,7 +282,7 @@
 "observaciones": "No sabemos qué tan necesario es ponerlo en el PBOT, siendo que el mejoramiento y mantenimiento de las vías rurales es una obligación de la administración.",
 "lo esperado": "Se propone tener en cuenta otros proyectos que representen una necesidad sentida en la movilidad urbana y rural.",
 "cobertura oficial": "Zona Rural",
-"clasificacion": "#rural",
+"clasificacion": "##rural",
 "vigencia": "#corta #mediana #larga",
 "prioridad": "#alta",
 "operacion": "SGP Propósito General + INVIAS + Gobernación del Huila"
@@ -298,7 +298,7 @@
 "observaciones": "No contempla estudios y diseños de las construcciones y mantenimientos de andenes y sardineles que permitan determinar el presupuesto y la ejecución de los mismos.",
 "lo esperado": "Consideramos que se deben tener en cuenta inicialmente los estudios y diseños de las construcciones y mantenimientos de andenes y sardineles, con el fin de determinar el presupuesto y la ejecución de los mismos. Cambiar el nombre del proyecto a \"Estudios, diseños y diagnóstico de los andenes y sardineles del casco urbano del municipio de Garzón\".",
 "cobertura oficial": "Zona Urbana",
-"clasificacion": "#urbana",
+"clasificacion": "##urbana",
 "vigencia": "#corta #mediana",
 "prioridad": "#alta",
 "operacion": "SGP Propósito General + Recursos propios municipio"
@@ -314,7 +314,7 @@
 "observaciones": "No contempla un estudio de impacto de tránsito respecto a las ciclorrutas en el área urbana ni a las vías peatonales.",
 "lo esperado": "Realizar inicialmente un estudio de impacto de tránsito respecto a las ciclorrutas en el área urbana; de igual manera, para las vías peatonales. Cambiar el nombre del proyecto a \"Estudios y diseños para la implementación de ciclovías y vías peatonales en el casco urbano del municipio de Garzón\".",
 "cobertura oficial": "Zona Urbana",
-"clasificacion": "#urbana",
+"clasificacion": "##urbana",
 "vigencia": "#corta #mediana",
 "prioridad": "#alta",
 "operacion": "SGP Propósito General + Fondo Desarrollo Urbano"
@@ -330,7 +330,7 @@
 "observaciones": "Este proyecto debería considerarse dentro del proyecto 22 y derivar del mismo #adherir proyecto al 22.",
 "lo esperado": "Incluir este proyecto como un derivado del proyecto 22.",
 "cobertura oficial": "Zona Rural / Zona Urbana",
-"clasificacion": "#general",
+"clasificacion": "##general",
 "vigencia": "#corta #mediana",
 "prioridad": "#alta",
 "operacion": "SGP Propósito General + Recursos propios municipio"
@@ -346,7 +346,7 @@
 "observaciones": "El presupuesto para dicho estudio es muy bajo, por lo que probablemente se preste para ser sectorizado.",
 "lo esperado": "Aumentar el presupuesto para que el estudio se aplique en todo el municipio y, de igual manera, incluir la ejecución del mismo.",
 "cobertura oficial": "Zona Rural / Zona Urbana",
-"clasificacion": "#general",
+"clasificacion": "##general",
 "vigencia": "##corta",
 "prioridad": "#alta",
 "operacion": "SGP Propósito General + Recursos propios municipio"
@@ -362,7 +362,7 @@
 "observaciones": "Se estima un plan maestro a corto, mediano y largo plazo.",
 "lo esperado": "Se recomienda que la oficina de ordenamiento territorial lleve un control anual sobre la implementación y ejecución del plan maestro para hacerle seguimiento.",
 "cobertura oficial": "Zona Rural / Zona Urbana",
-"clasificacion": "#general",
+"clasificacion": "##general",
 "vigencia": "#corta #mediana #larga",
 "prioridad": "#alta",
 "operacion": "SGP Propósito General + Recursos propios municipio + Gobernación del Huila"
@@ -394,7 +394,7 @@
 "observaciones": "Es un proyecto del programa ambiental y no de gestión del riesgo. Se entiende que en la actualidad el municipio ya está abordando de manera inicial el tema de PSA bajo un plan piloto. Se observa que el proyecto queda limitado y sometido a recursos externos.",
 "lo esperado": "Ubicarlo en el programa ambiental. Que se hable de promover, implementar y fortalecer el tema de PSA; para ello, se deben tener en cuenta los recursos para cada una de estas etapas; así mismo, si los recursos van solo destinados al pago de los servicios, a la estructuración de los programas y/o al seguimiento/monitoreo. También tendría en cuenta recursos municipales.",
 "cobertura oficial": "Zona Rural / Zona Urbana",
-"clasificacion": "#general",
+"clasificacion": "##general",
 "vigencia": "#corta #mediana #larga",
 "prioridad": "#alta",
 "operacion": "Gobernación del Huila + Ministerio del Interior + Fondo de Adaptación"
@@ -410,7 +410,7 @@
 "observaciones": "No es claro qué es lo que se piensa sustraer, y el presupuesto no contempla un estudio detallado de las zonas susceptibles de sustracción, entre otros.",
 "lo esperado": "Antes de llevar a cabo el proceso de sustracción se debe tener claro qué es lo que se piensa sustraer. Contemplar el estudio detallado de las zonas susceptibles de sustracción y después su desarrollo. De acuerdo con el objetivo de la sustracción, así mismo sería ubicar el proyecto en el programa adecuado. El proyecto podría denominarse \"Diagnóstico y ejecución de sustracción de áreas ocupadas por infraestructura en suelo rural\".",
 "cobertura oficial": "Zona Rural / Zona Urbana",
-"clasificacion": "#general",
+"clasificacion": "##general",
 "vigencia": "#corta #mediana",
 "prioridad": "#alta",
 "operacion": "Recursos propios municipio + Ministerio de Ambiente"
@@ -426,7 +426,7 @@
 "observaciones": "No se especifica el objetivo principal de la adquisición de los predios en zona de protección.",
 "lo esperado": "Tener claro el objetivo del proyecto para ubicarlo en el programa de mayor relevancia: si la adquisición del predio es para fines de gestión del riesgo (como se describe en el nombre del programa), entonces dejar constancia para el diagnóstico de las zonas de interés; si, por el contrario, se contempla la adquisición para fines de conservación y preservación de zonas estratégicas, lo más pertinente sería dejar el proyecto en el programa 10. Garzón garante ambiental. Lo anterior supondría una modificación del monto de financiación asignado.",
 "cobertura oficial": "Zona Rural",
-"clasificacion": "#general",
+"clasificacion": "##general",
 "vigencia": "#corta #mediana #larga",
 "prioridad": "#alta",
 "operacion": "Fondo Nacional de Calamidades + Recursos propios municipio"
@@ -442,7 +442,7 @@
 "observaciones": "La misma dinámica del proyecto anterior: no se especifica el objetivo de la adquisición de los predios Bosque El Caimarón (catalogado como área de conservación y protección por el sistema de áreas protegidas municipales) y Loma Chícora.",
 "lo esperado": "Tener claro el objetivo del proyecto para ubicarlo en el programa de mayor relevancia. Si la adquisición es principalmente para fines de conservación, entonces dejar el proyecto en el programa 10. Garzón garante ambiental. En cualquiera de los dos casos, este proyecto se podría unificar con el anterior. Lo anterior supondría una modificación del monto de financiación asignado.",
 "cobertura oficial": "Zona Rural",
-"clasificacion": "#urbana",
+"clasificacion": "##urbana",
 "vigencia": "#corta #mediana",
 "prioridad": "#alta",
 "operacion": "Fondo Nacional de Calamidades + Recursos propios municipio"
@@ -458,7 +458,7 @@
 "observaciones": "No parece un proyecto del programa de gestión del riesgo. POR SÍ SOLAS, LAS ACTIVIDADES DE REFORESTACIÓN Y AISLAMIENTO EN ZONAS QUE NO PRESENTAN RIESGO SUPONEN ACTIVIDADES PROPIAS DEL PROGRAMA AMBIENTAL.",
 "lo esperado": "Definir mejor el nombre del proyecto. Tener claras las zonas de alto riesgo y con posible desborde de masa para reforestar y aislar. El proyecto debe ser más claro: \"Reforestar y aislar zonas de alto riesgo ubicadas en áreas de influencia de ecosistemas estratégicos\". Si lo que se quiere es reforestar zonas de altas pendientes o alto riesgo, también deberían tener en cuenta otros espacios similares en la zona urbana y rural. TENER EN CUENTA OTRAS ZONAS Y NO SOLO LA VEREDA CLAROS.",
 "cobertura oficial": "Vereda Claros",
-"clasificacion": "#general",
+"clasificacion": "##general",
 "vigencia": "#corta #mediana #larga",
 "prioridad": "#alta",
 "operacion": "CAM Huila + SGP Propósito General"
@@ -474,7 +474,7 @@
 "observaciones": "Por sí solo, el nombre del proyecto plantea una idea netamente ambiental. Ahora bien, si los asentamientos se encuentran en zona de protección y no presentan riesgo alguno, entonces hablamos de un proyecto que fácilmente se puede ubicar en el programa 10. Garzón garante ambiental. Para ser un proceso de reubicación, el presupuesto supone una baja inversión. NO SE TIENE EN CUENTA LA ZONA URBANA.",
 "lo esperado": "Se debería dejar claro que los asentamientos están en zona de riesgo (independientemente de que estén en zona de protección o no). Que se vea reflejado en el presupuesto tanto el diagnóstico como la metodología de ejecución (reubicación). Por otro lado, el nombre del proyecto podría ser \"Reubicación de asentamientos ubicados en zona de riesgo y zona de protección del área rural\" para el caso del programa 4. Garzón gestiona el riesgo. Si los asentamientos en realidad no se encuentran ubicados en zona de riesgo, pero sí en zona de protección, entonces el proyecto podría llamarse \"Reubicación de asentamientos localizados en zona de protección rural\" y se pondría en el programa No. 10 o No. 7. ES IMPORTANTE TENER EN CUENTA LA REUBICACIÓN DE ASENTAMIENTOS LOCALIZADOS EN ZONA DE RIESGO EN LA ZONA URBANA DEL MUNICIPIO. TAMBIÉN DEBERÍA APLICAR PARA ÁREAS DIFERENTES A LA PROTECCIÓN RURAL.",
 "cobertura oficial": "Zona Rural",
-"clasificacion": "#rural",
+"clasificacion": "##rural",
 "vigencia": "Mediana - Larga",
 "prioridad": "#alta",
 "operacion": "Ministerio del Interior + Gobernación del Huila + Fondo de Adaptación"
@@ -490,7 +490,7 @@
 "observaciones": "No corresponde a este programa. Es un proyecto que corresponde directamente al programa 10. Garzón garante ambiental.",
 "lo esperado": "Ver el proyecto en el programa 10. Garzón garante ambiental. Su formulación, implementación, seguimiento y evaluación podrían requerir un recurso superior.",
 "cobertura oficial": "Zona Rural",
-"clasificacion": "#rural",
+"clasificacion": "##rural",
 "vigencia": "#corta #mediana",
 "prioridad": "#alta",
 "operacion": "CAM Huila + Gobernación del Huila + Ministerio de Ambiente"
@@ -506,7 +506,7 @@
 "observaciones": "Al estar en el programa de gestión del riesgo, se sobreentiende que los puertos fluviales tendrán el objetivo principal de prestar servicios de vigilancia, emergencias, rescate y otros. En otro escenario se podría entender que es un proyecto enfocado a fortalecer el turismo y la actividad económica. Para el puerto se requieren trámites e infraestructura, lo que supondría una inversión mayor.",
 "lo esperado": "Mayor claridad con el objetivo del proyecto; se debería ser más claro con el nombre del proyecto, sin olvidar que el PBOT debe ser entendible para el público en general. Ajustar el monto asignado.",
 "cobertura oficial": "Zona Rural",
-"clasificacion": "#rural",
+"clasificacion": "##rural",
 "vigencia": "#corta #mediana",
 "prioridad": "#alta",
 "operacion": "EMGESA / Enel + Ministerio de Transporte + Gobernación del Huila"
@@ -522,7 +522,7 @@
 "observaciones": "Es un sector al que el municipio no le ha prestado mucha atención.",
 "lo esperado": "No aplica.",
 "cobertura oficial": "Zona Rural",
-"clasificacion": "#rural",
+"clasificacion": "##rural",
 "vigencia": "#corta #mediana #larga",
 "prioridad": "#alta",
 "operacion": "CAM Huila + Ministerio de Ambiente + Gobernación del Huila"
@@ -538,7 +538,7 @@
 "observaciones": "Nuevamente parece un proyecto del sector ambiental. Es el complemento del proyecto número 29.",
 "lo esperado": "Definir el proyecto con mayor claridad. Podría ser \"Ejecutar actividades de reforestación en zona perimetral del casco urbano que presenten pendientes con algún tipo de riesgo\".",
 "cobertura oficial": "Periferia Urbana",
-"clasificacion": "#urbana",
+"clasificacion": "##urbana",
 "vigencia": "#corta #mediana",
 "prioridad": "#alta",
 "operacion": "CAM Huila + SGP Propósito General"
@@ -554,7 +554,7 @@
 "observaciones": "Es un proyecto netamente ambiental (programa número 10, Garzón garante ambiental). El monto asignado sí depende del alcance que tenga el apoyo.",
 "lo esperado": "Reubicar el proyecto.",
 "cobertura oficial": "Zona Rural / Zona Urbana",
-"clasificacion": "#rural",
+"clasificacion": "##rural",
 "vigencia": "#corta #mediana",
 "prioridad": "#alta",
 "operacion": "Regalías OCAD Departamental + Ministerio de Ambiente"
@@ -570,7 +570,7 @@
 "observaciones": "Otro proyecto que apunta a no tener nada que ver con el programa al que pertenece. Ahora bien, si se habla de los bosques energéticos en producción de biomasa para generar energía limpia, de nada sirve incorporar estos bosques sin la tecnología apropiada para transformarlos en dicha energía (mucho menos con ese presupuesto tan bajo). Además, se presta para otras actividades como el MONOCULTIVO (enemigo de la conservación, de la biodiversidad y de la calidad del suelo). Entre otras cosas, es un proyecto que no resuelve mucho.",
 "lo esperado": "El proyecto debe albergar todo (terreno, siembra, seguimiento y tecnologías/infraestructura de transformación de biomasa en energía): un proyecto ejecutado de inicio a fin, que comprenda no solo la materia prima, sino también la infraestructura y la tecnología apropiadas para llevarse a cabo. Es preferible abrirle la puerta a un proyecto piloto de paneles solares, que no genera alteraciones en la biodiversidad y el ambiente en general.",
 "cobertura oficial": "Zona Urbana",
-"clasificacion": "#general",
+"clasificacion": "##general",
 "vigencia": "#corta #mediana",
 "prioridad": "#alta",
 "operacion": "Ministerio de Minas y Energía + IPSE + Gobernación del Huila"
@@ -586,7 +586,7 @@
 "observaciones": "Sin observaciones.",
 "lo esperado": "No aplica.",
 "cobertura oficial": "Zona Rural / Zona Urbana",
-"clasificacion": "#general",
+"clasificacion": "##general",
 "vigencia": "#corta #mediana #larga",
 "prioridad": "#alta",
 "operacion": "SGP Propósito General + UNGRD"
@@ -602,7 +602,7 @@
 "observaciones": "Sin observaciones.",
 "lo esperado": "No aplica.",
 "cobertura oficial": "La Jagua",
-"clasificacion": "#rural",
+"clasificacion": "##rural",
 "vigencia": "#corta #mediana",
 "prioridad": "#alta",
 "operacion": "SGP Propósito General + Ministerio de Vivienda"
@@ -618,7 +618,7 @@
 "observaciones": "Sin observaciones.",
 "lo esperado": "No aplica.",
 "cobertura oficial": "Zona Rural / Zona Urbana",
-"clasificacion": "#general",
+"clasificacion": "##general",
 "vigencia": "#corta #mediana",
 "prioridad": "#alta",
 "operacion": "SGP Propósito General + Servicio Geológico Colombiano (SGC)"
@@ -634,7 +634,7 @@
 "observaciones": "Sin observaciones.",
 "lo esperado": "No aplica.",
 "cobertura oficial": "Zona Rural / Zona Urbana",
-"clasificacion": "#general",
+"clasificacion": "##general",
 "vigencia": "##corta",
 "prioridad": "#alta",
 "operacion": "SGP Propósito General + CAM Huila"
@@ -650,7 +650,7 @@
 "observaciones": "Es importante la ordenación y acotación de las microcuencas del municipio para mitigar los riesgos que se puedan presentar en ellas; sin embargo, muchas de las acciones para mitigarlos corresponden a acciones netamente ambientales (reforestación, control de vertimientos, protección y conservación, entre otros). Se considera que la ordenación y el acotamiento de las microcuencas son importantes. Finalmente, también cabe aclarar si en realidad el proyecto se refiere al acotamiento de la ronda hídrica y no de la microcuenca (como se menciona en el nombre del proyecto).",
 "lo esperado": "Si el objetivo del proyecto es un diagnóstico de gestión del riesgo en las microcuencas, está bien. Pero se puede usar ese mismo diagnóstico para implementar herramientas de control como los PMA (puede ser otro proyecto ubicado en el programa ambiental) para mitigar esos riesgos y demás. Ahora bien, de ser el acotamiento de la ronda hídrica, ese proyecto va más ligado al programa ambiental o de ordenamiento, y con él se lleva a realizar un estudio de amenazas (ESTABLECIDO EN EL PROYECTO ANTERIOR).",
 "cobertura oficial": "Zona Rural / Zona Urbana",
-"clasificacion": "#general",
+"clasificacion": "##general",
 "vigencia": "#corta #mediana #larga",
 "prioridad": "#alta",
 "operacion": "CAM Huila + SGP Propósito General"
@@ -666,7 +666,7 @@
 "observaciones": "Sin observaciones.",
 "lo esperado": "No aplica.",
 "cobertura oficial": "Zona Rural / Zona Urbana",
-"clasificacion": "#general",
+"clasificacion": "##general",
 "vigencia": "##corta",
 "prioridad": "#alta",
 "operacion": "Fondo Nacional de Calamidades + Ministerio de Vivienda + UNGRD"
@@ -682,7 +682,7 @@
 "observaciones": "Sin observaciones.",
 "lo esperado": "No aplica.",
 "cobertura oficial": "Zona Rural / Zona Urbana",
-"clasificacion": "#general",
+"clasificacion": "##general",
 "vigencia": "#corta #mediana #larga",
 "prioridad": "#alta",
 "operacion": "CAM Huila + SGP Propósito General"
@@ -698,7 +698,7 @@
 "observaciones": "Sin observaciones.",
 "lo esperado": "No aplica.",
 "cobertura oficial": "Zona Rural / Zona Urbana",
-"clasificacion": "#general",
+"clasificacion": "##general",
 "vigencia": "#corta #mediana",
 "prioridad": "#alta",
 "operacion": "UNGRD + Gobernación del Huila"
@@ -714,7 +714,7 @@
 "observaciones": "De por sí, los Planes de Ordenación y Manejo de Cuencas Hidrográficas (POMCA) son responsabilidad de la autoridad ambiental, y el proyecto parece ser del programa ambiental y no de gestión del riesgo.",
 "lo esperado": "Ubicarlo en el programa ambiental y que el proyecto no se fundamente en la elaboración, sino más bien en el apoyo y la articulación; debería modificarse a apoyar o promover la iniciativa.",
 "cobertura oficial": "Zona Rural / Zona Urbana",
-"clasificacion": "#general",
+"clasificacion": "##general",
 "vigencia": "#corta #mediana #larga",
 "prioridad": "#alta",
 "operacion": "CAM Huila + SGP Propósito General"
@@ -730,7 +730,7 @@
 "observaciones": "Sin observaciones.",
 "lo esperado": "No aplica.",
 "cobertura oficial": "Zona Rural / Zona Urbana",
-"clasificacion": "#general",
+"clasificacion": "##general",
 "vigencia": "#corta #mediana",
 "prioridad": "#alta",
 "operacion": "UNGRD + SGP Propósito General"
@@ -746,7 +746,7 @@
 "observaciones": "Sin observaciones.",
 "lo esperado": "No aplica.",
 "cobertura oficial": "Administrativa",
-"clasificacion": "#general",
+"clasificacion": "##general",
 "vigencia": "##corta",
 "prioridad": "#alta",
 "operacion": "Recursos propios municipio"
@@ -761,8 +761,8 @@
 "dinero ideal": "1345500000",
 "observaciones": "Se necesita esta oficina para un mejor control sobre las urbanizaciones ilegales y el crecimiento desmedido en sectores periféricos del municipio.",
 "lo esperado": "No aplica.",
-"cobertura oficial": "#urbana",
-"clasificacion": "#general",
+"cobertura oficial": "##urbana",
+"clasificacion": "##general",
 "vigencia": "##corta",
 "prioridad": "#alta",
 "operacion": "Recursos propios municipio + SGP Propósito General"
@@ -778,7 +778,7 @@
 "observaciones": "#duplicado. El proyecto se contempla dos veces de manera diferente, en el proyecto 22 y en el 49.",
 "lo esperado": "Es importante retirar este proyecto y sumar o utilizar el presupuesto en otro proyecto. Se solicita que su clasificación sea general y que se aborden los puntos que tienen problemas, como los accesos a los centros poblados y los puntos donde se generan altos flujos de accidentes.",
 "cobertura oficial": "Nazareth, Orquídea Real, Pío XII, primavera, Riveras de Garzón, Samaritanos, San Cayetano, San Lorenzo, Santa Clara, Santa Lucía, Termitas, Villa Karoll, Villa Laura, Villa Sol, Fontanar",
-"clasificacion": "#general",
+"clasificacion": "##general",
 "vigencia": "##corta",
 "prioridad": "#media",
 "operacion": "Regalías directas municipio + Sobretasa a la gasolina + SGP Propósito General"
@@ -794,7 +794,7 @@
 "observaciones": "No se enfoca en las áreas rurales dispersas. La cobertura está desconectada de la realidad del municipio. Promigas es una empresa que no opera directamente en el Huila, con su sede principal en Barranquilla. Gas Natural S.A. no existe, según lo que se investigó (Vanti es la empresa que suministra gas en Bogotá).",
 "lo esperado": "Que sea a nivel municipal, con vigencia a corto, mediano y largo plazo, para poder gestionar proyectos de consecución de recursos para la ampliación de redes en toda la zona rural y urbana. Proponemos la construcción de la red de gas en todo el municipio; la clasificación debe ser general, no solamente rural. Fuente de recursos: 1. Municipio de Garzón, 2. Gobernación del Huila, 3. Ministerio de Energía, 4. Ecopetrol, 5. Alcanos y demás empresas prestadoras del servicio de gas.",
 "cobertura oficial": "San Antonio del Pescado, El Descanso, Caguancito, El Mesón, Santa Marta, Majo, El Paraíso, El Recreo, Zuluaga / Área urbana",
-"clasificacion": "#rural",
+"clasificacion": "##rural",
 "vigencia": "#corta #mediana",
 "prioridad": "#media",
 "operacion": "Promigas / Gas Natural S.A. + Regalías directas + Ministerio de Minas y Energía"
@@ -810,7 +810,7 @@
 "observaciones": "El presupuesto asignado para esta actividad es totalmente bajo, puesto que dentro de las zonas de protección hay muchos predios que se han venido afectando.",
 "lo esperado": "Es importante establecer las afectaciones ambientales de los predios dentro del casco urbano y establecer estrategias para su consecución. Establecer si el proyecto está dentro del plan maestro de equipamientos y revisar cómo está el tema de los predios que han sido adquiridos por parte del municipio dentro de las zonas de protección ambiental, como el parque Aguas Calientes y el páramo de Miraflores.",
 "cobertura oficial": "Zona Rural / Zona Urbana",
-"clasificacion": "#general",
+"clasificacion": "##general",
 "vigencia": "##corta",
 "prioridad": "#media",
 "operacion": "Recursos propios municipio + Ministerio de Ambiente"
@@ -826,7 +826,7 @@
 "observaciones": "El presupuesto asignado para esta actividad es totalmente bajo, puesto que dentro de las zonas de protección hay muchos predios que se han venido afectando. No se tiene establecido claramente qué tipo de terrenos se van a adquirir ni dentro de qué suelos se puede hacer esta actividad; no se determina si obedece al plan maestro de equipamientos.",
 "lo esperado": "Es importante establecer las afectaciones ambientales de los predios dentro del casco urbano y establecer estrategias para su consecución. Establecer si está dentro del plan maestro de equipamientos y revisar cómo está el tema de los predios que han sido adquiridos por parte del municipio dentro de las zonas de protección ambiental, como el parque Aguas Calientes y el páramo de Miraflores.",
 "cobertura oficial": "Zona Rural",
-"clasificacion": "#general",
+"clasificacion": "##general",
 "vigencia": "#corta #mediana #larga",
 "prioridad": "#media",
 "operacion": "Regalías directas municipio + Gobernación del Huila"
@@ -858,7 +858,7 @@
 "observaciones": "Sin observaciones.",
 "lo esperado": "No aplica.",
 "cobertura oficial": "Zona Rural Zona Urbana",
-"clasificacion": "#rural",
+"clasificacion": "##rural",
 "vigencia": "##corta",
 "prioridad": "#media",
 "operacion": "SGP APSB + CAM Huila + Gobernación del Huila"
@@ -874,7 +874,7 @@
 "observaciones": "Sin observaciones.",
 "lo esperado": "No aplica.",
 "cobertura oficial": "Zona Rural Zona Urbana",
-"clasificacion": "#general",
+"clasificacion": "##general",
 "vigencia": "#corta #mediana",
 "prioridad": "#media",
 "operacion": "Recursos propios municipio + Ministerio de Ambiente (Resolución 472/2017)"
@@ -890,7 +890,7 @@
 "observaciones": "Sin observaciones.",
 "lo esperado": "No aplica.",
 "cobertura oficial": "Zona Urbana",
-"clasificacion": "#urbana",
+"clasificacion": "##urbana",
 "vigencia": "#corta #mediana",
 "prioridad": "#media",
 "operacion": "Recursos propios municipio y privado"
@@ -906,7 +906,7 @@
 "observaciones": "No se definen perímetros claros para dichos desarrollos.",
 "lo esperado": "Se deben enfocar otros proyectos que sí requieran un nivel de importancia alto.",
 "cobertura oficial": "El Mesón, Santa Marta, La Jagua, Vereda Claros, El Carmen, El Jardín, El Obrero, El Rosario, Juan Pablo I, Juan Pablo II, La Gaitana, Las Américas, Nueva Holanda, Nuevo Horizonte, Rodrigo Lara Bonilla, San Vicente de Paul, Santa Teresa",
-"clasificacion": "#urbana",
+"clasificacion": "##urbana",
 "vigencia": "#corta #mediana",
 "prioridad": "#media",
 "operacion": "Ministerio de Vivienda VIS + Regalías directas + SGP Propósito General + Gobernación"
@@ -922,7 +922,7 @@
 "observaciones": "El proyecto de acuerdo establece que los nuevos desarrollos deben destinar un 20% para programas de vivienda de interés social; debemos tener en cuenta que existen proyectos ya consolidados.",
 "lo esperado": "Establecer normas claras respecto al mismo y definir estrategias más claras a corto plazo para la consecución de dichos terrenos.",
 "cobertura oficial": "Zona Rural / Zona Urbana",
-"clasificacion": "#urbana",
+"clasificacion": "##urbana",
 "vigencia": "#corta #mediana #larga",
 "prioridad": "#media",
 "operacion": "Ministerio de Vivienda VIS + Regalías directas + Gobernación del Huila"
@@ -938,7 +938,7 @@
 "observaciones": "Se limita el presupuesto sobre las viviendas que hay que reubicar dentro del municipio de Garzón, conforme a los terrenos que entran sobre las rondas de protección. El valor que se asigna al presupuesto es muy bajo respecto a la realidad del municipio.",
 "lo esperado": "Aumentar dicho valor respecto a lo establecido en los diferentes inventarios.",
 "cobertura oficial": "Zona Rural / Zona Urbana",
-"clasificacion": "#urbana",
+"clasificacion": "##urbana",
 "vigencia": "#corta #mediana",
 "prioridad": "#media",
 "operacion": "Fondo Nacional de Calamidades + Ministerio de Vivienda + Gobernación del Huila"
@@ -954,7 +954,7 @@
 "observaciones": "Sin observaciones.",
 "lo esperado": "No aplica.",
 "cobertura oficial": "Zuluaga",
-"clasificacion": "#urbana",
+"clasificacion": "##urbana",
 "vigencia": "##corta",
 "prioridad": "#media",
 "operacion": "Recursos propios municipio + IGAC"
@@ -970,7 +970,7 @@
 "observaciones": "Sin observaciones.",
 "lo esperado": "No aplica.",
 "cobertura oficial": "Zona Urbana",
-"clasificacion": "#urbana",
+"clasificacion": "##urbana",
 "vigencia": "##corta",
 "prioridad": "#media",
 "operacion": "Recursos propios municipio + DNP"
@@ -986,7 +986,7 @@
 "observaciones": "No guarda congruencia entre el proyecto y la población impactada.",
 "lo esperado": "Establecer la población real impactada, especialmente los asentamientos que no tienen un urbanismo definido.",
 "cobertura oficial": "Zona Rural / Zona Urbana",
-"clasificacion": "#urbana",
+"clasificacion": "##urbana",
 "vigencia": "Mediana - Larga",
 "prioridad": "#media",
 "operacion": "Ministerio de Vivienda – Programa de Mejoramiento + Gobernación + Recursos propios"
@@ -1002,7 +1002,7 @@
 "observaciones": "El precio es incomprensible, puesto que no se sabe cómo va el plan maestro de equipamientos.",
 "lo esperado": "Sugerimos que se establezca el cambio del proyecto y se deje estipulado que se debe realizar el plan maestro de equipamientos en el corto plazo y, en el mediano y largo plazo, la construcción de los mismos.",
 "cobertura oficial": "Zona Rural / Zona Urbana",
-"clasificacion": "#general",
+"clasificacion": "##general",
 "vigencia": "#corta #mediana",
 "prioridad": "#media",
 "operacion": "SGP Deporte + Ministerio del Deporte + Gobernación del Huila"
@@ -1018,7 +1018,7 @@
 "observaciones": "Se está duplicando un mismo proyecto en dos ejes #duplicado 64_63.",
 "lo esperado": "Se debe contemplar el plan maestro de equipamientos.",
 "cobertura oficial": "San Antonio del Pescado, El Mesón, Santa Marta, La Jagua, El Paraíso / 20 de Julio, Chapinero, Granjas, Julio Bahamón, La Florida, La Libertad, Los Comuneros, Los Nogales, San Isidro, Valle del Casa Loma",
-"clasificacion": "#general",
+"clasificacion": "##general",
 "vigencia": "#corta #mediana",
 "prioridad": "#media",
 "operacion": "SGP Deporte + Ministerio del Deporte + Gobernación del Huila"
@@ -1034,7 +1034,7 @@
 "observaciones": "El valor del proyecto está muy por debajo de la realidad.",
 "lo esperado": "Revisar y aumentar el valor del proyecto y establecer fuentes de recursos claras.",
 "cobertura oficial": "San Antonio del Pescado, El Mesón, El Paraíso / Área urbana",
-"clasificacion": "#general",
+"clasificacion": "##general",
 "vigencia": "##corta",
 "prioridad": "#media",
 "operacion": "SGP Propósito General + Recursos propios municipio"
@@ -1050,7 +1050,7 @@
 "observaciones": "El valor del mismo es muy reducido y las fuentes de recursos no son adecuadas.",
 "lo esperado": "Modificar las fuentes de recursos y aumentar el valor del mismo. Fuente de recursos: el gobierno departamental y el Ministerio del Deporte.",
 "cobertura oficial": "Zona Rural / Zona Urbana",
-"clasificacion": "#general",
+"clasificacion": "##general",
 "vigencia": "#corta #mediana",
 "prioridad": "#media",
 "operacion": "SGP Deporte + Recursos propios municipio"
@@ -1066,7 +1066,7 @@
 "observaciones": "No se explica por qué la plaza de eventos está dentro del programa deportivo.",
 "lo esperado": "Explicar por qué la plaza de eventos está dentro del programa deportivo.",
 "cobertura oficial": "Zona Urbana",
-"clasificacion": "#urbana",
+"clasificacion": "##urbana",
 "vigencia": "#corta #mediana",
 "prioridad": "#media",
 "operacion": "Recursos propios municipio + Gobernación del Huila"
@@ -1082,7 +1082,7 @@
 "observaciones": "El valor del mismo es muy reducido y las fuentes de recursos no son adecuadas.",
 "lo esperado": "Modificar las fuentes de recursos y aumentar el valor del mismo. Fuente de recursos: el gobierno departamental y el Ministerio del Deporte.",
 "cobertura oficial": "Zona Rural / Zona Urbana",
-"clasificacion": "#general",
+"clasificacion": "##general",
 "vigencia": "#corta #mediana #larga",
 "prioridad": "#media",
 "operacion": "SGP Deporte + Recursos propios municipio"
@@ -1098,7 +1098,7 @@
 "observaciones": "Presupuesto muy bajo para la destinación de dichos suelos; no existe una normativa clara sobre si es con el plan de equipamientos o si se deja a voluntad de la administración.",
 "lo esperado": "Sugerimos que se amplíe el presupuesto y se incluya la destinación de El Caimarón.",
 "cobertura oficial": "Zona Rural / Zona Urbana",
-"clasificacion": "#general",
+"clasificacion": "##general",
 "vigencia": "#corta #mediana",
 "prioridad": "#media",
 "operacion": "SGP Propósito General + Recursos propios municipio"
@@ -1114,7 +1114,7 @@
 "observaciones": "No se incluyen las zonas consolidadas en las áreas suburbanas y otros centros poblados.",
 "lo esperado": "Se debe dejar abierto el proyecto en toda la zona rural y urbana.",
 "cobertura oficial": "Santa Marta, El Paraíso, El Recreo, San Gerardo, Zuluaga / Área urbana completa",
-"clasificacion": "#general",
+"clasificacion": "##general",
 "vigencia": "#corta #mediana #larga",
 "prioridad": "#media",
 "operacion": "SGP Propósito General + Regalías directas + Gobernación del Huila"
@@ -1130,7 +1130,7 @@
 "observaciones": "No contempla estudios y diseños; no se contempla si hay que reformar, ampliar, construir o implementar.",
 "lo esperado": "Dar claridad sobre cuál es el fin del proyecto.",
 "cobertura oficial": "Zona Urbana",
-"clasificacion": "#urbana",
+"clasificacion": "##urbana",
 "vigencia": "#corta #mediana #larga",
 "prioridad": "#media",
 "operacion": "SGP Propósito General + Fondo Desarrollo Urbano + Gobernación del Huila"
@@ -1146,7 +1146,7 @@
 "observaciones": "Sin observaciones.",
 "lo esperado": "Deben incluirse proyectos como el centro transitorio y las cámaras de vigilancia.",
 "cobertura oficial": "Zuluaga",
-"clasificacion": "#rural",
+"clasificacion": "##rural",
 "vigencia": "##corta",
 "prioridad": "#media",
 "operacion": "Policía Nacional + Recursos propios municipio + Gobernación del Huila"
@@ -1162,7 +1162,7 @@
 "observaciones": "Se enfoca únicamente en el centro poblado de La Jagua.",
 "lo esperado": "Se debe ampliar el fortalecimiento de eventos artísticos a toda el área del municipio, no enfocarse únicamente en La Jagua. Incorporar otros proyectos, como la construcción de escenarios culturales y el mantenimiento del Instituto de Cultura.",
 "cobertura oficial": "La Jagua",
-"clasificacion": "#general",
+"clasificacion": "##general",
 "vigencia": "#corta #mediana #larga",
 "prioridad": "Media-baja",
 "operacion": "Ministerio de Cultura + SGP Propósito General + Gobernación del Huila"
@@ -1178,7 +1178,7 @@
 "observaciones": "Solo se enfoca en dos centros poblados; no se habla del café ni del plátano.",
 "lo esperado": "Aumentar el presupuesto, ya que es muy bajo para el alcance que tiene el proyecto, e incluir los demás centros poblados y el área rural de los mismos.",
 "cobertura oficial": "El Recreo, Majo",
-"clasificacion": "#general",
+"clasificacion": "##general",
 "vigencia": "#corta #mediana #larga",
 "prioridad": "Media-baja",
 "operacion": "Ministerio de Agricultura / ADR + Gobernación del Huila + Recursos propios"
@@ -1194,7 +1194,7 @@
 "observaciones": "Habla del fomento de la piscicultura a pequeña escala en el centro poblado El Recreo, cuando la pesca a pequeña escala se enfoca en sitios como Huacanas, Los Medios y Jagualito.",
 "lo esperado": "Dirigir el proyecto adonde realmente se esté ejecutando la piscicultura a pequeña escala; apoyar a empresarios con distritos de riego y conducción de aguas, con permisos ambientales para el aprovechamiento sobre lagos y cultivos de peces.",
 "cobertura oficial": "El Recreo",
-"clasificacion": "#rural",
+"clasificacion": "##rural",
 "vigencia": "#corta #mediana",
 "prioridad": "Media-baja",
 "operacion": "AUNAP + Ministerio de Agricultura + Gobernación del Huila"
@@ -1210,7 +1210,7 @@
 "observaciones": "Se habla del anillo turístico vial Garzón-Zuluaga-Gigante y se incluyen veredas que se encuentran en otros sitios alejados de este anillo vial. No se tuvo en cuenta el plan sectorial de turismo.",
 "lo esperado": "Tener en cuenta el plan sectorial del turismo.",
 "cobertura oficial": "Caguancito, Santa Marta, Majo, El Paraíso, El Recreo",
-"clasificacion": "#rural",
+"clasificacion": "##rural",
 "vigencia": "#corta #mediana #larga",
 "prioridad": "Media-baja",
 "operacion": "Fontur + ProColombia + Gobernación del Huila + Recursos propios"
@@ -1226,7 +1226,7 @@
 "observaciones": "Creemos que es la mejor apuesta que tiene el municipio a 12 años: la industrialización del campo y del municipio desde el sector agroindustrial.",
 "lo esperado": "El parque agroindustrial concentra el 51,1 % de toda la inversión del PBOT, para el largo plazo. Al depender de una mezcla compleja de regalías, alianzas público-privadas y ministerios, el documento debería estructurar este proyecto en fases modulares. Esto evitaría que, en un eventual retraso en la financiación supramunicipal, se paralice la totalidad del programa.",
 "cobertura oficial": "Garzón, Gigante, Guadalupe, Altamira, El Pital, Agrado, Tarqui, La Argentina – Subregión Centro Sur del Huila",
-"clasificacion": "#general",
+"clasificacion": "##general",
 "vigencia": "#larga",
 "prioridad": "#supramunicipal",
 "operacion": "Regalías SGR (OCAD Paz + OCAD Departamental) + Ministerio de Comercio / iNNpulsa + Ministerio de Agricultura / ADR / FNC + Bancóldex (APP) + ProColombia + Gobernación del Huila + Alianzas Público-Privadas"
