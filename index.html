@@ -482,6 +482,7 @@ font-family: "Autography", sans-serif;
 @media (max-width: 700px) {
     /* reglas para pantallas menores de 320px */
     #contadorFilas,
+    #grafico,
     #puntos{ display: none !important;  }
     #presentacion{ bottom: 16px }
 }
@@ -526,7 +527,7 @@ font-family: "Autography", sans-serif;
     position: absolute;
     right: 24px;
     top: 6px;
-    z-index: 100000000000;
+    z-index: 100;
     font-size: 24px;
     color: #000;
     font-weight: bold;
@@ -552,10 +553,17 @@ font-family: "Autography", sans-serif;
             position: absolute;
             right: 28px;
             top: 112px;
-            z-index: 100000000000;
+            z-index: 100;
             font-weight: bold;
             }
             #contadorFilas span{ color: #5500d8; font-size: 24px; font-weight:bold; }
+
+#grafico{
+        z-index: 9999;
+        position: absolute;
+        bottom: 120px;
+        right: 60px;
+        }
 
     </style>
 </head>
@@ -570,6 +578,7 @@ font-family: "Autography", sans-serif;
     autofocus="true"
 >
 
+<div id="grafico"></div>
 
 <div id="disclaimer"><span class="firma texto-degradado ">Sergio losada</span></div>
 <div id="presentacion"></div>
@@ -658,17 +667,646 @@ var __CLAVE__ = "",
 
 
 
+/**
+ * Dibuja una torta estadística (SVG, sin librerías) dentro de un elemento.
+ *
+ * @param {HTMLElement|string} elemento  Elemento HTML o selector CSS ("#grafico").
+ * @param {Array} datos                  [{ porcentaje, cantidad, color, nombre? }, ...]
+ * @param {Object} [opciones]
+ *   tamano          {number}   Lado del SVG en px (por defecto 220)
+ *   mostrarCantidad {boolean}  Escribe la cantidad dentro de cada porción (por defecto true)
+ *   leyenda         {boolean}  Muestra la leyenda con los nombres debajo (por defecto true)
+ *   formatoCantidad {Function} Cómo mostrar la cantidad (por defecto es-CO)
+ *   fuenteCantidad  {number}   font-size (px) del dato de cantidad dentro de la torta
+ *                              (por defecto, proporcional al tamaño: tamano / 14)
+ *   fuenteNombre    {number}   font-size (px) del nombre que va debajo de la cantidad
+ *                              (por defecto, proporcional al tamaño: tamano / 24)
+ *   arrastrable     {boolean}  Permite mover el gráfico por la página (por defecto true)
+ */
+function dibujarTorta(elemento, datos, opciones = {}) {
+
+    const contenedor = typeof elemento === "string"
+        ? document.querySelector(elemento)
+        : elemento;
+
+    if (!contenedor) {
+        console.warn("dibujarTorta: elemento no encontrado");
+        return;
+    }
+
+    const {
+        tamano = 220,
+        mostrarCantidad = true,
+        leyenda = true,
+        formatoCantidad = (n) => Number(n).toLocaleString("es-CO"),
+        arrastrable = true
+    } = opciones;
+
+    // Acepta 24, "24" o "24px"
+    const fuenteCantidad =
+        parseFloat(opciones.fuenteCantidad) || Math.max(12, tamano / 14);
+
+    const fuenteNombre =
+        parseFloat(opciones.fuenteNombre) || Math.max(9, tamano / 24);
+
+    const NS = "http://www.w3.org/2000/svg";
+
+    // Limpia lo que hubiera antes
+    contenedor.innerHTML = "";
+
+    // Solo porciones con porcentaje válido (> 0)
+    const porciones = (datos || [])
+        .map(d => ({ ...d, porcentaje: Number(d.porcentaje) }))
+        .filter(d => d.porcentaje > 0);
+
+    if (!porciones.length) {
+        contenedor.textContent = "Sin datos";
+        return;
+    }
+
+    // Si los porcentajes no suman 100, se normaliza para cerrar el círculo
+    const suma = porciones.reduce((t, d) => t + d.porcentaje, 0);
+
+    const r = tamano / 2;
+    const cx = r;
+    const cy = r;
+
+    const svg = document.createElementNS(NS, "svg");
+    svg.setAttribute("viewBox", `0 0 ${tamano} ${tamano}`);
+    svg.setAttribute("width", tamano);
+    svg.setAttribute("height", tamano);
+    svg.style.display = "block";
+    svg.style.margin = "0 auto";
+    // Tamaño fijo en px: evita que el CSS de la página escale el SVG
+    // (y con él el texto)
+    svg.style.width = tamano + "px";
+    svg.style.height = tamano + "px";
+    svg.style.maxWidth = "none";
+
+    // Ángulos en radianes, empezando arriba (-90°)
+    let inicio = -Math.PI / 2;
+
+    porciones.forEach(d => {
+
+        const fraccion = d.porcentaje / suma;
+        const angulo = fraccion * Math.PI * 2;
+        const fin = inicio + angulo;
+
+        const titulo = document.createElementNS(NS, "title");
+        titulo.textContent =
+            (d.nombre ? d.nombre + ": " : "") +
+            formatoCantidad(d.cantidad) +
+            " (" + (fraccion * 100).toFixed(1) + "%)";
+
+        let forma;
+
+        if (porciones.length === 1) {
+            // Una sola porción = círculo completo (un arco de 360° no se puede trazar)
+            forma = document.createElementNS(NS, "circle");
+            forma.setAttribute("cx", cx);
+            forma.setAttribute("cy", cy);
+            forma.setAttribute("r", r);
+        } else {
+            const x1 = cx + r * Math.cos(inicio);
+            const y1 = cy + r * Math.sin(inicio);
+            const x2 = cx + r * Math.cos(fin);
+            const y2 = cy + r * Math.sin(fin);
+            const grande = angulo > Math.PI ? 1 : 0;
+
+            forma = document.createElementNS(NS, "path");
+            forma.setAttribute(
+                "d",
+                `M ${cx} ${cy} L ${x1} ${y1} A ${r} ${r} 0 ${grande} 1 ${x2} ${y2} Z`
+            );
+        }
+
+        forma.setAttribute("fill", d.color || "#999");
+        forma.setAttribute("stroke", "#fff");
+        forma.setAttribute("stroke-width", "1.5");
+        forma.appendChild(titulo);
+        svg.appendChild(forma);
+
+        // Cantidad dentro de la porción (solo si es lo bastante grande)
+        if (mostrarCantidad && fraccion >= 0.08) {
+
+            const medio = inicio + angulo / 2;
+            const rt = porciones.length === 1 ? 0 : r * 0.62;
+
+            const px = cx + rt * Math.cos(medio);
+            const py = cy + rt * Math.sin(medio);
+            const fuente = fuenteCantidad;                     // cantidad
+            const fill = colorTexto(d.color);
+
+            // Ancho aproximado disponible para el texto dentro de la porción
+            const ancho = porciones.length === 1
+                ? tamano * 0.8
+                : Math.min(2 * rt * Math.sin(angulo / 2), r * 0.95);
+
+            const crearTexto = (contenido, y, tam, peso) => {
+                const t = document.createElementNS(NS, "text");
+                t.setAttribute("x", px);
+                t.setAttribute("y", y);
+                t.setAttribute("text-anchor", "middle");
+                t.setAttribute("dominant-baseline", "middle");
+                t.setAttribute("font-size", tam);
+                // El estilo en línea gana sobre cualquier CSS de la página
+                // (un atributo SVG pierde contra cualquier regla CSS)
+                t.style.fontSize = tam + "px";
+                t.setAttribute("font-family", "Arial, sans-serif");
+                t.setAttribute("font-weight", peso);
+                t.setAttribute("fill", fill);
+                t.setAttribute("pointer-events", "none");
+                t.textContent = contenido;
+                svg.appendChild(t);
+            };
+
+            if (d.nombre) {
+
+                // Cantidad arriba, nombre abajo (se recorta con "…" si no cabe)
+                const tamNombre = fuenteNombre;
+                const maxCaracteres = Math.max(3, Math.floor(ancho / (tamNombre * 0.55)));
+                let nombre = String(d.nombre);
+
+                if (nombre.length > maxCaracteres) {
+                    nombre = nombre.slice(0, maxCaracteres - 1).trim() + "…";
+                }
+
+                crearTexto(formatoCantidad(d.cantidad), py - tamNombre * 0.6, fuente, "bold");
+                crearTexto(nombre, py + fuente * 0.55, tamNombre, "normal");
+
+            } else {
+
+                crearTexto(formatoCantidad(d.cantidad), py, fuente, "bold");
+            }
+        }
+
+        inicio = fin;
+    });
+
+    contenedor.appendChild(svg);
+
+    // Leyenda
+    if (leyenda) {
+
+        const lista = document.createElement("div");
+        lista.style.cssText =
+            "display:flex;flex-wrap:wrap;justify-content:center;" +
+            "gap:6px 14px;margin-top:10px;font:13px Arial,sans-serif;";
+
+        porciones.forEach(d => {
+
+            const item = document.createElement("div");
+            item.style.cssText = "display:flex;align-items:center;gap:6px;";
+
+            const cuadro = document.createElement("span");
+            cuadro.style.cssText =
+                "width:12px;height:12px;border-radius:3px;flex:none;" +
+                "background:" + (d.color || "#999");
+
+            const etiqueta = document.createElement("span");
+            // La cantidad ya está en la torta: la leyenda muestra el nombre
+            // (si no hay nombre, muestra la cantidad)
+            etiqueta.textContent = d.nombre || formatoCantidad(d.cantidad);
+
+            item.append(cuadro, etiqueta);
+            lista.appendChild(item);
+        });
+
+        contenedor.appendChild(lista);
+    }
+
+    if (arrastrable) {
+        hacerArrastrable(contenedor);
+    }
+}
+
+/**
+ * Permite mover un elemento por la página arrastrándolo (ratón o táctil).
+ * Usa transform: translate, así no altera el resto del layout.
+ * No se puede sacar de la ventana.
+ */
+function hacerArrastrable(el) {
+
+    if (el._tortaArrastrable) {
+        return;                       // ya tiene los eventos (al redibujar)
+    }
+    el._tortaArrastrable = true;
+
+    let baseX = 0, baseY = 0;         // desplazamiento acumulado
+    let inicioX, inicioY, limites = null;
+
+    el.style.cursor = "move";
+    el.style.userSelect = "none";
+    el.style.touchAction = "none";
+    el.style.width = el.style.width || "fit-content";
+
+    el.addEventListener("pointerdown", (e) => {
+
+        if (e.button !== undefined && e.button !== 0) {
+            return;                   // solo botón izquierdo
+        }
+
+        const r = el.getBoundingClientRect();
+
+        inicioX = e.clientX;
+        inicioY = e.clientY;
+
+        // Cuánto se puede mover en cada dirección sin salir de la ventana
+        limites = {
+            minX: -r.left,
+            maxX: window.innerWidth - r.right,
+            minY: -r.top,
+            maxY: window.innerHeight - r.bottom
+        };
+
+        el.setPointerCapture(e.pointerId);
+        el.style.zIndex = 100000;
+        e.preventDefault();
+    });
+
+    el.addEventListener("pointermove", (e) => {
+
+        if (!limites) {
+            return;
+        }
+
+        const dx = Math.min(Math.max(e.clientX - inicioX, limites.minX), limites.maxX);
+        const dy = Math.min(Math.max(e.clientY - inicioY, limites.minY), limites.maxY);
+
+        el.style.transform = `translate(${baseX + dx}px, ${baseY + dy}px)`;
+        el._dx = dx;
+        el._dy = dy;
+    });
+
+    const soltar = () => {
+
+        if (!limites) {
+            return;
+        }
+
+        baseX += el._dx || 0;
+        baseY += el._dy || 0;
+        el._dx = el._dy = 0;
+        limites = null;
+    };
+
+    el.addEventListener("pointerup", soltar);
+    el.addEventListener("pointercancel", soltar);
+}
+
+/** Devuelve blanco o negro según qué contraste mejor con el color de fondo. */
+function colorTexto(color) {
+
+    const c = document.createElement("canvas").getContext("2d");
+    c.fillStyle = "#999";
+    c.fillStyle = color || "#999";   // acepta nombres, hex, rgb(), etc.
+
+    const hex = c.fillStyle;          // se normaliza a #rrggbb
+
+    const r = parseInt(hex.substr(1, 2), 16);
+    const g = parseInt(hex.substr(3, 2), 16);
+    const b = parseInt(hex.substr(5, 2), 16);
+
+    const luminancia = (0.299 * r + 0.587 * g + 0.114 * b) / 255;
+
+    return luminancia > 0.6 ? "#000" : "#fff";
+}
+
+/**
+ * Permite mover un elemento por la página arrastrándolo (ratón o táctil).
+ * Usa transform: translate, así no altera el resto del layout.
+ * No se puede sacar de la ventana.
+ */
+function hacerArrastrable(el) {
+
+    if (el._tortaArrastrable) {
+        return;                       // ya tiene los eventos (al redibujar)
+    }
+    el._tortaArrastrable = true;
+
+    let baseX = 0, baseY = 0;         // desplazamiento acumulado
+    let inicioX, inicioY, limites = null;
+
+    el.style.cursor = "move";
+    el.style.userSelect = "none";
+    el.style.touchAction = "none";
+    el.style.width = el.style.width || "fit-content";
+
+    el.addEventListener("pointerdown", (e) => {
+
+        if (e.button !== undefined && e.button !== 0) {
+            return;                   // solo botón izquierdo
+        }
+
+        const r = el.getBoundingClientRect();
+
+        inicioX = e.clientX;
+        inicioY = e.clientY;
+
+        // Cuánto se puede mover en cada dirección sin salir de la ventana
+        limites = {
+            minX: -r.left,
+            maxX: window.innerWidth - r.right,
+            minY: -r.top,
+            maxY: window.innerHeight - r.bottom
+        };
+
+        el.setPointerCapture(e.pointerId);
+        el.style.zIndex = 100000;
+        e.preventDefault();
+    });
+
+    el.addEventListener("pointermove", (e) => {
+
+        if (!limites) {
+            return;
+        }
+
+        const dx = Math.min(Math.max(e.clientX - inicioX, limites.minX), limites.maxX);
+        const dy = Math.min(Math.max(e.clientY - inicioY, limites.minY), limites.maxY);
+
+        el.style.transform = `translate(${baseX + dx}px, ${baseY + dy}px)`;
+        el._dx = dx;
+        el._dy = dy;
+    });
+
+    const soltar = () => {
+
+        if (!limites) {
+            return;
+        }
+
+        baseX += el._dx || 0;
+        baseY += el._dy || 0;
+        el._dx = el._dy = 0;
+        limites = null;
+    };
+
+    el.addEventListener("pointerup", soltar);
+    el.addEventListener("pointercancel", soltar);
+}
+
+/** Devuelve blanco o negro según qué contraste mejor con el color de fondo. */
+function colorTexto(color) {
+
+    const c = document.createElement("canvas").getContext("2d");
+    c.fillStyle = "#999";
+    c.fillStyle = color || "#999";   // acepta nombres, hex, rgb(), etc.
+
+    const hex = c.fillStyle;          // se normaliza a #rrggbb
+
+    const r = parseInt(hex.substr(1, 2), 16);
+    const g = parseInt(hex.substr(3, 2), 16);
+    const b = parseInt(hex.substr(5, 2), 16);
+
+    const luminancia = (0.299 * r + 0.587 * g + 0.114 * b) / 255;
+
+    return luminancia > 0.6 ? "#000" : "#fff";
+}
+
+/**
+ * Permite mover un elemento por la página arrastrándolo (ratón o táctil).
+ * Usa transform: translate, así no altera el resto del layout.
+ * No se puede sacar de la ventana.
+ */
+function hacerArrastrable(el) {
+
+    if (el._tortaArrastrable) {
+        return;                       // ya tiene los eventos (al redibujar)
+    }
+    el._tortaArrastrable = true;
+
+    let baseX = 0, baseY = 0;         // desplazamiento acumulado
+    let inicioX, inicioY, limites = null;
+
+    el.style.cursor = "move";
+    el.style.userSelect = "none";
+    el.style.touchAction = "none";
+    el.style.width = el.style.width || "fit-content";
+
+    el.addEventListener("pointerdown", (e) => {
+
+        if (e.button !== undefined && e.button !== 0) {
+            return;                   // solo botón izquierdo
+        }
+
+        const r = el.getBoundingClientRect();
+
+        inicioX = e.clientX;
+        inicioY = e.clientY;
+
+        // Cuánto se puede mover en cada dirección sin salir de la ventana
+        limites = {
+            minX: -r.left,
+            maxX: window.innerWidth - r.right,
+            minY: -r.top,
+            maxY: window.innerHeight - r.bottom
+        };
+
+        el.setPointerCapture(e.pointerId);
+        el.style.zIndex = 100000;
+        e.preventDefault();
+    });
+
+    el.addEventListener("pointermove", (e) => {
+
+        if (!limites) {
+            return;
+        }
+
+        const dx = Math.min(Math.max(e.clientX - inicioX, limites.minX), limites.maxX);
+        const dy = Math.min(Math.max(e.clientY - inicioY, limites.minY), limites.maxY);
+
+        el.style.transform = `translate(${baseX + dx}px, ${baseY + dy}px)`;
+        el._dx = dx;
+        el._dy = dy;
+    });
+
+    const soltar = () => {
+
+        if (!limites) {
+            return;
+        }
+
+        baseX += el._dx || 0;
+        baseY += el._dy || 0;
+        el._dx = el._dy = 0;
+        limites = null;
+    };
+
+    el.addEventListener("pointerup", soltar);
+    el.addEventListener("pointercancel", soltar);
+}
+
+/** Devuelve blanco o negro según qué contraste mejor con el color de fondo. */
+function colorTexto(color) {
+
+    const c = document.createElement("canvas").getContext("2d");
+    c.fillStyle = "#999";
+    c.fillStyle = color || "#999";   // acepta nombres, hex, rgb(), etc.
+
+    const hex = c.fillStyle;          // se normaliza a #rrggbb
+
+    const r = parseInt(hex.substr(1, 2), 16);
+    const g = parseInt(hex.substr(3, 2), 16);
+    const b = parseInt(hex.substr(5, 2), 16);
+
+    const luminancia = (0.299 * r + 0.587 * g + 0.114 * b) / 255;
+
+    return luminancia > 0.6 ? "#000" : "#fff";
+}
+
+/**
+ * Permite mover un elemento por la página arrastrándolo (ratón o táctil).
+ * Usa transform: translate, así no altera el resto del layout.
+ * No se puede sacar de la ventana.
+ */
+function hacerArrastrable(el) {
+
+    if (el._tortaArrastrable) {
+        return;                       // ya tiene los eventos (al redibujar)
+    }
+    el._tortaArrastrable = true;
+
+    let baseX = 0, baseY = 0;         // desplazamiento acumulado
+    let inicioX, inicioY, limites = null;
+
+    el.style.cursor = "move";
+    el.style.userSelect = "none";
+    el.style.touchAction = "none";
+    el.style.width = el.style.width || "fit-content";
+
+    el.addEventListener("pointerdown", (e) => {
+
+        if (e.button !== undefined && e.button !== 0) {
+            return;                   // solo botón izquierdo
+        }
+
+        const r = el.getBoundingClientRect();
+
+        inicioX = e.clientX;
+        inicioY = e.clientY;
+
+        // Cuánto se puede mover en cada dirección sin salir de la ventana
+        limites = {
+            minX: -r.left,
+            maxX: window.innerWidth - r.right,
+            minY: -r.top,
+            maxY: window.innerHeight - r.bottom
+        };
+
+        el.setPointerCapture(e.pointerId);
+        el.style.zIndex = 100000;
+        e.preventDefault();
+    });
+
+    el.addEventListener("pointermove", (e) => {
+
+        if (!limites) {
+            return;
+        }
+
+        const dx = Math.min(Math.max(e.clientX - inicioX, limites.minX), limites.maxX);
+        const dy = Math.min(Math.max(e.clientY - inicioY, limites.minY), limites.maxY);
+
+        el.style.transform = `translate(${baseX + dx}px, ${baseY + dy}px)`;
+        el._dx = dx;
+        el._dy = dy;
+    });
+
+    const soltar = () => {
+
+        if (!limites) {
+            return;
+        }
+
+        baseX += el._dx || 0;
+        baseY += el._dy || 0;
+        el._dx = el._dy = 0;
+        limites = null;
+    };
+
+    el.addEventListener("pointerup", soltar);
+    el.addEventListener("pointercancel", soltar);
+}
+
+/** Devuelve blanco o negro según qué contraste mejor con el color de fondo. */
+function colorTexto(color) {
+
+    const c = document.createElement("canvas").getContext("2d");
+    c.fillStyle = "#999";
+    c.fillStyle = color || "#999";   // acepta nombres, hex, rgb(), etc.
+
+    const hex = c.fillStyle;          // se normaliza a #rrggbb
+
+    const r = parseInt(hex.substr(1, 2), 16);
+    const g = parseInt(hex.substr(3, 2), 16);
+    const b = parseInt(hex.substr(5, 2), 16);
+
+    const luminancia = (0.299 * r + 0.587 * g + 0.114 * b) / 255;
+
+    return luminancia > 0.6 ? "#000" : "#fff";
+}
 
 
 
 
 
+/** Devuelve blanco o negro según qué contraste mejor con el color de fondo. */
+function colorTexto(color) {
+
+    const c = document.createElement("canvas").getContext("2d");
+    c.fillStyle = "#999";
+    c.fillStyle = color || "#999";   // acepta nombres, hex, rgb(), etc.
+
+    const hex = c.fillStyle;          // se normaliza a #rrggbb
+
+    const r = parseInt(hex.substr(1, 2), 16);
+    const g = parseInt(hex.substr(3, 2), 16);
+    const b = parseInt(hex.substr(5, 2), 16);
+
+    const luminancia = (0.299 * r + 0.587 * g + 0.114 * b) / 255;
+
+    return luminancia > 0.6 ? "#000" : "#fff";
+}
 
 
 
-
-
-
+/** Devuelve blanco o negro según qué contraste mejor con el color de fondo. */
+function colorTexto(color) {
+ 
+    const c = document.createElement("canvas").getContext("2d");
+    c.fillStyle = "#999";
+    c.fillStyle = color || "#999";   // acepta nombres, hex, rgb(), etc.
+ 
+    const hex = c.fillStyle;          // se normaliza a #rrggbb
+ 
+    const r = parseInt(hex.substr(1, 2), 16);
+    const g = parseInt(hex.substr(3, 2), 16);
+    const b = parseInt(hex.substr(5, 2), 16);
+ 
+    const luminancia = (0.299 * r + 0.587 * g + 0.114 * b) / 255;
+ 
+    return luminancia > 0.6 ? "#000" : "#fff";
+}
+ 
+/** Devuelve blanco o negro según qué contraste mejor con el color de fondo. */
+function colorTexto(color) {
+ 
+    const c = document.createElement("canvas").getContext("2d");
+    c.fillStyle = "#999";
+    c.fillStyle = color || "#999";   // acepta nombres, hex, rgb(), etc.
+ 
+    const hex = c.fillStyle;          // se normaliza a #rrggbb
+ 
+    const r = parseInt(hex.substr(1, 2), 16);
+    const g = parseInt(hex.substr(3, 2), 16);
+    const b = parseInt(hex.substr(5, 2), 16);
+ 
+    const luminancia = (0.299 * r + 0.587 * g + 0.114 * b) / 255;
+ 
+    return luminancia > 0.6 ? "#000" : "#fff";
+}
 
 
 
@@ -1494,6 +2132,7 @@ const tabla = new Tabulator(
          */
 
         movableRows: false,
+        renderVertical: "basic",
 
 
         /*
@@ -1639,8 +2278,22 @@ function actualizarPuntos() {
 
     let puntosAlcanzados = 0;
 
+    var rojas = 0,
+        amarillas = 0,
+        verdes = 0;
+
     filas.forEach(fila => {
         const valor = Number(fila.flag);
+
+        if( valor==1 ){
+                    rojas = rojas + 1
+                    }
+        else if( valor==2 ){
+                    amarillas = amarillas + 1
+                    }
+        else if( valor==3 ){
+                    verdes = verdes + 1
+                    }
 
         if (!Number.isNaN(valor)) {
             puntosAlcanzados += valor;
@@ -1655,8 +2308,35 @@ function actualizarPuntos() {
 
 //    parrafo.textContent = `${puntosAlcanzados} de ${puntosPosibles} puntos posibles: ${rendimiento.toFixed(2)}% de rendimiento.`;
     parrafo.innerHTML = `<span id="puntos_hechos">${puntosAlcanzados}</span> de <span id="puntos_posibles">${puntosPosibles}</span> puntos posibles.<br><span id="puntos_rendimiento">rendimiento</span><span id="puntos_porcentage">${rendimiento.toFixed(2)}%</span>`;
+
+
+
+
+    var etiqueta_verde = verdes==1? "Bueno":"Buenos",
+        etiqueta_amarilla = amarillas==1? "Pasable":"Pasables",
+        etiqueta_roja = rojas==1? "Malo":"Malos";
+
+
+
+dibujarTorta("#grafico", [
+    { porcentaje: (puntosPosibles/100)*verdes, cantidad: verdes, color: "#6effa8", nombre: etiqueta_verde },
+    { porcentaje: (puntosPosibles/100)*amarillas, cantidad: amarillas,  color: "#ffef62", nombre: etiqueta_amarilla },
+    { porcentaje: (puntosPosibles/100)*rojas, cantidad: rojas,  color: "#ff0000", nombre: etiqueta_roja }
+],
+{
+    tamano: 300,                 // lado del SVG en px (por defecto 220)
+    mostrarPorcentaje: true,    // oculta el % dentro de las porciones
+    leyenda: false,              // oculta la leyenda
+    fuenteCantidad: 48,
+    fuenteNombre: 18,
+    formatoCantidad: n => "" + n.toLocaleString("es-CO")
+});
+
+
+
+
 }
-setTimeout(function(){ actualizarPuntos() }, 1000)
+setTimeout(function(){ actualizarPuntos() }, 100)
 
 
 // =========================================================
