@@ -2267,38 +2267,48 @@ function actualizarPuntos() {
 
     const filas = tabla.getRows("active").map(row => row.getData());
 
-    const cantidad_mostrandose = tabla.getRows("active").length;
+   // const cantidad_mostrandose = tabla.getRows("active").length;
 
-    document.getElementById("contadorFilas").innerHTML = `en <span>${cantidad_mostrandose}</span> proyectos.`;
+   
 
 
-    console.log( filas.length )
+ //   console.log( filas.length )
 
-    const puntosPosibles = filas.length * 3;
 
-    let puntosAlcanzados = 0;
 
     var rojas = 0,
         amarillas = 0,
         verdes = 0;
 
+    var puntosAlcanzados = 0;
+    var filas_con_banderas = 0;
+
     filas.forEach(fila => {
         const valor = Number(fila.flag);
 
         if( valor==1 ){
-                    rojas = rojas + 1
+                    rojas = rojas + 1;
+                    puntosAlcanzados = puntosAlcanzados + valor
+                    filas_con_banderas = filas_con_banderas + 1;
                     }
         else if( valor==2 ){
-                    amarillas = amarillas + 1
+                    amarillas = amarillas + 1;
+                    puntosAlcanzados = puntosAlcanzados + valor
+                    filas_con_banderas = filas_con_banderas + 1;
                     }
         else if( valor==3 ){
-                    verdes = verdes + 1
+                    verdes = verdes + 1;
+                    puntosAlcanzados = puntosAlcanzados + valor
+                    filas_con_banderas = filas_con_banderas + 1;
                     }
 
-        if (!Number.isNaN(valor)) {
-            puntosAlcanzados += valor;
-        }
+                    
+
     });
+
+        const puntosPosibles = filas_con_banderas*3; // filas.length * 3;
+         document.getElementById("contadorFilas").innerHTML = `en <span>${filas_con_banderas}</span> proyectos.`;
+    
 
     const rendimiento = puntosPosibles > 0
         ? (puntosAlcanzados / puntosPosibles) * 100
