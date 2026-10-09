@@ -1,6 +1,22 @@
 [
     {
         "activo": true,
+        "id": 85,
+        "proyecto": "Estudios, diseños y construcción del Centro de Bienestar Animal (CBA) para la atención y protección de la fauna doméstica en el municipio de Garzón, departamento del Huila",
+        "sector": "#bienestaranimal #fauna #proteccion",
+        "dinero asignado": 0,
+        "flag": 0,
+        "dinero ideal": 0,
+        "observaciones": "Construir y dotar un Centro de Bienestar Animal para garantizar el rescate, atención médico-veterinaria, esterilización y albergue temporal de la fauna doméstica vulnerable, con el propósito de mitigar los riesgos de salud pública, promover la adopción y fomentar la tenencia responsable en el municipio.",
+        "lo esperado": "sin datos",
+        "cobertura oficial": "Urbana / Rural",
+        "clasificacion": "#Urbana #Rural ",
+        "vigencia": "#Corta #mediana",
+        "prioridad": "#alta",
+        "operacion": "Recursos propios "
+    },
+    {
+        "activo": true,
         "id": 84,
         "proyecto": "Diseño, construcción e implementación integral del museo de la jagua para la salvaguarda del patrimonio cultural en el centro poblado de la jagua",
         "sector": "#cultura #museo #lajagua #patrimonio",
@@ -11,7 +27,7 @@
         "lo esperado": "sin datos",
         "cobertura oficial": "Urbana",
         "clasificacion": "#Urbana",
-        "vigencia": "#Corto",
+        "vigencia": "#Corta",
         "prioridad": "#alta",
         "operacion": "Recursos propios + emgesa + recursos departamentales + ministerio de cultura"
     },
